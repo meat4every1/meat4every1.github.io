@@ -10,14 +10,14 @@
 	<script type="text/javascript">
 	function layoutShift() {
 		var sideToggle = document.getElementById("sidebar");
-		var bodyToggle = document.getElementByID("content");
+		var bodyToggle = document.getElementById("content");
 		if((window.innerWidth < 900)){
 			sideToggle.style.display = "none";
-			<!--bodyToggle.style.width = "100%";-->
+			bodyToggle.style.width = "100%"
 		}
 		else{
 			sideToggle.style.display = "inline";
-			<!--bodyToggle.style.width = "70%";-->
+			bodyToggle.style.width = "70%";
 		}
 	}
 	window.onresize = layoutShift;
@@ -30,7 +30,7 @@
 	 
 		<header class="mainHeader">
 			<img src="Img/logo.png">
-			Test 8
+			Test 9
 			<nav><ul>
 				<li class="active"><a href="#">Home</a></li>
 				<li><a href="#">Media</a></li>
