@@ -91,6 +91,7 @@ a:hover, a:active {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	line-height: 25px;
+	outline: 1px solid grey;
 }
 /*accordion link header link styling*/
 .mainContent h3 a:link, .mainContent h3 a:visited {
