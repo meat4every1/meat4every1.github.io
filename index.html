@@ -4,14 +4,22 @@
 		<meta charset="utf-8">
 		<title>IanCW: Homepage</title>
 		<meta charset="utf-8" />
-		<link id="pageStyle" rel="stylesheet" href="style.css" type="text/css" />
+		<link  rel="stylesheet" href="style.css" type="text/css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--
+	
 	<script type="text/javascript">
 	function layoutShift() {
-		var styleLink = 
+		var sideToggle = document.getElementsByClassName("sidebar");
+		if(window.innerWidth < 900){
+			sidetoggle.style.display = none;
+		}
+		else{
+			sideToggle.style.display = inline;
+		}
 	}
-	</script> -->
+	</script> 
+	window.onresize = layoutShift;
+	layoutShift();
 	</head>
 	
 	<body class="body">
@@ -206,7 +214,7 @@
 			</div>
 		</div>
 	<!--SIDEBAR-->
-		<aside class="sidebar" id="sideToggle">
+		<aside class="sidebar">
 			<article>
 				<h2>Top SideBar Title</h2>
 				<p>sideBar Content</p>
