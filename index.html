@@ -10,11 +10,14 @@
 	<script type="text/javascript">
 	function layoutShift() {
 		var sideToggle = document.getElementById("sidebar");
+		var bodyToggle = document.getElementByID("content");
 		if((window.innerWidth < 900)){
 			sideToggle.style.display = "none";
+			bodyToggle.style.width = 100%;
 		}
 		else{
 			sideToggle.style.display = "inline";
+			bodyToggle.style.width = 70%;
 		}
 	}
 	window.onresize = layoutShift;
@@ -27,7 +30,7 @@
 	 
 		<header class="mainHeader">
 			<img src="Img/logo.png">
-			Test 6
+			Test 7
 			<nav><ul>
 				<li class="active"><a href="#">Home</a></li>
 				<li><a href="#">Media</a></li>
@@ -39,7 +42,7 @@
 		
 		<div class="mainContent">
 			<div class="accordion">
-				<div class="content">
+				<div id="content">
 				
 				<!--SECTION_ForcefullFalcion-->
 					<div id="ten" class="section">

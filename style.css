@@ -147,7 +147,7 @@ padding-right: 10px;
 .fullImage{
 width: 100%;
 }
-.content {
+#content {
 	width: 70%;
 	float: left;
 }
