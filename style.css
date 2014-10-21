@@ -153,6 +153,13 @@ display: table;
 width: 100%;
 }
 
+.imgRow li {
+display: table-cell;
+}
+
+.imgRow img{
+width: 100%;
+}
 
 
 #content {
