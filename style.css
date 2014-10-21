@@ -117,10 +117,6 @@ background-color: #181818;
 display: inline;
 }
 
-.mainContent div{
-padding-top: 100px;
-}
-
 .vidScale {
    position: relative;
     padding-bottom: 56.25%; /* 16/9 ratio */
