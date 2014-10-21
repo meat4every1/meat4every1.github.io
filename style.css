@@ -103,8 +103,7 @@ a:hover, a:active {
 .mainContent h3 a:hover, .mainContent h3 a:active,
 .mainContent h3 .active a:link, .mainContent h3 .active a:visited {
 background-color: #181818; 
-	color: #660099;
-	
+	color: #660099
 }
 
 
@@ -141,10 +140,9 @@ display: inline;
 .imgC{
 float: right;
 height: 100px;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 20px;
-
+padding-top: 10px;
+padding-bottom: 10px;
+padding-right: 10px;
 }	
 .fullImage{
 width: 100%;
