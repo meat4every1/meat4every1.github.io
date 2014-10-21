@@ -141,10 +141,10 @@ display: inline;
 .imgC{
 float: right;
 height: 100px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-right: 10px;
-display: block;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 20px;
+
 }	
 .fullImage{
 width: 100%;
