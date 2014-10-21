@@ -114,7 +114,11 @@ background-color: #181818;
 	-webkit-border-radius: 5px;
 }
 .mainContent h3 p {
-display: inline;
+	display: inline;
+}
+
+.mainContent div {
+	width: 100%;
 }
 
 .vidScale {
@@ -191,6 +195,10 @@ margin-left: 3%;
 margin-top: 10px;
 padding: 2% 3%;
 display:inline;
+}
+
+#mainFooter{
+position:absolute;
 }
 
 
