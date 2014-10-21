@@ -150,6 +150,7 @@ width: 100%;
 
 .imgRow{
 display: inline;
+max-width:100%;
 }
 
 #content {
