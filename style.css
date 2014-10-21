@@ -135,7 +135,7 @@ display: inline;
 
 }
 
-/*getting img where i want it*/
+/*getting content title img where i want it*/
 
 .imgC{
 float: right;
@@ -147,6 +147,11 @@ padding-right: 10px;
 .fullImage{
 width: 100%;
 }
+
+.imgRow{
+display: inline;
+}
+
 #content {
 	width: 70%;
 	float: left;
