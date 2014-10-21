@@ -149,9 +149,11 @@ width: 100%;
 }
 
 .imgRow{
-display: inline;
-max-width:100%;
+display: table;
+width: 100%;
 }
+
+
 
 #content {
 	width: 70%;
