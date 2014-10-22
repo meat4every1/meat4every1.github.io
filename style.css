@@ -69,7 +69,6 @@ a:hover, a:active {
 
 .accordion h3 + div {
         height: 0;
-		width: auto;
         overflow: hidden; /*I think this is the key*/
         -webkit-transition: height 0.3s ease-in;
         -moz-transition: height 0.3s ease-in;
@@ -84,6 +83,7 @@ a:hover, a:active {
 
 .accordion .section.large:target h3 + div {
         overflow: auto;
+		width:100%;
 }
 /*accordion window styling*/
 .mainContent{
@@ -118,9 +118,7 @@ background-color: #181818;
 	display: inline;
 }
 
-.mainContent div {
-	width: 100%;
-}
+
 
 .vidScale {
    position: relative;
