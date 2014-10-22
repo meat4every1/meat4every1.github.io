@@ -78,7 +78,7 @@ a:hover, a:active {
 }
 
 .accordion :target h3 + div {
-        height: 0px;
+        height: auto;
 }
 
 .accordion .section.large:target h3 + div {
