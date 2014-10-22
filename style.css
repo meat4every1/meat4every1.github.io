@@ -69,14 +69,14 @@ a:hover, a:active {
 
 .accordion h3 + div {
         height: 0;
-        overflow: hidden; /*I think this is the key*/
+        overflow: hidden;
         -webkit-transition: height 0.3s ease-in;
         -moz-transition: height 0.3s ease-in;
         -o-transition: height 0.3s ease-in;
         -ms-transition: height 0.3s ease-in;
         transition: height 0.3s ease-in;
 }
-
+/*THIS IS WHERE YOU STYLE THE OPENED ACCORDIAN DIV!!!!!*/
 .accordion :target h3 + div {
         height: auto;
 		width: 100%;
