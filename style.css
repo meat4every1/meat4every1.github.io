@@ -78,7 +78,7 @@ a:hover, a:active {
 }
 
 .accordion :target h3 + div {
-        height: auto;
+        height: 0px;
 }
 
 .accordion .section.large:target h3 + div {
@@ -117,7 +117,7 @@ background-color: #181818;
 	display: inline;
 }
 
-.mainContent div:active {
+.mainContent div {
 	width: 100%;
 }
 
