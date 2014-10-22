@@ -79,11 +79,11 @@ a:hover, a:active {
 
 .accordion :target h3 + div {
         height: auto;
+		width: 100%;
 }
 
 .accordion .section.large:target h3 + div {
         overflow: auto;
-		width:100%;
 }
 /*accordion window styling*/
 .mainContent{
