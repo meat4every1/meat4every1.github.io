@@ -20,11 +20,11 @@
 			bodyToggle.style.width = "70%";
 		}
 	}
-	window.onresize = layoutShift;
-	window.start = layoutShift;
+	window.onresize = layoutShift();
+	window.onload = layoutShift();
 	layoutShift();
-	</script> 
-	
+	</script>	
+
 	</head>
 	
 	<body class="body">
@@ -33,8 +33,9 @@
 			<img src="Img/logo.png">
 		
 			<nav><ul>
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="#">Golgotha Project Blog</a></li>
+				<li> <a href="#">Home</a></li>
+				<li class="active"><a href="GolgothaBlog.html">Golgotha Project Blog</a></li>
+				
 			</ul></nav>
 		
 		</header>
