@@ -184,7 +184,7 @@ border-color: #191970;
 .staticBlock h3 {
 	color: #666; 
 	padding: 10px 25px;
-	
+	height: 10px;
 }
 
 .staticBlock p {
