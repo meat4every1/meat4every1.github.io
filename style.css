@@ -179,7 +179,6 @@ border-color: #191970;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	height: auto;
 }
 
 .staticBlock h3 {
@@ -189,7 +188,7 @@ border-color: #191970;
 }
 
 .staticBlock p {
-	padding: 0px 25px ;
+	padding: 0px 25px 5px ;
 }
 
 .topContent {
