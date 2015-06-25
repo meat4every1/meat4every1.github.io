@@ -181,6 +181,11 @@ border-color: #191970;
 	-webkit-border-radius: 5px;
 }
 
+.staticBlock h3 {
+	height: auto;
+	width: 100%;
+}
+
 .topContent {
 	background-color: #000000;
 	border-radius:5px;
