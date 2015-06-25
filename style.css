@@ -80,6 +80,8 @@ a:hover, a:active {
 .accordion :target h3 + div {
         height: auto;
 		width: 100%;
+		text-align: justify;
+		text-justify: inter-word;
 }
 
 .accordion .section.large:target h3 + div {
