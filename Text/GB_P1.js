@@ -4,15 +4,15 @@ document.write("<p>\
 	</p>\
 	<div>\
 		<ul class="imgRow">\
-			<li><img title="Sven Front" src="Img/Golgotha Blog/P1_Plant.jpg"></li>\
-			<li><img title="Sven Back" src="Img/Golgotha Blog/P1_Cent.jpg"></li>\
+			<li><img title=\"Sven Front\" src=\"Img/Golgotha Blog/P1_Plant.jpg\"></li>\
+			<li><img title=\"Sven Back\" src=\"Img/Golgotha Blog/P1_Cent.jpg\"></li>\
 		</ul>\
 	</div>\
-	<img class="fullImage" src="Img/Golgotha Blog/P1_PC1.jpg">\
+	<img class=\"fullImage\" src=\"Img/Golgotha Blog/P1_PC1.jpg\">\
 	<div>\
-		<ul class="imgRow">
-			<li><img title="Sven Front" src="Img/Golgotha Blog/P1_PC2.jpg"></li>\
-			<li><img title="Sven Back" src="Img/Golgotha Blog/P1_Tent.jpg"></li>\
+		<ul class=\"imgRow\">
+			<li><img title=\"Sven Front\" src=\"Img/Golgotha Blog/P1_PC2.jpg\"></li>\
+			<li><img title=\"Sven Back\" src=\"Img/Golgotha Blog/P1_Tent.jpg\"></li>\
 		</ul>\
 	</div>\
 ");
