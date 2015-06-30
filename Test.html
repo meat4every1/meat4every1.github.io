@@ -8,14 +8,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		<p> this is my test page #13 </p>
+		<p> this is my test page #12 </p>
 		<script src="jquery.js"></script>
 		<script>
-					$(".text").load("Text/Test.txt", function(){
-						alert("Done Loading");
-					});
-				}); 
-			});
+			function myFunction() {
+				$("#h01").html("Hello jQuery");
+		}
+		$(document).ready(myFunction);
 		</script>
 		<p id="text"></p>
 	</body class="body">
