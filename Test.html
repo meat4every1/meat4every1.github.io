@@ -8,6 +8,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		<p> this is my test page #7 </p>
-		 <script  type="text/javascript" src="/Text/Test.js"></script>
+		<p> this is my test page #8 </p>
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#lesen").click(function() {
+					$(".text").load("Text/Test.txt", function(){
+						alert("Done Loading");
+					});
+				}); 
+			});
+		</script>
+		<p>post script</p>
 	</body class="body">
