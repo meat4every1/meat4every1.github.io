@@ -6,13 +6,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<p> this is my test page #13 </p>
+		<p> this is my test page #14 </p>
 		<script src="jquery.js"></script>
-		<script>
-		$("#h01").load("/Text/Test.txt");
-		</script>
+		
 	</head>
 	<body>
-		
+		<script>
+			function myFunction() {
+				$("#h01").load("Text/Test.txt");
+			}
+			$(document).ready(myFunction);
+		</script>
 		<p id="h01"></p>
 	</body class="body">
