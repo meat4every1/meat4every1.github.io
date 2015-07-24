@@ -8,8 +8,8 @@ body {
 	text-align:left;
 }
 footer{
-position: absolute;
-align:bottom;
+position: fixed;
+
 }
 
 a {
