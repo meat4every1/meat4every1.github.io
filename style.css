@@ -163,7 +163,8 @@ display: table-cell;
 }
 
 .cbImgRow img{
-Height: 100px;
+Height: 200px;
+width: 90%;
 vertical-align: top;
 border-radius: 3px;
 border-color: #191970;
