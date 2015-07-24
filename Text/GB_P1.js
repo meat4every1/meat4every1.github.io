@@ -1,5 +1,6 @@
 <!--
-document.write("<ul class=\"cbImgRow\">\
+document.write("<div>\
+		<ul class=\"cbImgRow\">\
 			<li><a class=\"P1_Gallery\" href= \"Img/Golgotha Blog/P1_Plant.jpg\"> <img title=\"Plant Monster\" src=\"Img/Golgotha Blog/P1_CBPlant.jpg\"> </a> </li>\
 			<li><a class=\"P1_Gallery\" href= \"Img/Golgotha Blog/P1_Cent.jpg\"> <img title=\"Sven Back\" src=\"Img/Golgotha Blog/P1_CBCent.jpg\"> </a> </li>\
 			<li><a class=\"P1_Gallery\" href= \"Img/Golgotha Blog/P1_PC1.jpg\"> <img class=\"fullImage\" src=\"Img/Golgotha Blog/P1_CBPC1.jpg\"> </a> </li>\
@@ -10,5 +11,6 @@ document.write("<ul class=\"cbImgRow\">\
 		<script>\
             jQuery(\"a.P1_Gallery\").colorbox({rel:\'P1_Gallery\', width:\"60%\", height:\"90%\"});\
         </script>\
+	</div>\
 ");
 -->
