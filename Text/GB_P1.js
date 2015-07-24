@@ -9,15 +9,8 @@ document.write("<p>At the onset there was a strong plan for our design philosoph
 			<li><a class=\"P1_Gallery\" href= \"Img/Golgotha Blog/P1_Tent.jpg\"><img title=\"Sven Back\" src=\"Img/Golgotha Blog/P1_Tent.jpg\"> </a> </li>\
 		</ul>\
 		<script>\
-            jQuery(\"a.P1_Gallery\").colorbox({rel:\'P1_Gallery\', width:\"75%\", height:\"75%\"});\
+            jQuery(\"a.P1_Gallery\").colorbox({rel:\'P1_Gallery\', width:\"60%\", height:\"90%\"});\
         </script>\
-	</div>\
-	<img class=\"fullImage\" src=\"Img/Golgotha Blog/P1_PC1.jpg\">\
-	<div>\
-		<ul class=\"imgRow\">\
-			<li><img title=\"Sven Front\" src=\"Img/Golgotha Blog/P1_PC2.jpg\"></li>\
-			<li><img title=\"Sven Back\" src=\"Img/Golgotha Blog/P1_Tent.jpg\"></li>\
-		</ul>\
 	</div>\
 ");
 -->
