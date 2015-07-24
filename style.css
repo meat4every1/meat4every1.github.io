@@ -141,6 +141,7 @@ background-color: #181818;
 
 }
 .GBvidScale {
+	margin: auto;
    position: relative;
     padding-bottom: 56.25%; /* 16/9 ratio */
     padding-top: 30px; /* IE6 workaround*/
@@ -151,7 +152,7 @@ background-color: #181818;
 .GBvidScale object,
 .GBvidScale embed {
  position: absolute;
- margin: auto;
+ 
     top: 0;
     left: 0;
 	height: 90%;
