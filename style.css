@@ -151,6 +151,7 @@ background-color: #181818;
 .GBvidScale object,
 .GBvidScale embed {
  position: absolute;
+ margin: auto;
     top: 0;
     left: 0;
 	height: 90%;
