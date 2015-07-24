@@ -154,7 +154,7 @@ width: 100%;
 }
 .cbImgRow{
 display: table;
-width: 100%;
+width: 90%;
 }
 
 .cbImgRow li {
@@ -164,7 +164,7 @@ display: table-cell;
 
 .cbImgRow img{
 
-
+width: 90%;
 vertical-align: top;
 border-radius: 3px;
 border-color: #191970;
