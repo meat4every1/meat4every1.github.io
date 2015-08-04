@@ -1,6 +1,1 @@
-<p> Project Golgotha is an ambitious independent game development project in the early stages of prototyping. The design ethos of this game are focused on procedural content development. The early project goals are focused on day one pipeline development to ensure that Golgotha can constantly and easily evolve and expand after a future launch.  Golgotha's first major milestone will be a small prototype that will be presented to the public as the centrepiece of a crowd funding presentation.
-<p>
-While it is too early to give an explanation of the specific gameplay intentions we have for Golgotha, we can say that the premise is heavily influenced by the Dark Souls and Binding of Isaac series.
-<p>
-If you have any interest in learning more or getting involved email me at iancwoskey@gmail.com
-						
+<p> My education and work have afforded me a broad skillset within digital media including but not limited to Web dev, animation, and game development. I am highly skilled in traditional and digital illustration, digital sculpture, and other artistic disciplines. I can create in a wide variety of styles to meet the needs of a given projects art direction. My focus is primarily on game character creation, from conception through creation and setup, to mechanics development and integration. I also have experience in interface design, shader writing, character fx, simulation, and game prototyping.				
