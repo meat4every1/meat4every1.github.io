@@ -73,7 +73,7 @@ Main components
   float: left;
   position: relative;
   left: -50%;
-  margin: 13px 0 0 5%;
+  width: 20%;
 }
 .cd-header #logo-fixer {
 float: left;
