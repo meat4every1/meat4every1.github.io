@@ -71,6 +71,8 @@ Main components
 }
 .cd-header #cd-logo {
   float: left;
+  position: relative;
+  left: -50%;
   margin: 13px 0 0 5%;
 }
 .cd-header #cd-logo img {
