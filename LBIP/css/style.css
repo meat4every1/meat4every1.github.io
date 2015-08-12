@@ -75,12 +75,13 @@ Main components
   left: -50%;
 }
 .cd-header #cd-logo img {
-width:20%;
+width:100%;
 }
 .cd-header #logo-fixer {
 float: left;
 position: relative;
 left: 50%;
+width: 20%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -88,7 +89,7 @@ left: 50%;
     height: 70px;
   }
   .cd-header #cd-logo img{
-	width:20%;
+	width:100%;
   }
 }
 
