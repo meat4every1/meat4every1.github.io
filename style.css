@@ -25,7 +25,7 @@ a:hover, a:active {
 }
 #center {
 	z-index: -1;
-	position: absolute;
+	position: fixed;
 	background-image: url("Img/UI/BG_center.png");
 	background-repeat: repeat-y;
 	background-size: 100%;
