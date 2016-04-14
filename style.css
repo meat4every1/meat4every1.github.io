@@ -1,8 +1,8 @@
 body {
 	background-image: url('Img/bg.png');
-	background-color: #404040; 
+	background-color: #404040;
 	color: #666666;
-	font-size: 87.5%; 
+	font-size: 87.5%;
 	font-family: Ariel, 'Lucida Sans Unicode';
 	line-height: 1.5;
 	text-align:left;
@@ -17,17 +17,27 @@ a:link, a:visited {
 a:hover, a:active {
 }
 
-.body {
+#body {
 	margin: 0 auto;
 	width: 70%;
+	height: 100%;
 	clear: both;
+}
+#center {
+	z-index: -1;
+	position: fixed;
+	background-color: #4a44be;
+	opacity: 0.5;
+	align-self:
+	width: 70%;
+	height: 100%;
 }
 
 .mainHeader img{
 	width: 100%;
 	height: auto;
 	margin: 2% 0;
-	
+
 }
 
 .mainHeader nav{
@@ -54,10 +64,10 @@ a:hover, a:active {
 	padding: 10px 25px;
 	height: 20px;
 	}
-	
-.mainHeader nav a:hover, .mainHeader nav a:active , 
+
+.mainHeader nav a:hover, .mainHeader nav a:active ,
 .mainHeader nav.active a:link, .mainHeader nav .active a:visited {
-	background-color: #181818; 
+	background-color: #181818;
 	color: #660099; /*colors top nav links*/
 }
 
@@ -98,7 +108,7 @@ a:hover, a:active {
 }
 /*accordion link header link styling*/
 .mainContent h3 a:link, .mainContent h3 a:visited {
-	color: #666; 
+	color: #666;
 	display: inline-block;
 	padding: 10px 25px;
 	height: 20px;
@@ -106,7 +116,7 @@ a:hover, a:active {
 
 .mainContent h3 a:hover, .mainContent h3 a:active,
 .mainContent h3 .active a:link, .mainContent h3 .active a:visited {
-background-color: #181818; 
+background-color: #181818;
 	color: #660099;
 }
 
@@ -152,12 +162,12 @@ background-color: #181818;
 .GBvidScale object,
 .GBvidScale embed {
  position: absolute;
- 
+
     top: 0;
     left: 0;
 	height: 100%;
     width: 100%;
-	
+
 
 }
 
@@ -169,7 +179,7 @@ height: 100px;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-right: 10px;
-}	
+}
 .fullImage{
 width: 100%;
 }
@@ -221,7 +231,7 @@ border-color: #191970;
 }
 
 .staticBlock h3 {
-	color: #666; 
+	color: #666;
 	padding: 10px 25px;
 	height: 10px;
 }
@@ -253,12 +263,3 @@ margin-top: 10px;
 padding: 2% 3%;
 display:inline;
 }
-
-
-
-
-	
-	
-	
-	
-	

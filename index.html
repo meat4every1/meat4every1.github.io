@@ -7,48 +7,57 @@
 		<link  rel="stylesheet" href="style.css" type="text/css" />
 		<link rel="stylesheet" href="colorbox.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<script type="text/javascript">
 	function layoutShift() {
 		var sideToggle = document.getElementById("sidebar");
-		var bodyToggle = document.getElementById("content");
+		var contentToggle = document.getElementById("content");
+		var bodyToggle = document.getElementById("body");
+		var centerToggle = document.getElementById('center')
+		console.log(bodyToggle[0] +"this is body toggle");
 		if((window.innerWidth < 1000)){
 			sideToggle.style.display = "none";
-			bodyToggle.style.width = "100%"
+			contentToggle.style.width = "100%";
+			bodyToggle.style.width = "90%";
+			centerToggle.style.width ="90%";
 		}
 		else{
 			sideToggle.style.display = "inline";
+			contentToggle.style.width = "70%";
 			bodyToggle.style.width = "70%";
+			centerToggle.style.width ="70%";
 		}
 	}
 	window.onresize = layoutShift;
 	window.onload = layoutShift;
 	layoutShift();
 	</script>
-	
+
 	<script src="jquery.js"></script>
 	<script src="jquery.colorbox-min.js"></script>
 
 	</head>
-	
-	<body class="body">
-	 
+
+	<body id="body">
+
 		<header class="mainHeader">
+			<div id="center">
+			</div>
 			<img src="Img/logo.png">
-		
+
 			<nav><ul>
 				<li class="active"> <a href="#">Portfolio</a></li>
 				<li><a href="GolgothaBlog.html">Golgotha Project Blog</a></li>
 				<li><a href="Meat4every1.html">meat4every1.tv</a></li>
-				
+
 			</ul></nav>
-		
+
 		</header>
-		
+
 		<div class="mainContent">
 			<div class="accordion">
 				<div id="content">
-				
+
 				<!--SECTION_Souls-->
 					<div id="SOULS" class="section">
 						<a href="#SOULS" title="Meat4every Twitch Channel (2015)"><img class="imgC" src="Img/Phead_Souls.png"></a>
@@ -56,7 +65,7 @@
 							<h3>
 								<a href="#SOULS" title="Sven">Chibi Souls Series :3 (2016)</a>
 							</h3>
-							
+
 							<div><!--Accordian Div-->
 								<script type"text/javascript" src="/Text/Port_Gal_Souls.js"></script>
 								<div>
@@ -65,7 +74,7 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 				<!--SECTION_Derp Wars-->
 					<div id="DWS" class="section">
 						<a href="#DWS" title="Derp Wars"><img class="imgC" src="Img/Phead_DerpWars.png"></a>
@@ -73,7 +82,7 @@
 							<h3>
 								<a href="#DWS" title="Sven">Derp Wars (2015)</a>
 							</h3>
-							
+
 							<div><!--Accordian Div-->
 								<div class="vidScale">
 								<iframe  src="https://www.youtube.com/embed/a1814v8gHYc" frameborder="0" allowfullscreen></iframe>
@@ -84,7 +93,7 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 				<!--SECTION_Rakashasa-->
 					<div id="ROR" class="section">
 						<a href="#ROR" title="Rise of Rakshasa (2015)"><img class="imgC" src="Img/Phead_ROR.png"></a>
@@ -92,7 +101,7 @@
 							<h3>
 								<a href="#ROR" title="Sven">Rise of Rakshasa (2015)</a>
 							</h3>
-							
+
 							<div><!--Accordian Div-->
 							<div>pand pooples</div>
 								<script type"text/javascript" src="/Text/Port_Gal_ROR.js"></script>
@@ -102,7 +111,7 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 				<!--SECTION_M4E1-->
 					<div id="M4E1" class="section">
 						<a href="#M4E1" title="Meat4every Twitch Channel (2015)"><img class="imgC" src="Img/Phead_M4E1.png"></a>
@@ -110,7 +119,7 @@
 							<h3>
 								<a href="#M4E1" title="Sven">Meat4every Twitch Channel (2015)</a>
 							</h3>
-							
+
 							<div><!--Accordian Div-->
 								<div>
 									<a href="Meat4every1.html">meat4every1.tv</a>
@@ -118,13 +127,13 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 				<!--Art Commissions-->
 					<div id="ARTCOM2015" class="section">
 					<a href="#ARTCOM2015" title="Art Commissions"><img class="imgC" src="Img/Phead_ACOM.png"></a>
 					<article class="topContent">
 						<h3>
-							<a href="#ARTCOM2015" title="Art Commissions">2015 Art Commissions</a>	
+							<a href="#ARTCOM2015" title="Art Commissions">2015 Art Commissions</a>
 						</h3>
 						<div><!--Accordian Div-->
 							<div>
@@ -132,18 +141,18 @@
 							</div>
 							<a href="http://imgur.com/IbLYPNt" title="Portrait" target="_blank"><img class="fullImage" src="Img/Content Posts/ACOM_MH_Portrait.png"></a>
 							<a href="http://imgur.com/IG6M3tt" title="Logo" target="_blank"><img class="fullImage" src="Img/Content Posts/ACOM_MH_logo.png"></a>
-							
-							
+
+
 						</div><!--Accordian Div-->
 					</article>
 					</div>
-					
+
 				<!--SECTION_UNSEELY_SECRETS-->
 					<div id="UNSEELY" class="section">
 					<a href="#UNSEELY" title="Unseely Secrets"><img class="imgC" src="Img/Phead_US_V01.png"></a>
 					<article class="topContent">
 						<h3>
-							<a href="#UNSEELY" title="Unseely Secrets">Pathfinder 3rd Party Expansion Illustrator (Ongoing)</a>	
+							<a href="#UNSEELY" title="Unseely Secrets">Pathfinder 3rd Party Expansion Illustrator (Ongoing)</a>
 						</h3>
 						<div><!--Accordian Div-->
 							<div>
@@ -154,9 +163,9 @@
 							<img class="fullImage" src="Img/Content Posts/US_Enspiriter_Work.png">
 							<img class="fullImage" src="Img/Content Posts/US_Goblin_2_Work.png">
 							<img class="fullImage" src="Img/Content Posts/US_Goblin_1_Work.png">
-							
+
 						</div><!--Accordian Div-->
-						
+
 					</article>
 					</div>
 				<!--SECTION_ForcefullFalcion-->
@@ -164,7 +173,7 @@
 					<a href="#FORCEFULFALCON" title="ForcefulFalcon"><img class="imgC" src="Img/Phead_FF_V01.png"></a>
 					<article class="topContent">
 						<h3>
-							<a href="#FORCEFULFALCON" title="ForcefulFalcon">Forceful Falcon Brand Design (Ongoing)</a>	
+							<a href="#FORCEFULFALCON" title="ForcefulFalcon">Forceful Falcon Brand Design (Ongoing)</a>
 						</h3>
 						<div><!--Accordian Div-->
 							<div>
@@ -175,11 +184,11 @@
 							<img class="fullImage" src="Img/Content Posts/FF_WorkNProg.png">
 							<div>
 								<p>
-								This image was requested as the centerpeice for the ForcefulFalcon Youtube banner. A complex and detailed painting requiring the 
-								designing of a version of Katie as a MOBA ranger type character.   
-								</p>	
+								This image was requested as the centerpeice for the ForcefulFalcon Youtube banner. A complex and detailed painting requiring the
+								designing of a version of Katie as a MOBA ranger type character.
+								</p>
 							</div>
-							
+
 							<img class="fullImage" src="Img/Content Posts/FF_Work_Zombie.png">
 							<div>
 								<p>
@@ -194,28 +203,28 @@
 								</p>
 							</div>
 						</div><!--Accordian Div-->
-						
+
 					</article>
 					</div>
-					
+
 					<!--SECTION_DOTA2CENTUAR-->
 					<div id="CENTAUR" class="section">
 					<a href="#CENTAUR" title="centaur"><img class="imgC" src="Img/Phead_CT_V01.png"></a>
 					<article class="topContent">
 						<h3>
-							<a href="#CENTAUR" title="Centaur">Dota 2 Set: Centaur Warrunner (Ongoing)</a>	
+							<a href="#CENTAUR" title="Centaur">Dota 2 Set: Centaur Warrunner (Ongoing)</a>
 						</h3>
 						<div><!--Accordian Div-->
 							A Work In Progress put on hiatus recently because of an influx of commissions.
 							<img class="fullImage" src="Img/Content Posts/CT_Work_01.png">
 							<img class="fullImage" src="Img/Content Posts/CT_Work_02.png">
 							<img class="fullImage" src="Img/Content Posts/CT_Work_03.png">
-							
+
 						</div><!--Accordian Div-->
-						
+
 					</article>
 					</div>
-				
+
 				<!--SECTION_Shadow_Demon-->
 					<div id="SHADOWDEMON" class="section">
 						<a href="#SHADOWDEMON" title="Shadow Demon"><img class="imgC" src="Img/Phead_SD_V01.png"></a>
@@ -236,7 +245,7 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-				
+
 				<!--SECTION_Sketchbook_Selections-->
 					<div id="SKETCHBOOK2014" class="section">
 						<a href="#SKETCHBOOK2014" title="Sketchbook 2011-2014"><img class="imgC" src="Img/Phead_Sketch_11_14.png"></a>
@@ -249,7 +258,7 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 				<!--SECTION_Sven-->
 					<div id="SVEN" class="section">
 						<a href="#SVEN" title="Sven"><img class="imgC" src="Img/SvenPostHead.png"></a>
@@ -257,7 +266,7 @@
 							<h3>
 								<a href="#SVEN" title="Sven">Dota 2 Set: Sven (2014)</a>
 							</h3>
-							
+
 							<div><!--Accordian Div-->
 								<div class="vidScale">
 									<iframe src="https://www.youtube.com/embed/CUGw2p8s9zg" frameborder="0" allowfullscreen></iframe>
@@ -283,8 +292,8 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
-				<!--SECTION_LoL_Art-->	
+
+				<!--SECTION_LoL_Art-->
 					<div id="LOLART" class="section">
 						<a href="#LOLART" title="lol art"><img class="imgC" src="Img/pHead_Aatrox.png"></a>
 						<article class="topContent">
@@ -295,14 +304,14 @@
 								<div>
 									<p>Created over the course of a 14 consecutive hour illustration competition.</p>
 								</div>
-								<a href="http://imgur.com/D9Wi5rt"><img class="fullImage" src="http://i.imgur.com/D9Wi5rt.png" title="Hosted by imgur.com"/></a>	
-								
+								<a href="http://imgur.com/D9Wi5rt"><img class="fullImage" src="http://i.imgur.com/D9Wi5rt.png" title="Hosted by imgur.com"/></a>
+
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-				
+
 				<!--SECTION_Dead_End-->
-					<div id="DEADEND" class="section">	
+					<div id="DEADEND" class="section">
 						<a href="#DEADEND" title="Dead End"><img class="imgC" src="Img/Phead_DE.png"></a>
 						<article class="topContent">
 							<h3>
@@ -320,12 +329,12 @@
 								The creation of this project was documented in this <a href="">developement blog</a>
 								</p>
 								<p>
-								The project portion of my Master's Thesis at Drexel University, Dead End was a ~15 minute survival horror game, developed over the course of 4 Months. All aspects of this game, code, art, etc. were created by myself during this period. The one exception to this was the in engine video recording plugin AVPRO Movie Capture generously donated by RenderHeads. </p> 
+								The project portion of my Master's Thesis at Drexel University, Dead End was a ~15 minute survival horror game, developed over the course of 4 Months. All aspects of this game, code, art, etc. were created by myself during this period. The one exception to this was the in engine video recording plugin AVPRO Movie Capture generously donated by RenderHeads. </p>
 
 								<p>The Purpose of my thesis was to test two hypothesis. The first, that the externally displayed emotions of a Player Character (PC) in a third person perspective horror game would influence the emotional state of the player during the course of gameplay. The second, that this emotional shift would impact player performance. 40 students at Drexel University were tested. They were split into 2 groups. In one group the PC was animated to express fear. The other group used a PC animated to express confidence. The results were collected through metrics culled directly from gameplay, and post play session interviews. The metrics, compared between the two groups showed no statistically significant difference in performance between the two groups. The interviews however showed that players viewed the experience and their performance differently between the two groups, the fear group favoring negative accounts and the confident group favoring positive accounts.
 
 								</p>
-								
+
 								</div>
 								<div class="vidScale">
 									<iframe src="//www.youtube.com/embed/5BeYkkgaeX4" frameborder="0" allowfullscreen></iframe>
@@ -333,7 +342,7 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 				<!--SECTION_Bugs-->
 					<div id="BUGS" class="section">
 						<a href="#BUGS" title="Bugs"><img class="imgC" src="Img/Phead_Bugz.png"></a>
@@ -342,7 +351,7 @@
 								<a href="#BUGS" title="Bugs">Unity 3D Swarm Simulation (2013)</a>
 							</h3>
 							<div><!--Accordian Div-->
-							
+
 								<div class="vidScale">
 									<iframe src="//www.youtube.com/embed/pybu0QhtKU0" frameborder="0" allowfullscreen></iframe>
 								</div>
@@ -357,7 +366,7 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 				<!--SECTION_Necromancer-->
 					<div id="NECRO" class="section">
 						<a href="#NECRO" title="four"><img class="imgC" src="Img/Phead_Necro.png"></a>
@@ -376,12 +385,12 @@
 								<p>
 								I developed this project simultaneously with my Master's Thesis, Dead End. It was created over the course of a ten week term as the final submission for my graduate compositing course at Drexel University. A layered fully realized Photoshop painting was split and projected onto relatively simple geometry to produce the scene and character. I modeled this geometry to match the images, then rigged and animated the character.  The animated scene in maya was imported and assembled in nuke for a final render. At some point I want to take another stab at this kind of composition in a game engine.
 								</p>
-								
+
 								</div>
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 				<!--SECTION_Operation_Dino-->
 					<div id="DINO" class="section">
 						<a href="#DINO" title="six"><img class="imgC" src="Img/Phead_Op_Dino.png"></a>
@@ -404,7 +413,7 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 					<!--DMM-->
 					<div id="DMM" class="section">
 						<a href="#DMM" title="six"><img class="imgC" src="Img/Phead_DMM.png"></a>
@@ -414,7 +423,7 @@
 							</h3>
 							<div><!--Accordian Div-->
 							<div class="vidScale">
-								<iframe src="//player.vimeo.com/video/40922676" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+								<iframe src="//player.vimeo.com/video/40922676" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 							</div>
 							<div class="vidScale">
 								<iframe src="//player.vimeo.com/video/40929205" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -423,7 +432,7 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 						<!--cassie-->
 					<div id="DP2012" class="section">
 						<a href="#DP2012" title="six"><img class="imgC" src="Img/Phead_cas.png"></a>
@@ -446,12 +455,12 @@
 									<iframe src="//player.vimeo.com/video/36682086" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 								</div>
 								<div class="vidScale">
-									<iframe src="//player.vimeo.com/video/37581538" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+									<iframe src="//player.vimeo.com/video/37581538" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 								</div>
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-				
+
 				<!--SECTION_Epic_Defense-->
 					<div id="EPIC" class="section">
 						<a href="#EPIC" title="Epic"><img class="imgC" src="Img/Phead_ED.png"></a>
@@ -472,7 +481,7 @@
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 				<!--SECTION_College_Cg_Animations-->
 					<div id="BARGAIN" class="section">
 						<a href="#BARGAIN" title="six"><img class="imgC" src="Img/Phead_Old_Dude.png"></a>
@@ -489,7 +498,7 @@
 									<img class="fullImage" src="Img/Content Posts/OldManRig.PNG">
 								</div>
 								<p>My first facial rig, created over the course of 10 weeks for my Character Animation II course at Drexel University. The character was modeled in Zbrush, rigged and animated and rendered in Maya, then composited in nuke. </p>
-								
+
 							</div><!--Accordian Div-->
 						</article>
 					</div>
@@ -502,17 +511,17 @@
 							</h3>
 							<div><!--Accordian Div-->
 								<div class="vidScale">
-									<iframe src="//player.vimeo.com/video/17614668" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+									<iframe src="//player.vimeo.com/video/17614668" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 								</div>
 								<div>
 								<p>An animation created over the course of 5 weeks for my Character Animation I course at Drexel University.  The rigs for this animation were provided by our professor for this course.  Disappointed by missing out on a chance to create a new character, not satisfied with the provided rig, and being the only person i know who enjoys weight painting, i ripped the character off of the rig, fashioned the feminine curves, added and rigged her hair, and rebound her to the rig. Over the course of this project I was responsible for camera work, lighting, the females characters animations, and a portion of the background assets.
 								</p?
 								</div>
-								
+
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 					<!--starflies-->
 					<div id="starFlies" class="section">
 						<a href="#starFlies" title="six"><img class="imgC" src="Img/Phead_StarFlies.png"></a>
@@ -526,13 +535,13 @@
 								</div>
 								<div>
 								<p>A three person project created over the course of the final 5 weeks of a VFX course at Drexel University. I was responsible for the modelling and texturing of the Tree and Character. I rigged the character which included 3 stretchy spline rigs. I also animated him for the short.</p>
-									
+
 								</div>
-								
+
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-					
+
 					<!--Vody-->
 					<div id="Vody" class="section">
 						<a href="#Vody" title="six"><img class="imgC" src="Img/Phead_Vody.png"></a>
@@ -542,22 +551,22 @@
 							</h3>
 							<div><!--Accordian Div-->
 								<div class="vidScale">
-									<iframe src="//player.vimeo.com/video/12482990" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+									<iframe src="//player.vimeo.com/video/12482990" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 								</div>
 								<div>
 									<p> my first complex character rig. This project was produced over the course of 5 weeks during my Animation II course at Drexel University. Considering the time restrictions, and my inexperience at the time, I am still very happy with the outcome, though it is not perfect. Having only only basic experience whith rigging, i created a spline rig for the characters spine and a complex multijointed, milti IK, leg, that sadly is barely seen in the video. I learned a lot about how to prioritize on an animation project.
 							</div><!--Accordian Div-->
 						</article>
 					</div>
-				<!--end final post--->	
+				<!--end final post--->
 						<footer>
 			<p>Copyright Ian Woskey 2016 ver: 44</p>
 		</footer>
 				</div>
-		
+
 			</div>
-			
-		</div>
+
+
 	<!--SIDEBAR-->
 		<aside id = "sidebar">
 			<article>
@@ -573,7 +582,7 @@
 				<h2>Middle SideBar Title</h2>
 				<p>sideBar Content</p>
 				<p>
-					Cat Form specializes in bleeding the target. 
+					Cat Form specializes in bleeding the target.
 					</p>
 			</article>
 		</aside>
@@ -587,7 +596,6 @@
 			</article>
 		</aside>
 		-->
-		
-	 
-	</body> 
+
+	</body>
 </html>
