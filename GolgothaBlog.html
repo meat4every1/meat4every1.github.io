@@ -9,18 +9,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<script type="text/javascript">
-	function layoutShift() {
-		var sideToggle = document.getElementById("sidebar");
-		var bodyToggle = document.getElementById("content");
-		if((window.innerWidth < 1000)){
-			sideToggle.style.display = "none";
-			bodyToggle.style.width = "100%";
-		}
-		else{
-			sideToggle.style.display = "inline";
-			bodyToggle.style.width = "70%";
-		}
-	}
+
+    function layoutShift() {
+  		var sideToggle = document.getElementById("sidebar");
+  		var contentToggle = document.getElementById("content");
+  		var bodyToggle = document.getElementById("body");
+  		var centerToggle = document.getElementById('center')
+  		console.log(bodyToggle[0] +"this is body toggle");
+  		if((window.innerWidth < 1000)){
+  			sideToggle.style.display = "none";
+  			contentToggle.style.width = "100%";
+  			bodyToggle.style.width = "90%";
+  			centerToggle.style.width ="90%";
+  		}
+  		else{
+  			sideToggle.style.display = "inline";
+  			contentToggle.style.width = "70%";
+  			bodyToggle.style.width = "70%";
+  			centerToggle.style.width ="70%";
+  		}
+  	}
 	window.onresize = layoutShift;
 	window.onload = layoutShift;
 	layoutShift();
@@ -29,7 +37,13 @@
 	<script src="jquery.colorbox-min.js"></script>
 	</head>
 
-	<body class="body">
+	<body id="body">
+    <div id="center">
+      <div id="ledge">
+      </div>
+      <div id="redge">
+      </div>
+    </div>
 	<script>
 			function myFunction() {
 				$("#About") .load("Text/AboutGB.txt");
@@ -39,6 +53,7 @@
 		</script>
 
 		<header class="mainHeader">
+
 			<img src="Img/logo.png">
 
 			<nav><ul>
