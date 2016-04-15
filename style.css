@@ -252,6 +252,8 @@ border-color: #191970;
 
 .staticBlock {
 	background-color: #000000;
+	margin-top:10px;
+padding: 25px 5%;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -279,14 +281,52 @@ border-color: #191970;
 }
 
 #sidebar{
-width: 21%;
+width: 23%;
 float: left;
 background-color: #000000;
 border-radius:5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
-margin-left: 3%;
+margin-left: 1%;
 margin-top: 10px;
+
 padding: 2% 3%;
 display:inline;
+}
+#sidebar iframe {
+	position: relative;
+	border: none;
+
+	width: 110%;
+	left: -5%;
+}
+
+#follow {
+	width: 110%;
+	left: -5%;
+	height: 30px;
+	border: none;
+	position: relative;
+	background-color: #2b2b2b;
+	top: -10px;
+	line-height:20px;
+	border-radius:5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#follow p {
+	padding-top: 5px;
+	color: #b09bdd;
+	font-weight: bold;
+	font-size: 20;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#follow:hover {
+	background-color: #181818;
+}
+
+#follow:hover p{
+		color: #660099;
 }
