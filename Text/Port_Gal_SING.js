@@ -5,22 +5,30 @@ document.write("\
 		</p>\
 	<p>During this exploratory prototyping phase we developed aspects of the UI and game world to functional completion, and created a robust plan for required development. Upon reaching this point we felt we had a full understanding of the project's complexity and requirements. Analyzing the needs of the project, the timeline of development to this point, and the expected timeline for prototype completion, we decided that our development goals would be better served by redirecting towards a smaller scale project.  We have high hopes for the future of Singularity, and fully intend to reexamine it if and when we have more resources we can leverage to address development concerns.  We have since redirected our efforts towards serialized storytelling in our new Webcomic, and plan to do another small scale game prototype focused on pipeline design.\
 	</p<\
+
+	<div></div>\
+
 	<p>Concept art at early stage of development, showing the hub character that represents the player, the expected game world style, and plans for coding interface.</p>\
 	<ul class=\"cbImgRow\">\
 		<a class=\"SING_Gallery\" href=\"Img/Content Posts/SI1_UI.png\"> <img title=\"SI1\" src=\"Img/Content Posts/SI1_CBUI.png\"> </a>\
 	</ul>\
+
 	<p>Concept art depicting the planned aesthetics for fog of war in Singularity.  Fog of war would allow us make sure every puzzle contained at least 2 phases, discovery and action.</p>\
 	<ul class=\"cbImgRow\">\
 		<a class=\"SING_Gallery\" href=\"Img/Content Posts/SI2_FW.png\"> <img title=\"SI2\" src=\"Img/Content Posts/SI2_CBFW.png\"> </a>\
 	</ul>\
+
+<p>This Image shows the interface at the end of prototyping. Players could Move code chunks to up to 5 scalable windows, edit that code, print the code into the console, and close coding windows to clear their contents.</p>\
+	<ul class=\"cbImgRow\">\
+		<li><a class=\"SING_Gallery\" href=\"Img/Content Posts/ROR2_Portion.png\"> <img title=\"PC1\" src=\"Img/Content Posts/ROR2_CBPortion.png\"> </a> </li>\
+		 </ul>\
+
+<p>Images of in game sprites, and the subsequent assembly and animation.</p>\
 		<ul class=\"cbImgRow\">\
-			<li><a class=\"ROR_Gallery\" href=\"Img/Content Posts/ROR2_Portion.png\"> <img title=\"PC1\" src=\"Img/Content Posts/ROR2_CBPortion.png\"> </a> </li>\
-			<li><a class=\"ROR_Gallery\" href=\"Img/Content Posts/ROR3_Axe.png\"> <img title=\"PC1\" src=\"Img/Content Posts/ROR3_CBAxe.png\"> </a> </li>\
-			<li><a class=\"ROR_Gallery\" href=\"Img/Content Posts/ROR4_Face.png\"> <img title=\"PC1\" src=\"Img/Content Posts/ROR4_CBFace.png\"> </a> </li>\
-			<li><a class=\"ROR_Gallery\" href=\"Img/Content Posts/ROR5_Fire.png\"> <img title=\"PC1\" src=\"Img/Content Posts/ROR5_CBFire.png\"> </a> </li>\
+			<li><a class=\"SING_Gallery\" href=\"Img/Content Posts/ROR2_Portion.png\"> <img title=\"PC1\" src=\"Img/Content Posts/ROR2_CBPortion.png\"> </a> </li>\
 			 </ul>\
 		<p></p>\
-		<script>jQuery(\"a.ROR_Gallery\").colorbox({rel:\'ROR_Gallery\', width:\"60%\", height:\"90%\"});</script>\
+		<script>jQuery(\"a.SING_Gallery\").colorbox({rel:\'SING_Gallery\', width:\"60%\", height:\"90%\"});</script>\
 	</div>\
 ");
 -->

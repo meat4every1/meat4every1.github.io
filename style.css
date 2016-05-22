@@ -281,29 +281,38 @@ padding: 25px 5%;
 }
 
 #sidebar{
-width: 23%;
-float: left;
-background-color: #000000;
-border-radius:5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-margin-left: 1%;
-margin-top: 10px;
-
-padding: 2% 3%;
-display:inline;
+	width: 29%;
+	float: left;
+	display:inline;
+	margin-top: 10px;
+	margin-left: 1%;
 }
-#sidebar iframe {
-	position: relative;
-	border: none;
+#sidebar article {
+	padding-top: 10px;
+	background-color: #000000;
+	border-radius:5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-bottom: 15px;
+}
 
-	width: 110%;
-	left: -5%;
+#sidebar div {
+	position:relative;
+	width: 90%;
+	left: 5%;
+		padding-bottom: 15px;
+}
+
+
+#chunker {
+	position: relative;
+	height: 64px;
+	width: 90%;
+	left: 5%;
 }
 
 #follow {
-	width: 110%;
-	left: -5%;
+	padding-bottom: 0px !important;
 	height: 30px;
 	border: none;
 	position: relative;
@@ -321,6 +330,7 @@ display:inline;
 	font-size: 20;
 	text-align: center;
 	vertical-align: middle;
+
 }
 
 #follow:hover {
