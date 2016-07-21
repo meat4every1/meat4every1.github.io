@@ -157,7 +157,14 @@ background-color: #181818;
 .mainContent h3 p {
 	display: inline;
 }
-
+.mainContent p a:link{
+	color: #660099;
+	font-weight:bold;
+}
+.mainContent p a:hover{
+	color: #777;
+	font-weight: bold;
+}
 
 
 .vidScale {
@@ -226,6 +233,15 @@ width: 90%;
 vertical-align: top;
 border-radius: 3px;
 border-color: #191970;
+}
+.cbImgCol{
+	display:block;
+	list-style-type: none;
+}
+
+.cbImgCol img{
+	width: 90%;
+	margin: 0 auto;
 }
 .imgRow{
 display: table;
