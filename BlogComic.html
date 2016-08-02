@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>IanCW: Golgotha Blog</title>
+		<meta charset="utf-8" />
+		<link  rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" href="colorbox.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript">
+
+    function layoutShift() {
+  		var sideToggle = document.getElementById("sidebar");
+  		var contentToggle = document.getElementById("content");
+  		var bodyToggle = document.getElementById("body");
+  		var centerToggle = document.getElementById('center');
+  		console.log(bodyToggle[0] +"this is body toggle");
+  		if((window.innerWidth < 1000)){
+  			sideToggle.style.display = "none";
+  			contentToggle.style.width = "100%";
+  			bodyToggle.style.width = "90%";
+  			centerToggle.style.width ="90%";
+  		}
+  		else{
+  			sideToggle.style.display = "inline";
+  			contentToggle.style.width = "70%";
+  			bodyToggle.style.width = "70%";
+  			centerToggle.style.width ="70%";
+  		}
+  	}
+	window.onresize = layoutShift;
+	window.onload = layoutShift;
+	layoutShift();
+	</script>
+	<script src="jquery.js"></script>
+	<script src="jquery.colorbox-min.js"></script>
+	</head>
+
+	<body id="body">
+    <div id="center">
+      <div id="ledge">
+      </div>
+      <div id="redge">
+      </div>
+    </div>
+	<script>
+			function myFunction() {
+				$("#About") .load("Text/AboutGB.txt");
+				$("#P8").load("Text/P008.txt");
+			}
+			$(document).ready(myFunction);
+		</script>
+
+		<header class="mainHeader">
+
+			<img src="Img/logo.png">
+
+			<nav><ul>
+				<li><a href="index.html">Portfolio</a></li>
+				<li class="active"><a href="#">Golgotha Project Blog</a></li>
+				<li><a href="Meat4every1.html">meat4every1.tv</a></li>
+			</ul></nav>
+
+		</header>
+
+		<div class="mainContent">
+				<div id="content"> <!-- Start Content -->
+					<div class="staticBlock">
+
+						<h3>Proof of Concept Strips</h3>
+						<ul class="cbImgCol">
+							<li>	<a class="COMIC_Gallery" href="Img/Content Posts/comic_P1.png"> <img title="P1" src="Img/Content Posts/comic_CBP1.jpg"> </a> </li>
+							<li>	<a class="COMIC_Gallery" href="Img/Content Posts/comic_P2.png"> <img title="P2" src="Img/Content Posts/comic_CBP2.jpg"> </a> </li>
+						</ul>
+						<script>jQuery("a.COMIC_Gallery").colorbox({rel:'COMIC_Gallery', width:"140%"});</script>
+						<p>
+							With 2 solid character ideas forming in my head (Mae and Tim) and some good long term story planning coming together on paper, I decided it was time to crunch through some concrete planning on visual style and production pipeline. This was an exploratory project meant to both assess the viability of producing high quality imagery at the required pace and building a vocabulary of image creation techniques.  To this end I came up with a non sequitur 2 strip mini gag that I felt captured the characters enough to produce compelling images. This story also took place in a single simple environment from a limited set of angles, allowing me to focus on the characters, building techniques for creating surface tones and values for these fairly complex characters at pace.
+						</p>
+						<p>
+							My normal modus operandi for image creation up until this point had been to produce very detailed compositions that took many sessions to complete. This approach has produced powerful images that i am certainly proud of (links) but there is no way to apply that approach to a webcomic. I Produced Derp wars (link) from start to finish in a span of 16 days last December. During development I would sometimes producing up to five characters in a single evening meat4every1 show. I began to realize the necessity and benefits of standardized approaches to image creation. Derp Wars began to bring to my attention that I could rapidly produce images by establishing a streamlined technique and creatively applying it; at this point I began thinking about producing serialized art.  With this in mind I have begun the process of letting go of detail, maintaining the kind creative patience that allows me to form and implement thought out techniques, while avoiding the kind of attention to detail that leads to overworked images, and masks itself as patience.
+						</p>
+						<p>
+							The two strips at the top of this post were produced for this proof of concept. Instead of going through the project entirely chronologically, we will be examining  the differences of techniques between the first and second strip, to better understand the evolving technique.
+						</p>
+						<p>
+							Previsualization and Line art came easy in the first Strip. I had been building up the overarching story and this short gag strip for a few weeks and had surprisingly concrete imagery of characters, expressions and setting in my head.  After producing 2 strips I’m not sure if there is a way to bring more efficiency into the process of developing the line art. The line art winds up being the most important part of any strip. It sets the scene, angle, expressions, pacing etc. for every strip. The more laborious processes of coloring/texturing and lighting has much less impact on the quality of the image. Even the atmosphere of each panel, at least to my eyes and inner visualization, derives more from line and layout than texture or lighting.
+						</p>
+					</div>
+
+
+				<!--sample acccordian
+
+					<div id="Post1" class="section">
+						<a href="#Post1" title="six"><img class="imgC" src="Img/Phead_Vody.png"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#Post1" title="Post1">Early Concept Art (2013-2014)</a>
+							</h3>
+							<div>
+								 <script  type="text/javascript" src="/Text/GB_P1.js"></script>
+
+							</div>
+						</article>
+					</div>-->
+				<footer>
+			<p>Copyright Ian Woskey 2016</p>
+			</footer>
+				</div> <!--End Content-->
+
+
+	<!--SIDEBAR-->
+	<aside id = "sidebar" style="padding-bottom:1%;">
+		<article>
+				<iframe id = "chunker" src="http://streambadge.com/twitch/dark/meat4every1/" style = "height: 64px;"></iframe>
+			<a href="https://www.twitch.tv/meat4every1">
+				<div id="follow">
+					<p>Follow me on Twitch!</p>
+				</div>
+			</a>
+		</article>
+		<article>
+			<div>
+				<h2>Ian C. Woskey</h2>
+				<p>iancwoskey@gmail.com</p>
+				<p>Digital Media Bs/Ms</p>
+				<p>Drexel University</p>
+			</div>
+		</article>
+	</aside>
+</div>
+
+
+
+	</body>
+</html>
