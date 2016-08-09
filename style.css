@@ -309,14 +309,14 @@ padding: 25px 5%;
 	border-radius:5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 #sidebar div {
 	position:relative;
 	width: 90%;
 	left: 5%;
-		padding-bottom: 15px;
+	padding-bottom: 15px;
 }
 
 
@@ -325,6 +325,36 @@ padding: 25px 5%;
 	height: 64px;
 	width: 90%;
 	left: 5%;
+	border: 0px;
+  margin: 0px;
+  padding: 0px;
+
+}
+#social{
+	display: inline;
+
+}
+#social ul{
+
+	padding:0;
+	display: inline;
+	list-style: none;
+
+
+
+
+}
+
+#social ul li{
+
+	display: inline;
+	padding: 0% .8%;
+
+}
+
+#social img {
+	width: 20%;
+
 }
 
 #follow {
