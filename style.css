@@ -318,7 +318,15 @@ padding: 25px 5%;
 	left: 5%;
 	padding-bottom: 15px;
 }
+#sidebar a:link{
+color: #660099;
+font-weight:bold;
+}
 
+#sidebar a:hover{
+	color: #777;
+	font-weight: bold;
+}
 
 #chunker {
 	position: relative;
