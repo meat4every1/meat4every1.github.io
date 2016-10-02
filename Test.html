@@ -34,9 +34,6 @@
 			for (i=0; i < socButtons.length; i++){
 				socButtons[i].style.width ="10%";
 			}
-			//for (i=0; i < mainNavButtons.length; i++){
-			//		mainNavButtons[i].style.fontSize ="100%";
-			//	}
 			mainNav.style.display = "block";
 			sideToggle.style.display = "none";
 			topToggle.style.display = "inline";
@@ -45,11 +42,13 @@
 			centerToggle.style.width ="90%";
 		}
 		else if (window.innerWidth <630){
-
 			var i;
 			for (i=0; i < socButtons.length; i++){
 				socButtons[i].style.width ="20%";
 			}
+			mainNav.style.display = "block";
+			sideToggle.style.display = "none";
+
 			mainNav.style.display = "inline";
 		//for (i=0; i < mainNavButtons.length; i++){
 					//mainNavButtons[i].style.fontSize ="80%";
