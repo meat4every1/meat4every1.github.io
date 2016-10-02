@@ -22,14 +22,14 @@
 		var centerToggle = document.getElementById('center');
 
 		console.log(window.innerWidth);
-		if (window.innerWidth >1000) {
+		if (window.innerWidth >=1000) {
 			sideToggle.style.display = "inline";
 			topToggle.style.display = "none";
 			contentToggle.style.width = "70%";
 			bodyToggle.style.width = "70%";
 			centerToggle.style.width ="70%";
 		}
-		if((window.innerWidth < 1000  && window.innerWidth >630)){
+		if((window.innerWidth < 1000  && window.innerWidth >=630)){
 			var i;
 			for (i=0; i < socButtons.length; i++){
 				socButtons[i].style.width ="10%";
@@ -55,6 +55,7 @@
 			//	}
 		}
 	}
+	window.onscroll = layoutShift;
 	window.onresize = layoutShift;
 	window.onload = layoutShift;
 	layoutShift();
