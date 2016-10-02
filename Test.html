@@ -13,8 +13,8 @@
 			console.log(window.innerWidth);
 		var sideToggle = document.getElementById("sidebar");
 		var topToggle = document.getElementById("topToggle");
-		var socButtons = document.getElementById("topToggle").getElementsByTagName("img");
-		var mainNavButtons =document.getElementById("mainNav").getElementsByTagName("a");
+	//	var socButtons = document.getElementById("topToggle").getElementsByTagName("img");
+	//	var mainNavButtons =document.getElementById("mainNav").getElementsByTagName("a");
 		var mainNavButtons =document.getElementById("mainNav");
 
 		var contentToggle = document.getElementById("content");
@@ -55,7 +55,7 @@
 			//	}
 		}
 	}
-	window.onscroll = layoutShift;
+	//window.onscroll = function() {layoutShift};
 	window.onresize = layoutShift;
 	window.onload = layoutShift;
 	layoutShift();
@@ -78,7 +78,7 @@
 			<img src="Img/logo.jpg">
 
 			<nav id="mainNav"><ul>
-				<li> <a  style="color: #660099;" href="#">Portfolio</a></li>
+				<li> <a  style="color: #660099;" href="#">Portfolio 1</a></li>
 				<li><a href="*">Projects</a></li>
 				<li><a href="*">Resume</a></li>
 				<li><a href="*">About</a></li>
