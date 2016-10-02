@@ -11,6 +11,7 @@
 	<script type="text/javascript">
 	function layoutShift() {
 			console.log(window.innerWidth);
+			window.alert(window.innerWidth);
 		var sideToggle = document.getElementById("sidebar");
 		var topToggle = document.getElementById("topToggle");
 	//	var socButtons = document.getElementById("topToggle").getElementsByTagName("img");
@@ -48,8 +49,9 @@
 		//	for (i=0; i < socButtons.length; i++){
 		//		socButtons[i].style.width ="20%";
 		//	}
-			mainNav.style.display = "block";
+
 			sideToggle.style.display = "none";
+			topToggle.style.display = "inline";
 
 			mainNav.style.backgroundColor = "purple";
 		//for (i=0; i < mainNavButtons.length; i++){
