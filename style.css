@@ -104,6 +104,10 @@ height: 100%;
 	-webkit-border-radius: 5px;
 }
 
+#mainNav {
+
+}
+
 
 .accordion h3 + div {
         height: 0;
@@ -262,7 +266,7 @@ border-color: #191970;
 
 
 #content {
-	width: 70%;
+	width: 100%;
 	float: left;
 }
 

@@ -10,26 +10,50 @@
 
 	<script type="text/javascript">
 	function layoutShift() {
+			console.log(window.innerWidth);
 		var sideToggle = document.getElementById("sidebar");
-		var topToggle = document.getElementById('topToggle')
+		var topToggle = document.getElementById("topToggle");
+		var socButtons = document.getElementById("topToggle").getElementsByTagName("img");
+		var mainNavButtons =document.getElementById("mainNav").getElementsByTagName("a");
+		var mainNavButtons =document.getElementById("mainNav");
+
 		var contentToggle = document.getElementById("content");
 		var bodyToggle = document.getElementById("body");
 		var centerToggle = document.getElementById('center');
 
-		console.log(bodyToggle[0] +"this is body toggle");
-		if((window.innerWidth < 1000)){
+		console.log(window.innerWidth);
+		if (window.innerWidth >1000) {
+			sideToggle.style.display = "inline";
+			topToggle.style.display = "none";
+			contentToggle.style.width = "70%";
+			bodyToggle.style.width = "70%";
+			centerToggle.style.width ="70%";
+		}
+		if((window.innerWidth < 1000  && window.innerWidth >630)){
+			var i;
+			for (i=0; i < socButtons.length; i++){
+				socButtons[i].style.width ="10%";
+			}
+			//for (i=0; i < mainNavButtons.length; i++){
+			//		mainNavButtons[i].style.fontSize ="100%";
+			//	}
+			mainNav.style.display = "block";
 			sideToggle.style.display = "none";
 			topToggle.style.display = "inline";
 			contentToggle.style.width = "100%";
 			bodyToggle.style.width = "90%";
 			centerToggle.style.width ="90%";
 		}
-		else{
-			sideToggle.style.display = "inline";
-			topToggle.style.display = "none";
-			contentToggle.style.width = "70%";
-			bodyToggle.style.width = "70%";
-			centerToggle.style.width ="70%";
+		else if (window.innerWidth <630){
+
+			var i;
+			for (i=0; i < socButtons.length; i++){
+				socButtons[i].style.width ="20%";
+			}
+			mainNav.style.display = "inline";
+		//for (i=0; i < mainNavButtons.length; i++){
+					//mainNavButtons[i].style.fontSize ="80%";
+			//	}
 		}
 	}
 	window.onresize = layoutShift;
@@ -53,10 +77,12 @@
 			</div>
 			<img src="Img/logo.jpg">
 
-			<nav><ul>
+			<nav id="mainNav"><ul>
 				<li> <a  style="color: #660099;" href="#">Portfolio</a></li>
-				<li><a href="GolgothaBlog.html">Golgotha Project Blog</a></li>
-				<li><a href="Meat4every1.html">meat4every1.tv</a></li>
+				<li><a href="*">Projects</a></li>
+				<li><a href="*">Resume</a></li>
+				<li><a href="*">About</a></li>
+				<li><a href="*">Contact</a></li>
 
 			</ul></nav>
 
@@ -67,21 +93,27 @@
 				<div id="content">
 
 					<div id="topToggle";>
+						<div class="staticBlock">
 							<div class="social">
 								<ul>
 									<li><a href="https://twitter.com/Meat4every1"><img src="Img/SMB_twitter.jpg"></a></li>
 									<li><a href="https://www.facebook.com/meat4every1/"><img src="Img/SMB_facebook.jpg"></a></li>
 									<li><a href="https://www.twitch.tv/meat4every1"><img src="Img/SMB_twitch.jpg"></a></li>
 									<li><a href="https://www.youtube.com/meat4every1"><img src="Img/SMB_youtube.jpg"></a></li>
+									<li><a href="https://twitter.com/Meat4every1"><img src="Img/SMB_twitter.jpg"></a></li>
+									<li><a href="https://www.facebook.com/meat4every1/"><img src="Img/SMB_facebook.jpg"></a></li>
+									<li><a href="https://www.twitch.tv/meat4every1"><img src="Img/SMB_twitch.jpg"></a></li>
+									<li><a href="https://www.youtube.com/meat4every1"><img src="Img/SMB_youtube.jpg"></a></li>
 								</ul>
 							</div>
+						</div>
 					</div>
 					<!--SECTION_Barnes-->
 						<div id="BARNES" class="section">
-							<a href="#BARNES" title="Meat4every Twitch Channel (2015)"><img class="imgC" src="Img/Phead_BARNES.jpg"></a>
+							<a href="#BARNES" title="Keyes to the Colleciton"><img class="imgC" src="Img/Phead_BARNES.jpg"></a>
 							<article class="topContent">
 								<h3>
-									<a href="#BARNES" title="Keys To the Collection">Keys to the Collection Lighting (2016)</a>
+									<a href="#BARNES" title="Keys to the Collection">Keys to the Collection Lighting</a>
 								</h3>
 								<div><!--Accordian Div-->
 									<p>Contract work I completed under Spech.Tech for the Barnes Foundation’s mobile app Keys to the Collection. My responsibilities included but were not limited to upgrading their broken Unity 4 lighting to the new Unity 5 system, improving lighting visual quality, and maintaining low memory use.</p>
@@ -102,10 +134,10 @@
 
 				<!--SECTION_Souls-->
 					<div id="SOULS" class="section">
-						<a href="#SOULS" title="Meat4every Twitch Channel (2015)"><img class="imgC" src="Img/Phead_Souls.jpg"></a>
+						<a href="#SOULS" title="Chibi Souls"><img class="imgC" src="Img/Phead_Souls.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#SOULS" title="Sven">Chibi Souls Series :3 (2016)</a>
+								<a href="#SOULS" title="Chibi Souls">Dark Chibi Series</a>
 							</h3>
 
 							<div><!--Accordian Div-->
@@ -119,10 +151,10 @@
 					</div>
 					<!--SECTION_COMIC-->
 						<div id="COMIC" class="section">
-							<a href="#COMIC" title="Meat4every Twitch Channel (2015)"><img class="imgC" src="Img/Phead_COMIC.jpg"></a>
+							<a href="#COMIC" title="Tim"><img class="imgC" src="Img/Phead_COMIC.jpg"></a>
 							<article class="topContent">
 								<h3>
-									<a href="#COMIC" title="Webcomic">Webcomic (working title)</a>
+									<a href="#COMIC" title="Tim">Tim</a>
 								</h3>
 
 								<div><!--Accordian Div-->
@@ -144,7 +176,7 @@
 						<a href="#DWS" title="Derp Wars"><img class="imgC" src="Img/Phead_DerpWars.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#DWS" title="Sven">Derp Wars (2015)</a>
+								<a href="#DWS" title="Sven">Derp Wars</a>
 							</h3>
 
 							<div><!--Accordian Div-->
@@ -160,10 +192,10 @@
 
 				<!--SECTION_Rakashasa-->
 					<div id="ROR" class="section">
-						<a href="#ROR" title="Rise of Rakshaza (2015)"><img class="imgC" src="Img/Phead_ROR.jpg"></a>
+						<a href="#ROR" title="Rise of Rakshaza"><img class="imgC" src="Img/Phead_ROR.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#ROR" title="Rise of Rakshaza">Rise of Rakshaza (2015)</a>
+								<a href="#ROR" title="Rise of Rakshaza">Rise of Rakshaza</a>
 							</h3>
 
 							<div><!--Accordian Div-->
@@ -185,10 +217,10 @@
 
 					<!--SECTION_Singularity-->
 						<div id="SING" class="section">
-							<a href="#SING" title="Singularity (2015)"><img class="imgC" src="Img/Phead_Singularity.jpg"></a>
+							<a href="#SING" title="Singularity"><img class="imgC" src="Img/Phead_Singularity.jpg"></a>
 							<article class="topContent">
 								<h3>
-									<a href="#SING" title="Singularity">Singularity (2015)</a>
+									<a href="#SING" title="Singularity">Singularity</a>
 								</h3>
 
 								<div><!--Accordian Div-->
@@ -221,10 +253,10 @@
 
 				<!--SECTION_M4E1-->
 					<div id="M4E1" class="section">
-						<a href="#M4E1" title="Meat4every1 on Twitch (2015-Present)"><img class="imgC" src="Img/Phead_M4E1.jpg"></a>
+						<a href="#M4E1" title="Meat4every1 on Twitch"><img class="imgC" src="Img/Phead_M4E1.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#M4E1" title="Sven">Meat4every Twitch Channel (2015)</a>
+								<a href="#M4E1" title="Sven">Meat4every Twitch Channel</a>
 							</h3>
 
 							<div><!--Accordian Div-->
@@ -245,7 +277,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 					<a href="#ARTCOM2015" title="Art Commissions"><img class="imgC" src="Img/Phead_ACOM.jpg"></a>
 					<article class="topContent">
 						<h3>
-							<a href="#ARTCOM2015" title="Art Commissions">2015 Art Commissions</a>
+							<a href="#ARTCOM2015" title="Art Commissions">Art Commissions</a>
 						</h3>
 						<div><!--Accordian Div-->
 							<div>
@@ -264,12 +296,12 @@ During My time on Twitch I have constructed a professional grade stream setup in
 					<a href="#UNSEELY" title="Unseely Secrets"><img class="imgC" src="Img/Phead_US_V01.jpg"></a>
 					<article class="topContent">
 						<h3>
-							<a href="#UNSEELY" title="Unseely Secrets">Pathfinder 3rd Party Expansion Illustrator (Ongoing)</a>
+							<a href="#UNSEELY" title="Unseely Secrets">Pathfinder Illustration</a>
 						</h3>
 						<div><!--Accordian Div-->
 							<div>
 								<p>
-									A long term publication project. I provide concept art that drives the creative process, and print ready assets for use in publication.
+									A long term 3rd party publication project. I provide concept art that drives the creative process, and print ready assets for use in publication.
 								</p>
 							</div>
 							<img class="fullImage" src="Img/Content Posts/US_Enspiriter_Work.jpg">
@@ -285,7 +317,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 					<a href="#FORCEFULFALCON" title="ForcefulFalcon"><img class="imgC" src="Img/Phead_FF_V01.jpg"></a>
 					<article class="topContent">
 						<h3>
-							<a href="#FORCEFULFALCON" title="ForcefulFalcon">Forceful Falcon Brand Design (Ongoing)</a>
+							<a href="#FORCEFULFALCON" title="ForcefulFalcon">Forceful Falcon Brand Design</a>
 						</h3>
 						<div><!--Accordian Div-->
 							<div>
@@ -324,7 +356,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 					<a href="#CENTAUR" title="centaur"><img class="imgC" src="Img/Phead_CT_V01.jpg"></a>
 					<article class="topContent">
 						<h3>
-							<a href="#CENTAUR" title="Centaur">Dota 2 Set: Centaur Warrunner (Ongoing)</a>
+							<a href="#CENTAUR" title="Centaur">Dota 2 Set: Centaur Warrunner</a>
 						</h3>
 						<div><!--Accordian Div-->
 							A Work In Progress put on hiatus recently because of an influx of commissions.
@@ -342,7 +374,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#SHADOWDEMON" title="Shadow Demon"><img class="imgC" src="Img/Phead_SD_V01.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#SHADOWDEMON" title="Shadow Demon">Dota 2 Set: Shadow Demon (Ongoing)</a>
+								<a href="#SHADOWDEMON" title="Shadow Demon">Dota 2 Set: Shadow Demon</a>
 							</h3>
 							<div><!--Accordian Div-->
 							<p>My Original Concept</p>
@@ -376,7 +408,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#SVEN" title="Sven"><img class="imgC" src="Img/SvenPostHead.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#SVEN" title="Sven">Dota 2 Set: Sven (2014)</a>
+								<a href="#SVEN" title="Sven">Dota 2 Set: Sven</a>
 							</h3>
 
 							<div><!--Accordian Div-->
@@ -410,7 +442,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#LOLART" title="lol art"><img class="imgC" src="Img/pHead_Aatrox.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#LOLART" title="lol art">Justin.Tv Art Contest (2014)</a>
+								<a href="#LOLART" title="lol art">Justin.Tv Art Contest</a>
 							</h3>
 							<div><!--Accordian Div-->
 								<div>
@@ -427,7 +459,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#DEADEND" title="Dead End"><img class="imgC" src="Img/Phead_DE.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#DEADEND" title="third post">Dead End (2012-2013)</a>
+								<a href="#DEADEND" title="third post">Dead End</a>
 							</h3>
 							<div><!--Accordian Div-->
 								<div class="vidScale">
@@ -460,7 +492,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#BUGS" title="Bugs"><img class="imgC" src="Img/Phead_Bugz.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#BUGS" title="Bugs">Unity 3D Swarm Simulation (2013)</a>
+								<a href="#BUGS" title="Bugs">Unity 3D Swarm Simulation</a>
 							</h3>
 							<div><!--Accordian Div-->
 
@@ -484,7 +516,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#NECRO" title="four"><img class="imgC" src="Img/Phead_Necro.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#NECRO" title="four">Necromancer (2013)</a>
+								<a href="#NECRO" title="four">Necromancer</a>
 							</h3>
 							<div><!--Accordian Div-->
 								<div class="vidScale">
@@ -508,7 +540,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#DINO" title="six"><img class="imgC" src="Img/Phead_Op_Dino.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#DINO" title="five">Operation Dino (2012)</a>
+								<a href="#DINO" title="five">Operation Dino</a>
 							</h3>
 							<div><!--Accordian Div-->
 								<div class="vidScale">
@@ -531,7 +563,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#DMM" title="six"><img class="imgC" src="Img/Phead_DMM.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#DMM" title="four">DMM Tutorials (2012)</a>
+								<a href="#DMM" title="four">DMM Tutorials</a>
 							</h3>
 							<div><!--Accordian Div-->
 							<div class="vidScale">
@@ -550,7 +582,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#DP2012" title="six"><img class="imgC" src="Img/Phead_cas.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#DP2012" title="eleven">Digital Painting (2011-2012)</a>
+								<a href="#DP2012" title="eleven">Digital Painting</a>
 							</h3>
 							<div><!--Accordian Div-->
 								<p>Portrait of a Friend</p>
@@ -578,7 +610,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#EPIC" title="Epic"><img class="imgC" src="Img/Phead_ED.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#EPIC" title="Epic">Epic Defense (2011)</a>
+								<a href="#EPIC" title="Epic">Epic Defense</a>
 							</h3>
 							<div><!--Accordian Div-->
 								<p>Promo Video: 10 week prototype</p>
@@ -599,7 +631,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#BARGAIN" title="six"><img class="imgC" src="Img/Phead_Old_Dude.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#BARGAIN" title="four">The Bargin(2011)</a>
+								<a href="#BARGAIN" title="four">The Bargin</a>
 							</h3>
 							<div><!--Accordian Div-->
 								<div class="vidScale">
@@ -619,7 +651,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#FIRSTSIGHT" title="six"><img class="imgC" src="Img/Phead_FirstSight.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#FIRSTSIGHT" title="four">First Sight(2011)</a>
+								<a href="#FIRSTSIGHT" title="four">First Sight</a>
 							</h3>
 							<div><!--Accordian Div-->
 								<div class="vidScale">
@@ -639,7 +671,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#starFlies" title="six"><img class="imgC" src="Img/Phead_StarFlies.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#starFlies" title="four">Star Flies (2011)</a>
+								<a href="#starFlies" title="four">Star Flies</a>
 							</h3>
 							<div><!--Accordian Div-->
 								<div class="vidScale">
@@ -659,7 +691,7 @@ During My time on Twitch I have constructed a professional grade stream setup in
 						<a href="#Vody" title="six"><img class="imgC" src="Img/Phead_Vody.jpg"></a>
 						<article class="topContent">
 							<h3>
-								<a href="#Vody" title="four">Vody (2010)</a>
+								<a href="#Vody" title="four">Vody</a>
 							</h3>
 							<div><!--Accordian Div-->
 								<div class="vidScale">
@@ -685,6 +717,10 @@ During My time on Twitch I have constructed a professional grade stream setup in
 				<article>
 					<div class="social">
 						<ul>
+							<li><a href="https://twitter.com/Meat4every1"><img src="Img/SMB_twitter.jpg"></a></li>
+							<li><a href="https://www.facebook.com/meat4every1/"><img src="Img/SMB_facebook.jpg"></a></li>
+							<li><a href="https://www.twitch.tv/meat4every1"><img src="Img/SMB_twitch.jpg"></a></li>
+							<li><a href="https://www.youtube.com/meat4every1"><img src="Img/SMB_youtube.jpg"></a></li>
 							<li><a href="https://twitter.com/Meat4every1"><img src="Img/SMB_twitter.jpg"></a></li>
 							<li><a href="https://www.facebook.com/meat4every1/"><img src="Img/SMB_facebook.jpg"></a></li>
 							<li><a href="https://www.twitch.tv/meat4every1"><img src="Img/SMB_twitch.jpg"></a></li>
