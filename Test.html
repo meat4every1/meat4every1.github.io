@@ -52,8 +52,14 @@
 
 		//SMALL
 		else if (window.innerWidth <630){
+			sideToggle.style.display = "none";
+			topToggle.style.display = "inline";
+			contentToggle.style.width = "100%";
+			bodyToggle.style.width = "90%";
+			centerToggle.style.width ="90%";
 			if (Math.abs(window.orientation) === 90) {
 				//Landscape
+				mainNav.style.backgroundColor = "Aqua";
 				for (i=0; i < socButtons.length; i++){
 					socButtons[i].style.width ="10%";
 					socBList[i].style.padding ="0.8% 0%";
@@ -61,16 +67,16 @@
 			}
 			else {
 				//Portrait
+				mainNav.style.backgroundColor = "purple";
 				for (i=0; i < socButtons.length; i++){
 					socButtons[i].style.width ="23%";
 					socList[i].style.padding ="0.8% 0%";
 					}
 			}
 
-			sideToggle.style.display = "none";
-			topToggle.style.display = "inline";
 
-			mainNav.style.backgroundColor = "purple";
+
+			
 		}
 	}
 	//window.onscroll = function() {layoutShift};
