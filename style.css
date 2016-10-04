@@ -210,13 +210,47 @@ background-color: #181818;
 }
 
 /*getting content title img where i want it*/
+.pHeadDivMobile{
+float: right;
+overflow: Hidden;
+position: relative;
+display : none;/*display: inline-block;*/ 
+height: 200px;
+width: 180%;
+vertical-align: middle;
+text-align: center;
+margin-right: 5%;
+margin-top: 5%;
 
+
+}
 .imgC{
+
 float: right;
 height: 100px;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-right: 10px;
+}
+
+.pHeadMobile {
+width: 50%;
+height: auto;
+position: absolute;
+
+margin: auto;
+
+bottom: 0px;
+top: 0px;
+}
+
+
+
+
+
+
+
+
 }
 .fullImage{
 width: 100%;
