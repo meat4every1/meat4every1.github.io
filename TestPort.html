@@ -39,6 +39,9 @@
 			for (i=0; i < pHeadMobile.length; i++) {
 				pHeadDivMobile[i].style.display = "none";
 				}
+				//COLOR DEBUG ___
+				mainNav.style.backgroundColor = "blue";
+
 		}
 
 		//MEDIUM______________________________________
@@ -60,7 +63,7 @@
 			for (i=0; i < pHead.length; i++) {
 					pHead[i].style.display = "inline";
 					}
-
+			//COLOR DEBUG ___
 			mainNav.style.backgroundColor = "green";
 		}
 
@@ -72,7 +75,7 @@
 			bodyToggle.style.width = "90%";
 			centerToggle.style.width ="90%";
 			if (Math.abs(window.orientation) === 90) {
-				//Landscape
+				//Landscape-----------------
 
 					for (i=0; i < socButtons.length; i++){
 						socButtons[i].style.width ="10%";
@@ -80,15 +83,16 @@
 						}
 					//PHEADTOGGLE
 					for (i=0; i < pHeadDivMobile.length; i++) {
-						pHeadDivMobile[i].style.display = none;
+						pHeadDivMobile[i].style.display = "none";
 						}
 					for (i=0; i < pHead.length; i++) {
 							pHead[i].style.display = "inline";
 							}
+						//COLOR DEBUG ___
 						mainNav.style.backgroundColor = "Aqua";
 			}
 			else {
-				//Portrait
+				//Portrait----------------
 
 				for (i=0; i < socButtons.length; i++){
 					socButtons[i].style.width ="23%";
@@ -101,6 +105,7 @@
 				for (i=0; i < pHead.length; i++) {
 						pHead[i].style.display = "none";
 						}
+					//COLOR DEBUG ___
 					mainNav.style.backgroundColor = "purple";
 				}
 
