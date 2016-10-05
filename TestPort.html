@@ -7,7 +7,8 @@
 		<link  rel="stylesheet" href="style.css" type="text/css" />
 		<link rel="stylesheet" href="colorbox.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<script src="jquery.js"></script>
+		<script src="jquery.colorbox-min.js"></script>
 	<script type="text/javascript">
 	function layoutShift() {
 			console.log(window.innerWidth);
@@ -17,6 +18,7 @@
 		var socList = document.getElementById("topToggle").getElementsByTagName("li");
 		var pHeadDivMobile = document.getElementsByClassName("pHeadDivMobile");
 		var pHead = document.getElementsByClassName("imgC");
+		var pHeadText = document.getElementById("pHeadText");
 	//	var mainNavButtons =document.getElementById("mainNav").getElementsByTagName("a");
 		var mainNavButtons =document.getElementById("mainNav");
 
@@ -63,6 +65,8 @@
 			for (i=0; i < pHead.length; i++) {
 					pHead[i].style.display = "inline";
 					}
+			$("article.topContent").find("h3").find("a").toggleClass("pHeadText", false);
+			$(".accordion").find(" h3 + div").css("height",'0');
 			//COLOR DEBUG ___
 			mainNav.style.backgroundColor = "green";
 		}
@@ -88,6 +92,8 @@
 					for (i=0; i < pHead.length; i++) {
 							pHead[i].style.display = "inline";
 							}
+							$("article.topContent").find("h3").find("a").toggleClass("pHeadText", false);
+							$(".accordion").find(" h3 + div").css("height",'0');
 						//COLOR DEBUG ___
 						mainNav.style.backgroundColor = "Aqua";
 			}
@@ -105,6 +111,13 @@
 				for (i=0; i < pHead.length; i++) {
 						pHead[i].style.display = "none";
 						}
+
+				$("article.topContent").find("h3").find("a").toggleClass("pHeadText", true);
+				$(".accordion").find(" h3 + div").css("height",'190px');
+				//$("pHeadMobileWrapper").css(z-index)
+
+
+
 					//COLOR DEBUG ___
 					mainNav.style.backgroundColor = "purple";
 				}
@@ -122,9 +135,8 @@
 
 	layoutShift();
 	</script>
+</script>
 
-	<script src="jquery.js"></script>
-	<script src="jquery.colorbox-min.js"></script>
 
 	</head>
 
@@ -172,15 +184,19 @@
 					</div>
 					<!--SECTION_Barnes-->
 						<div id="BARNES" class="section">
+
 							<a href="#BARNES" title="Keyes to the Colleciton">
 								<img class="imgC" src="Img/Phead_BARNES.jpg">
-								<div class="pHeadDivMobile">
-									<img class="pHeadMobile" src="Img/Phead_BARNES.jpg">
+								<div class = "pHeadMobileWrapper">
+									<div class="pHeadDivMobile">
+										<img class="pHeadMobile" src="Img/Phead_BARNES.jpg">
+									</div>
 								</div>
 							</a>
 							<article class="topContent">
+
 								<h3>
-									<a href="#BARNES" title="Keys to the Collection">Keys to the Collection Lighting</a>
+									<a href="#BARNES" title="Keys to the Collection" id = "fuupa" >Keys to the Collection Lighting</a>
 								</h3>
 								<div><!--Accordian Div-->
 									<p>Contract work I completed under Spech.Tech for the Barnes Foundation’s mobile app Keys to the Collection. My responsibilities included but were not limited to upgrading their broken Unity 4 lighting to the new Unity 5 system, improving lighting visual quality, and maintaining low memory use.</p>
@@ -203,13 +219,17 @@
 					<div id="SOULS" class="section">
 						<a href="#SOULS" title="Chibi Souls">
 							<img class="imgC" src="Img/Phead_Souls.jpg">
+							<div class = "pHeadMobileWrapper">
 							<div class="pHeadDivMobile">
 								<img class="pHeadMobile" src="Img/Phead_Souls.jpg">
+							</div>
 							</div>
 						</a>
 						<article class="topContent">
 							<h3>
+								<span>
 								<a href="#SOULS" title="Chibi Souls">Dark Chibi Series</a>
+							</span>
 							</h3>
 
 							<div><!--Accordian Div-->
@@ -225,8 +245,10 @@
 						<div id="COMIC" class="section">
 							<a href="#COMIC" title="Tim">
 								<img class="imgC" src="Img/Phead_COMIC.jpg">
+								<div class = "pHeadMobileWrapper">
 								<div class="pHeadDivMobile">
 									<img class="pHeadMobile" src="Img/Phead_COMIC.jpg">
+								</div>
 								</div>
 							</a>
 							<article class="topContent">
@@ -252,8 +274,10 @@
 					<div id="DWS" class="section">
 						<a href="#DWS" title="Derp Wars">
 							<img class="imgC" src="Img/Phead_DerpWars.jpg">
+							<div class = "pHeadMobileWrapper">
 							<div class="pHeadDivMobile">
 								<img class="pHeadMobile" src="Img/Phead_DerpWars.jpg">
+							</div>
 							</div>
 						</a>
 						<article class="topContent">
@@ -276,8 +300,10 @@
 					<div id="ROR" class="section">
 						<a href="#ROR" title="Rise of Rakshaza">
 							<img class="imgC" src="Img/Phead_ROR.jpg">
+							<div class = "pHeadMobileWrapper">
 							<div class="pHeadDivMobile">
 								<img class="pHeadMobile" src="Img/Phead_ROR.jpg">
+							</div>
 							</div>
 						</a>
 						<article class="topContent">
@@ -306,8 +332,10 @@
 						<div id="SING" class="section">
 							<a href="#SING" title="Singularity">
 								<img class="imgC" src="Img/Phead_Singularity.jpg">
+								<div class = "pHeadMobileWrapper">
 								<div class="pHeadDivMobile">
 									<img class="pHeadMobile" src="Img/Phead_Singularity.jpg">
+								</div>
 								</div>
 							</a>
 							<article class="topContent">
@@ -347,8 +375,10 @@
 					<div id="M4E1" class="section">
 						<a href="#M4E1" title="Meat4every1 on Twitch">
 							<img class="imgC" src="Img/Phead_M4E1.jpg">
+							<div class = "pHeadMobileWrapper">
 							<div class="pHeadDivMobile">
 								<img class="pHeadMobile" src="Img/Phead_M4E1.jpg">
+							</div>
 							</div>
 						</a>
 						<article class="topContent">
@@ -373,8 +403,10 @@ During My time on Twitch I have constructed a professional grade stream setup in
 					<div id="ARTCOM2015" class="section">
 					<a href="#ARTCOM2015" title="Art Commissions">
 						<img class="imgC" src="Img/Phead_ACOM.jpg">
+						<div class = "pHeadMobileWrapper">
 						<div class="pHeadDivMobile">
 							<img class="pHeadMobile" src="Img/Phead_ACOM.jpg">
+						</div>
 						</div>
 					</a>
 					<article class="topContent">

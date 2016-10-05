@@ -105,7 +105,7 @@ height: 100%;
 }
 
 #mainNav {
-
+ /*added for javascript color debugger*/
 }
 
 
@@ -120,7 +120,7 @@ height: 100%;
 }
 /*THIS IS WHERE YOU STYLE THE OPENED ACCORDIAN DIV!!!!!*/
 .accordion :target h3 + div {
-        height: auto;
+    height: auto !important;
 		width: 100%;
 		text-align: justify;
 		text-justify: inter-word;
@@ -148,7 +148,7 @@ height: 100%;
 .mainContent h3 a:hover, .mainContent h3 a:active,
 .mainContent h3 .active a:link, .mainContent h3 .active a:visited {
 background-color: #181818;
-	color: #660099;
+	color: #660099 !important;
 }
 
 
@@ -169,6 +169,7 @@ background-color: #181818;
 	color: #777;
 	font-weight: bold;
 }
+
 
 
 .vidScale {
@@ -211,17 +212,26 @@ background-color: #181818;
 
 /*getting content title img where i want it*/
 .pHeadDivMobile{
+
 float: right;
 overflow: Hidden;
 position: relative;
-display : none;/*display: inline-block;*/ 
+display : none;/*display: inline-block;*/
 height: 200px;
-width: 180%;
+width: 90%;
 vertical-align: middle;
 text-align: center;
 margin-right: 5%;
 margin-top: 5%;
 
+
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0)60%,rgba(0,0,0,0.65) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 
 }
 .imgC{
@@ -234,16 +244,29 @@ padding-right: 10px;
 }
 
 .pHeadMobile {
-width: 50%;
+z-index: -1;
+width: 100%;
 height: auto;
 position: absolute;
-
 margin: auto;
-
 bottom: 0px;
 top: 0px;
+right: 0;
+}
+.pHeadMobileWrapper {
+	position: relative;
+z-index: 1;
 }
 
+.pHeadText {
+	z-index: 2;
+	color : #D3D3D3 !important;
+	position: absolute;
+	margin-top: 130px;
+	margin-left: 10%;
+	left: 0;
+
+}
 
 
 
@@ -319,6 +342,8 @@ padding: 25px 5%;
 	height: 10px;
 }
 
+
+
 .staticBlock p {
 	text-align: justify;
     text-justify: inter-word;
@@ -332,6 +357,9 @@ padding: 25px 5%;
 	-webkit-border-radius: 5px;
 	padding: 25px 5%;
 	margin-top:10px;
+
+	/*height: 200px; JS Added for Portrait*/
+
 }
 
 #sidebar{
