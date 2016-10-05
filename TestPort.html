@@ -67,6 +67,11 @@
 					}
 			$("article.topContent").find("h3").find("a").toggleClass("pHeadText", false);
 			$(".accordion").find(" h3 + div").css("height",'0');
+
+			//~~~~~~Post Specific
+				//Rize of Rakshaza
+				$("#rorToggle").removeClass("cbImgCol").addClass("cbImgRow");
+				
 			//COLOR DEBUG ___
 			mainNav.style.backgroundColor = "green";
 		}
@@ -94,6 +99,11 @@
 							}
 							$("article.topContent").find("h3").find("a").toggleClass("pHeadText", false);
 							$(".accordion").find(" h3 + div").css("height",'0');
+
+							//~~~~~~Post Specific
+								//Rize of Rakshaza
+								$("#rorToggle").removeClass("cbImgCol").addClass("cbImgRow");
+
 						//COLOR DEBUG ___
 						mainNav.style.backgroundColor = "Aqua";
 			}
@@ -116,7 +126,9 @@
 				$(".accordion").find(" h3 + div").css("height",'190px');
 				//$("pHeadMobileWrapper").css(z-index)
 
-
+				//~~~~~~Post Specific
+					//Rize of Rakshaza
+					$("#rorToggle").removeClass("cbImgRow").addClass("cbImgCol");
 
 					//COLOR DEBUG ___
 					mainNav.style.backgroundColor = "purple";
@@ -233,7 +245,15 @@
 							</h3>
 
 							<div><!--Accordian Div-->
-								<script type"text/javascript" src="/Text/Port_Gal_Souls.js"></script>
+
+									<ul class="cbImgCol">
+										<li><a class="Souls_Gallery" href="Img/Content Posts/Souls1_BB.png"> <img title="Doll" src="Img/Content Posts/Souls1_CBBB.png"> </a> </li>
+										<li><a class="Souls_Gallery" href="Img/Content Posts/Souls2_Solair.png"> <img title="Solair" src="Img/Content Posts/Souls2_CBSolair.png"> </a> </li>
+										<li><a class="Souls_Gallery" href="Img/Content Posts/Souls3_WL.jpg"> <img title="The White Lady" src="Img/Content Posts/Souls3_CBWL.jpg"> </a> </li>
+										<li><a class="Souls_Gallery" href="Img/Content Posts/Souls4_FK.jpg"> <img title="The White Lady" src="Img/Content Posts/Souls4_CBFK.jpg"> </a> </li>
+									</ul>
+									<p></p>
+									<script>jQuery("a.Souls_Gallery").colorbox({rel:'Souls_Gallery', width:"60%", height:"90%"});</script>
 								<div>
 									<p>I started designing Chibi Souls as a short diversion from working on my webcomic. I wanted to sidestep away from the visual style and process of the webcomic to take what I learned and apply it in less regimented styles. Chibi Souls was meant to help inform my decisions upon going back to the webcomic and reevaluating my pipeline for creating serialized art. The images produced for this side project allowed me to experiment with colors in ways I had not previously. Part of the inspiration for Chibi Souls was my exposure to the art of Miss-Octopie.  Besides the obvious stylistic influence, I was specifically intrigued by her use of color in line art. This spurred me to challenge myself to stop using pure black and grey in my art, and really push my experimentations with the interaction of light and color.  During this project I also developed some new custom brushes that have drastically sped up the process of blending colors in my work. Because of this I feel I can more quickly capture lighting, leaving me more time to creatively interpret light.<p>
 
@@ -312,10 +332,20 @@
 							</h3>
 
 							<div><!--Accordian Div-->
-							<div>pand pooples</div>
-								<script type"text/javascript" src="/Text/Port_Gal_ROR.js"></script>
+
+								<ul class="cbImgRow">
+									<a class="ROR_Gallery" href="Img/Content Posts/ROR1_Full.png"> <img title="PC1" src="Img/Content Posts/ROR1_CBFull.png"> </a>
+								</ul>
+									<ul class="cbImgRow" id="rorToggle">
+										<li><a class="ROR_Gallery" href="Img/Content Posts/ROR2_Portion.png"> <img title="PC1" src="Img/Content Posts/ROR2_CBPortion.png"> </a> </li>
+										<li><a class="ROR_Gallery" href="Img/Content Posts/ROR3_Axe.png"> <img title="PC1" src="Img/Content Posts/ROR3_CBAxe.png"> </a> </li>
+										<li><a class="ROR_Gallery" href="Img/Content Posts/ROR4_Face.png"> <img title="PC1" src="Img/Content Posts/ROR4_CBFace.png"> </a> </li>
+										<li><a class="ROR_Gallery" href="Img/Content Posts/ROR5_Fire.png"> <img title="PC1" src="Img/Content Posts/ROR5_CBFire.png"> </a> </li>
+										 </ul>
+									<p></p>
+									<script>jQuery("a.ROR_Gallery").colorbox({rel:'ROR_Gallery', width:"60%", height:"90%"});</script>
 								<div>
-									<p>A seed project for Meat4every1 on Twitch, Rise of Rakshaza is the name of a proposed Fallout 4 mod. I worked through a mock pre production phase in the early days of Meat4every1 on Twitch. The concept art seen above was meant to challenge myself to stick with one piece of artwork for a long time and was meticulously painted over the course of 2 months towards the end of 2015. The base character was used as a mannequin for the testing of various garments and equipment for look development.
+									<p>A seed project for Meat4every1 on Twitch, Rise of Rakshaza is the name of a proposed Fallout 4 mod. I worked through a mock pre production phase in the early days of Meat4every1 on Twitch. The concept art seen above was meant to challenge myself to stick with one piece of artwork for a long period of time and was meticulously painted over the course of 2 months towards the end of 2015. The base character was used as a mannequin for the testing of various garments and equipment for look development.
 									</p>
 									<p>The concept art was crafted based on gameplay mechanics and lore surrounding the creature you see depicted.  In Fallout 4 ~200 years has passed since the great war. So much time has passed and the flora and fauna of the land has changed so drastically it is surprising to me that Bethesda has done very little to experiment with alternative cultural bases. Almost every culture we see in Fallout is directly linked to the pre war world. They live in pre war buildings, wear pre war clothes, use a pre war language etc. Everything is set in a Mad Max Aesthetic, all spikes, leather, and rusted technology. But I propose that with culture and society so thoroughly demolished, 200 years later we would begin to see cultures that had formed completely outside the direct influence of what had come before. With new species of sentient humanoids roaming the land in the form of sentient ghouls and super mutants, the shape of what a new society would look like begins to take form. Less Mad Max, more Apocalypto.
 									</p>
