@@ -71,7 +71,7 @@
 			//~~~~~~Post Specific
 				//Rize of Rakshaza
 				$("#rorToggle").removeClass("cbImgCol").addClass("cbImgRow");
-				
+
 			//COLOR DEBUG ___
 			mainNav.style.backgroundColor = "green";
 		}
@@ -144,7 +144,11 @@
 	window.onload = layoutShift;
 	window.onresize = layoutShift;
 	window.onorientationchange = layoutShift;
-
+	function DropMenuToggle() {
+	//	if ($("#dropMenuPos:first-child").className="")
+	//	$("#dropMenuPos:first-child").removeClass("dropMenuIn").addClass("dropMenuOut");
+	mainNav.style.backgroundColor = "purple";
+	}
 	layoutShift();
 	</script>
 </script>
@@ -169,8 +173,20 @@
 				<li><a href="*">Resume</a></li>
 				<li><a href="*">About</a></li>
 				<li><a href="*">Contact</a></li>
+				<li id="dropMenButt" onclick="DropMenuToggle()"><a>Dropdown</a></li>
 
 			</ul></nav>
+<div id="dropMenuPos">
+			<div id="dropMenuIn">
+				<ul>
+					<li> <a  style="color: #660099;" >Portfolio</a></li>
+					<li><a href="*">Projects</a></li>
+					<li><a href="*">Resume</a></li>
+					<li><a href="*">About</a></li>
+					<li><a href="*">Contact</a></li>
+				</ul>
+			</div>
+		</div>
 
 		</header>
 

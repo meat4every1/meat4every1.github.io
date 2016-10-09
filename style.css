@@ -108,7 +108,29 @@ height: 100%;
  /*added for javascript color debugger*/
 
 }
+#dropMenButt {
+	float : right;
+}
+#dropMenuPos {
 
+	float: right;
+
+}
+
+#dropMenuOut {
+	position: fixed;
+	display: none;
+	height: 100%;
+
+	background-color: "red";
+}
+
+#dropMenuIn {
+	position: fixed;
+
+	height: 100%;
+	right: 20%;
+}
 
 .accordion h3 + div {
         height: 0;
