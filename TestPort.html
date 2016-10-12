@@ -25,13 +25,13 @@
 		var contentToggle = document.getElementById("content");
 		var bodyToggle = document.getElementById("body");
 		var centerToggle = document.getElementById('center');
-		mainNav.style.backgroundColor = "red";
+		//mainNav.style.backgroundColor = "red";
 		console.log(window.innerWidth);
 
 		//LARGE________________________________________
 		if (window.innerWidth >=1000) {
 			var i;
-			mainNav.style.backgroundColor = "blue";
+
 			sideToggle.style.display = "inline";
 			topToggle.style.display = "none";
 			contentToggle.style.width = "70%";
@@ -42,12 +42,13 @@
 				pHeadDivMobile[i].style.display = "none";
 				}
 				//COLOR DEBUG ___
-				mainNav.style.backgroundColor = "blue";
+			//	mainNav.style.backgroundColor = "blue";
 
 		}
 
 		//MEDIUM______________________________________
-		else if((window.innerWidth < 1000)  && (window.innerWidth >=630)){
+		else if((window.innerWidth < 1000)  && (window.innerWidth >=685)){
+				$("#mainNav ul li:not(#dropMenButt)").show();
 			mainNav.style.display = "block";
 			sideToggle.style.display = "none";
 			topToggle.style.display = "inline";
@@ -73,16 +74,19 @@
 				$("#rorToggle").removeClass("cbImgCol").addClass("cbImgRow");
 
 			//COLOR DEBUG ___
-			mainNav.style.backgroundColor = "green";
+			//mainNav.style.backgroundColor = "green";
 		}
 
 		//SMALL__________________________________________
-		else if (window.innerWidth <630){
+		else if (window.innerWidth <685){
 			sideToggle.style.display = "none";
 			topToggle.style.display = "inline";
 			contentToggle.style.width = "100%";
 			bodyToggle.style.width = "90%";
 			centerToggle.style.width ="90%";
+			$("#mainNav ul li:not(#dropMenButt)").hide();
+
+
 			if (Math.abs(window.orientation) === 90) {
 				//Landscape-----------------
 
@@ -105,7 +109,7 @@
 								$("#rorToggle").removeClass("cbImgCol").addClass("cbImgRow");
 
 						//COLOR DEBUG ___
-						mainNav.style.backgroundColor = "Aqua";
+						//mainNav.style.backgroundColor = "Aqua";
 			}
 			else {
 				//Portrait----------------
@@ -131,13 +135,8 @@
 					$("#rorToggle").removeClass("cbImgRow").addClass("cbImgCol");
 
 					//COLOR DEBUG ___
-					mainNav.style.backgroundColor = "purple";
+					//mainNav.style.backgroundColor = "purple";
 				}
-
-
-
-
-
 		}
 	}
 	//window.onscroll = function() {layoutShift};
@@ -145,9 +144,9 @@
 	window.onresize = layoutShift;
 	window.onorientationchange = layoutShift;
 	function DropMenuToggle() {
-	//	if ($("#dropMenuPos:first-child").className="")
-		$("#dropMenu").toggleClass("dropMenuOpen");
-	mainNav.style.backgroundColor = "purple";
+
+		$("#dropMenuPos").toggleClass("dropMenuClosed");
+
 	}
 	layoutShift();
 	</script>
@@ -157,9 +156,10 @@
 	</head>
 
 	<body id="body">
-		<div id="dropMenuPos">
-					<div id="dropMenu">
+		<div id="dropMenuPos" class="dropMenuClosed">
+					<div id="dropMenu" >
 						<ul>
+							<li onclick="DropMenuToggle()"><a><img src="Img/MobMenuButt.png"></a></li>
 							<li> <a  style="color: #660099;" >Portfolio</a></li>
 							<li><a href="*">Projects</a></li>
 							<li><a href="*">Resume</a></li>
@@ -167,6 +167,7 @@
 							<li><a href="*">Contact</a></li>
 						</ul>
 					</div>
+					<div id="dropMenuCover" onclick="DropMenuToggle()"></div>
 				</div>
 
 		<header class="mainHeader">
@@ -184,7 +185,7 @@
 				<li><a href="*">Resume</a></li>
 				<li><a href="*">About</a></li>
 				<li><a href="*">Contact</a></li>
-				<li id="dropMenButt" onclick="DropMenuToggle()"><a>Dropdown</a></li>
+				<li id="dropMenButt" onclick="DropMenuToggle()"><a><img src="Img/MobMenuButt.png"></a></li>
 
 			</ul></nav>
 
