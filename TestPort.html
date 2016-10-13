@@ -11,6 +11,7 @@
 		<script src="jquery.colorbox-min.js"></script>
 	<script type="text/javascript">
 	function layoutShift() {
+
 			console.log(window.innerWidth);
 		var sideToggle = document.getElementById("sidebar");
 		var topToggle = document.getElementById("topToggle");
@@ -25,25 +26,24 @@
 		var contentToggle = document.getElementById("content");
 		var bodyToggle = document.getElementById("body");
 		var centerToggle = document.getElementById('center');
-		$("#mainNav ul li:not(#dropMenButt)").hide();
+
 
 		//mainNav.style.backgroundColor = "red";
 		console.log(window.innerWidth);
 
 		//LARGE________________________________________
 		if (window.innerWidth >=1000) {
-			var i;
-			$("#mainNav ul li:not(#dropMenButt)").show();
 			$("#dropMenu ul li").css("marginTop","40px");
+			$("#dropMenuCloseButt").css("marginTop","40px")
 			sideToggle.style.display = "inline";
 			topToggle.style.display = "none";
 			contentToggle.style.width = "70%";
 			bodyToggle.style.width = "70%";
 			centerToggle.style.width ="70%";
 			//PHEADTOGGLE
-			for (i=0; i < pHeadMobile.length; i++) {
-				pHeadDivMobile[i].style.display = "none";
-				}
+			$(".pHeadDivMobile").css("display","none");
+			$("#mainNav ul li:not(#dropMenButt)").show();
+			//$("#mainNav ul li").css("display","inline");
 				//COLOR DEBUG ___
 			//	mainNav.style.backgroundColor = "blue";
 
@@ -51,8 +51,9 @@
 
 		//MEDIUM______________________________________
 		else if((window.innerWidth < 1000)  && (window.innerWidth >=685)){
-				$("#mainNav ul li:not(#dropMenButt)").show();
+
 				$("#dropMenu ul li").css("marginTop","40px");
+				$("#dropMenuCloseButt").css("marginTop","40px")
 			mainNav.style.display = "block";
 			sideToggle.style.display = "none";
 			topToggle.style.display = "inline";
@@ -64,9 +65,7 @@
 				socList[i].style.padding ="0% .8%";
 		}
 		//Pheadtoggle
-		for (i=0; i < pHeadDivMobile.length; i++) {
-			pHeadDivMobile[i].style.display = "none";
-			}
+		$(".pHeadDivMobile").css("display","none");
 			for (i=0; i < pHead.length; i++) {
 					pHead[i].style.display = "inline";
 					}
@@ -79,6 +78,7 @@
 
 			//COLOR DEBUG ___
 			//mainNav.style.backgroundColor = "green";
+			$("#mainNav ul li:not(#dropMenButt)").show();
 		}
 
 		//SMALL__________________________________________
@@ -94,14 +94,13 @@
 			if (Math.abs(window.orientation) === 90) {
 				//Landscape-----------------
 				$("#dropMenu ul li").css("marginTop","5px");
+				$("#dropMenuCloseButt").css("marginTop","5px")
 					for (i=0; i < socButtons.length; i++){
 						socButtons[i].style.width ="10%";
 						socList[i].style.padding ="0% 0.8%";
 						}
 					//PHEADTOGGLE
-					for (i=0; i < pHeadDivMobile.length; i++) {
-						pHeadDivMobile[i].style.display = "none";
-						}
+					$(".pHeadDivMobile").css("display","none");
 					for (i=0; i < pHead.length; i++) {
 							pHead[i].style.display = "inline";
 							}
@@ -117,15 +116,14 @@
 			}
 			else {
 				//Portrait----------------
+				$("#dropMenuCloseButt").css("marginTop","40px")
 				$("#dropMenu ul li").css("marginTop","20px");
 				for (i=0; i < socButtons.length; i++){
 					socButtons[i].style.width ="23%";
 					socList[i].style.padding ="0.8% 0%";
 					}
 				//PHEADTOGGLE
-				for (i=0; i < pHeadDivMobile.length; i++) {
-					pHeadDivMobile[i].style.display = "inline-block";
-					}
+			$(".pHeadDivMobile").css("display","inline-block");
 				for (i=0; i < pHead.length; i++) {
 						pHead[i].style.display = "none";
 						}

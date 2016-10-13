@@ -103,15 +103,18 @@ height: 100%;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
-
-#mainNav {
- /*added for javascript color debugger*/
-
-}
 #dropMenButt {
+	display: inline !important;
 	float : right;
 	margin: 4px;
 }
+#mainNav ul li {
+	display: none;
+ /*added for javascript color debugger*/
+
+}
+
+
 #dropMenButt a:hover {
 	background: none;
 	-webkit-filter: invert(.1);
