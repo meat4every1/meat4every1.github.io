@@ -25,13 +25,16 @@
 		var contentToggle = document.getElementById("content");
 		var bodyToggle = document.getElementById("body");
 		var centerToggle = document.getElementById('center');
+		$("#mainNav ul li:not(#dropMenButt)").hide();
+
 		//mainNav.style.backgroundColor = "red";
 		console.log(window.innerWidth);
 
 		//LARGE________________________________________
 		if (window.innerWidth >=1000) {
 			var i;
-
+			$("#mainNav ul li:not(#dropMenButt)").show();
+			$("#dropMenu ul li").css("marginTop","40px");
 			sideToggle.style.display = "inline";
 			topToggle.style.display = "none";
 			contentToggle.style.width = "70%";
@@ -49,6 +52,7 @@
 		//MEDIUM______________________________________
 		else if((window.innerWidth < 1000)  && (window.innerWidth >=685)){
 				$("#mainNav ul li:not(#dropMenButt)").show();
+				$("#dropMenu ul li").css("marginTop","40px");
 			mainNav.style.display = "block";
 			sideToggle.style.display = "none";
 			topToggle.style.display = "inline";
@@ -89,7 +93,7 @@
 
 			if (Math.abs(window.orientation) === 90) {
 				//Landscape-----------------
-
+				$("#dropMenu ul li").css("marginTop","5px");
 					for (i=0; i < socButtons.length; i++){
 						socButtons[i].style.width ="10%";
 						socList[i].style.padding ="0% 0.8%";
@@ -113,7 +117,7 @@
 			}
 			else {
 				//Portrait----------------
-
+				$("#dropMenu ul li").css("marginTop","20px");
 				for (i=0; i < socButtons.length; i++){
 					socButtons[i].style.width ="23%";
 					socList[i].style.padding ="0.8% 0%";
