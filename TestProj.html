@@ -11,14 +11,14 @@
 		<script src="jquery.colorbox-min.js"></script>
 	<script type="text/javascript">
 	function layoutShift() {
-	//	$(".accordion").find(" h3 + div").css("height",'190px');
+
 			console.log(window.innerWidth);
 		var sideToggle = document.getElementById("sidebar");
 		var topToggle = document.getElementById("topToggle");
 		var socButtons = document.getElementById("topToggle").getElementsByTagName("img");
 		var socList = document.getElementById("topToggle").getElementsByTagName("li");
-
-
+		var pHeadDivMobile = document.getElementsByClassName("pHeadDivMobile");
+		var pHead = document.getElementsByClassName("imgC");
 		var pHeadText = document.getElementById("pHeadText");
 	//	var mainNavButtons =document.getElementById("mainNav").getElementsByTagName("a");
 		var mainNavButtons =document.getElementById("mainNav");
@@ -34,14 +34,14 @@
 		//LARGE________________________________________
 		if (window.innerWidth >=1000) {
 			$("#dropMenu ul li").css("marginTop","40px");
-			$("#dropMenuCloseButt").css("marginTop","40px");
+			$("#dropMenuCloseButt").css("marginTop","40px")
 			sideToggle.style.display = "inline";
 			topToggle.style.display = "none";
 			contentToggle.style.width = "70%";
 			bodyToggle.style.width = "70%";
 			centerToggle.style.width ="70%";
-
-
+			//PHEADTOGGLE
+			$(".pHeadDivMobile").css("display","none");
 			$("#mainNav ul li:not(#dropMenButt)").show();
 			//$("#mainNav ul li").css("display","inline");
 				//COLOR DEBUG ___
@@ -65,10 +65,12 @@
 				socList[i].style.padding ="0% .8%";
 		}
 		//Pheadtoggle
-
-
-		//	$("article.topContent").find("h3").find("a").toggleClass("pHeadText", false);
-		//	$(".accordion").find(" h3 + div").css("height",'0');
+		$(".pHeadDivMobile").css("display","none");
+			for (i=0; i < pHead.length; i++) {
+					pHead[i].style.display = "inline";
+					}
+			$("article.topContent").find("h3").find("a").toggleClass("pHeadText", false);
+			$(".accordion").find(" h3 + div").css("height",'0');
 
 			//~~~~~~Post Specific
 				//Rize of Rakshaza
@@ -98,10 +100,12 @@
 						socList[i].style.padding ="0% 0.8%";
 						}
 					//PHEADTOGGLE
-
-
-						//	$("article.topContent").find("h3").find("a").toggleClass("pHeadText", false);
-						//	$(".accordion").find(" h3 + div").css("height",'0');
+					$(".pHeadDivMobile").css("display","none");
+					for (i=0; i < pHead.length; i++) {
+							pHead[i].style.display = "inline";
+							}
+							$("article.topContent").find("h3").find("a").toggleClass("pHeadText", false);
+							$(".accordion").find(" h3 + div").css("height",'0');
 
 							//~~~~~~Post Specific
 								//Rize of Rakshaza
@@ -119,11 +123,13 @@
 					socList[i].style.padding ="0.8% 0%";
 					}
 				//PHEADTOGGLE
+			$(".pHeadDivMobile").css("display","inline-block");
+				for (i=0; i < pHead.length; i++) {
+						pHead[i].style.display = "none";
+						}
 
-
-
-			//	$("article.topContent").find("h3").find("a").toggleClass("pHeadText", true);
-				//$(".accordion").find(" h3 + div").css("height",'190px');
+				$("article.topContent").find("h3").find("a").toggleClass("pHeadText", true);
+				$(".accordion").find(" h3 + div").css("height",'190px');
 				//$("pHeadMobileWrapper").css(z-index)
 
 				//~~~~~~Post Specific
@@ -213,19 +219,19 @@
 						<div id="BARNES" class="section">
 
 							<a href="#BARNES" title="Keyes to the Colleciton">
-
+								<img class="imgC" src="Img/Phead_BARNES.jpg">
 								<div class = "pHeadMobileWrapper">
-									<div class="portHeadDiv">
-										<img class="pHeadMobile" src="Img/PortheadL_BARNES.jpg">
+									<div class="pHeadDivMobile">
+										<img class="pHeadMobile" src="Img/Phead_BARNES.jpg">
 									</div>
 								</div>
 							</a>
 							<article class="topContent">
 
-								<h3 class="portHeadAccordDiv">
-									<a class="portHeadText" href="#BARNES" title="Keys to the Collection" id = "fuupa" >Keys to the Collection Lighting</a>
+								<h3>
+									<a href="#BARNES" title="Keys to the Collection" id = "fuupa" >Keys to the Collection Lighting</a>
 								</h3>
-								<div ><!--Accordian Div-->
+								<div><!--Accordian Div-->
 									<p>Contract work I completed under Spech.Tech for the Barnes Foundation’s mobile app Keys to the Collection. My responsibilities included but were not limited to upgrading their broken Unity 4 lighting to the new Unity 5 system, improving lighting visual quality, and maintaining low memory use.</p>
 									<div>
 										<ul class="cbImgCol">
@@ -245,21 +251,21 @@
 				<!--SECTION_Souls-->
 					<div id="SOULS" class="section">
 						<a href="#SOULS" title="Chibi Souls">
-
+							<img class="imgC" src="Img/Phead_Souls.jpg">
 							<div class = "pHeadMobileWrapper">
-							<div class="portHeadDiv">
-								<img class="pHeadMobile" src="Img/PortheadL_Souls.jpg">
+							<div class="pHeadDivMobile">
+								<img class="pHeadMobile" src="Img/Phead_Souls.jpg">
 							</div>
 							</div>
 						</a>
 						<article class="topContent">
-							<h3 class="portHeadAccordDiv">
-
-								<a class="portHeadText" href="#SOULS" title="Chibi Souls">Dark Chibi Series</a>
-
+							<h3>
+								<span>
+								<a href="#SOULS" title="Chibi Souls">Dark Chibi Series</a>
+							</span>
 							</h3>
 
-							<div ><!--Accordian Div-->
+							<div><!--Accordian Div-->
 
 									<ul class="cbImgCol">
 										<li><a class="Souls_Gallery" href="Img/Content Posts/Souls1_BB.png"> <img title="Doll" src="Img/Content Posts/Souls1_CBBB.png"> </a> </li>
@@ -279,19 +285,19 @@
 					<!--SECTION_COMIC-->
 						<div id="COMIC" class="section">
 							<a href="#COMIC" title="Tim">
-
+								<img class="imgC" src="Img/Phead_COMIC.jpg">
 								<div class = "pHeadMobileWrapper">
-								<div class="portHeadDiv">
-									<img class="pHeadMobile" src="Img/PortheadM_COMIC.jpg">
+								<div class="pHeadDivMobile">
+									<img class="pHeadMobile" src="Img/Phead_COMIC.jpg">
 								</div>
 								</div>
 							</a>
 							<article class="topContent">
-								<h3 class="portHeadAccordDiv">
-									<a class="portHeadText" href="#COMIC" title="Tim">Tim</a>
+								<h3>
+									<a href="#COMIC" title="Tim">Tim</a>
 								</h3>
 
-								<div ><!--Accordian Div-->
+								<div><!--Accordian Div-->
 								<p>This webcomic is currently the main focus of the collected efforts of myself, my partnership with <a href="https://speck.tech/">Speck.Tech</a>, and our associates. The project is based around creating a recognizable Intellectual property that can be used to theme and promote serialized content across multiple mediums. This project is an exercise in world building, allowing our team to create a set of characters, events, and settings that free us to tell the kinds of personal and big picture stories that inspire us across multiple mediums.</p>
 								<p>We are currently in preproduction on two branded projects. The first is a webcomic meant to be a centerpiece for lore, story, character and world building for an expansive IP. The Second project is a simple game production primarily focused on implementing a model view controller and other improvements to our pipeline design. We are not building media, we are building a machine of talented individuals that creates quality media.</p>
 									<div>
@@ -308,16 +314,16 @@
 				<!--SECTION_Derp Wars-->
 					<div id="DWS" class="section">
 						<a href="#DWS" title="Derp Wars">
-
+							<img class="imgC" src="Img/Phead_DerpWars.jpg">
 							<div class = "pHeadMobileWrapper">
-							<div class="portHeadDiv">
+							<div class="pHeadDivMobile">
 								<img class="pHeadMobile" src="Img/Phead_DerpWars.jpg">
 							</div>
 							</div>
 						</a>
 						<article class="topContent">
-							<h3 class="portHeadAccordDiv">
-								<a class="portHeadText" href="#DWS" title="Sven">Derp Wars</a>
+							<h3>
+								<a href="#DWS" title="Sven">Derp Wars</a>
 							</h3>
 
 							<div><!--Accordian Div-->
@@ -327,23 +333,23 @@
 								<div>
 									<p>Derp Wars was an impromptu project born from my fascination with the Darth Jar Jar Theory (fact).  Started on December 9th and finished on December 24th, Derp Wars was an intense but short challenge of my ability to generate art quickly, write a cohesive argument, and bring these elements together with limited animations for a final video presentation.  This project was foundational in informing my way forward into various other projects.  It is a proof of concept that I can script and articulate a long form Youtube video about a complex topic.  This project allowed me to experiment with prototyping and incrementally improving on an art style prolifically in such a small period.  The increase in speed and quality I acheived by the end of the process was eye opening. From this experience I began to consider the merits of creating serialized art, which led to my webcomic.</p>
 								</div>
-							</div class="portHeadAccordDiv"><!--Accordian Div-->
+							</div><!--Accordian Div-->
 						</article>
 					</div>
 
 				<!--SECTION_Rakashasa-->
 					<div id="ROR" class="section">
 						<a href="#ROR" title="Rise of Rakshaza">
-
+							<img class="imgC" src="Img/Phead_ROR.jpg">
 							<div class = "pHeadMobileWrapper">
-							<div class="portHeadDiv">
-								<img class="pHeadMobile" src="Img/PortheadL_ROR.jpg">
+							<div class="pHeadDivMobile">
+								<img class="pHeadMobile" src="Img/Phead_ROR.jpg">
 							</div>
 							</div>
 						</a>
 						<article class="topContent">
-							<h3 class="portHeadAccordDiv">
-								<a class="portHeadText" href="#ROR" title="Rise of Rakshaza">Rise of Rakshaza</a>
+							<h3>
+								<a href="#ROR" title="Rise of Rakshaza">Rise of Rakshaza</a>
 							</h3>
 
 							<div><!--Accordian Div-->
@@ -356,7 +362,7 @@
 										<li><a class="ROR_Gallery" href="Img/Content Posts/ROR3_Axe.png"> <img title="PC1" src="Img/Content Posts/ROR3_CBAxe.png"> </a> </li>
 										<li><a class="ROR_Gallery" href="Img/Content Posts/ROR4_Face.png"> <img title="PC1" src="Img/Content Posts/ROR4_CBFace.png"> </a> </li>
 										<li><a class="ROR_Gallery" href="Img/Content Posts/ROR5_Fire.png"> <img title="PC1" src="Img/Content Posts/ROR5_CBFire.png"> </a> </li>
-									</ul>
+										 </ul>
 									<p></p>
 									<script>jQuery("a.ROR_Gallery").colorbox({rel:'ROR_Gallery', width:"60%", height:"90%"});</script>
 								<div>
@@ -376,16 +382,16 @@
 					<!--SECTION_Singularity-->
 						<div id="SING" class="section">
 							<a href="#SING" title="Singularity">
-
+								<img class="imgC" src="Img/Phead_Singularity.jpg">
 								<div class = "pHeadMobileWrapper">
-								<div class="portHeadDiv">
-									<img class="pHeadMobile" src="Img/PortheadL_Singularity.jpg">
+								<div class="pHeadDivMobile">
+									<img class="pHeadMobile" src="Img/Phead_Singularity.jpg">
 								</div>
 								</div>
 							</a>
 							<article class="topContent">
-								<h3 class="portHeadAccordDiv">
-									<a class="portHeadText" href="#SING" title="Singularity">Singularity</a>
+								<h3>
+									<a href="#SING" title="Singularity">Singularity</a>
 								</h3>
 
 								<div><!--Accordian Div-->
@@ -419,16 +425,16 @@
 				<!--SECTION_M4E1-->
 					<div id="M4E1" class="section">
 						<a href="#M4E1" title="Meat4every1 on Twitch">
-
+							<img class="imgC" src="Img/Phead_M4E1.jpg">
 							<div class = "pHeadMobileWrapper">
-							<div class="portHeadDiv">
-								<img class="pHeadMobile" src="Img/PortheadL_M4E1.jpg">
+							<div class="pHeadDivMobile">
+								<img class="pHeadMobile" src="Img/Phead_M4E1.jpg">
 							</div>
 							</div>
 						</a>
 						<article class="topContent">
-							<h3 class="portHeadAccordDiv">
-								<a class="portHeadText" href="#M4E1" title="Sven">Meat4every Twitch Channel</a>
+							<h3>
+								<a href="#M4E1" title="Sven">Meat4every Twitch Channel</a>
 							</h3>
 
 							<div><!--Accordian Div-->
@@ -447,16 +453,16 @@ During My time on Twitch I have constructed a professional grade stream setup in
 				<!--Art Commissions-->
 					<div id="ARTCOM2015" class="section">
 					<a href="#ARTCOM2015" title="Art Commissions">
-
+						<img class="imgC" src="Img/Phead_ACOM.jpg">
 						<div class = "pHeadMobileWrapper">
-						<div class="portHeadDiv">
-							<img class="pHeadMobile" src="Img/PortheadL_ACOM.jpg">
+						<div class="pHeadDivMobile">
+							<img class="pHeadMobile" src="Img/Phead_ACOM.jpg">
 						</div>
 						</div>
 					</a>
 					<article class="topContent">
-						<h3 class="portHeadAccordDiv">
-							<a class="portHeadText" href="#ARTCOM2015" title="Art Commissions">Art Commissions</a>
+						<h3>
+							<a href="#ARTCOM2015" title="Art Commissions">Art Commissions</a>
 						</h3>
 						<div><!--Accordian Div-->
 							<div>
