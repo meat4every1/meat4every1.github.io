@@ -394,13 +394,15 @@ border-color: #191970;
 }
 .cbImgCol{
 	display:block;
+	margin-top: 30px;
 	list-style-type: none;
 }
 
 .cbImgCol img{
+	margin-top: 30px;
 	width: 100%;
 	position: relative;
-	right: 5%;
+	right: 4%;
 }
 .imgRow{
 display: table;
