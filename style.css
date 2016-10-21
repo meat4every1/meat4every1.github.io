@@ -40,7 +40,7 @@ a:hover, a:active {
 	background-position: right;
 	right: 100%;
 	width: 10%;
-	height: 100%;
+	height: 120%;
 }
 
 #redge {
@@ -57,7 +57,7 @@ position: absolute;
 
 left: 100%;
 width: 10%;
-height: 100%;
+height: 120%;
 }
 
 .mainHeader img{
@@ -378,8 +378,8 @@ z-index: 1;
 width: 100%;
 }
 .cbImgRow{
-display: table;
-width: 90%;
+display: inline;;
+width: 100%;
 }
 
 .cbImgRow li {
@@ -393,16 +393,16 @@ border-radius: 3px;
 border-color: #191970;
 }
 .cbImgCol{
-	display:block;
-	margin-top: 30px;
+	display:inline;
+
 	list-style-type: none;
 }
 
 .cbImgCol img{
-	margin-top: 30px;
+	margin-Bottom: 30px;
 	width: 100%;
-	position: relative;
-	right: 4%;
+	position: inline;
+
 }
 .imgRow{
 display: table;
@@ -429,7 +429,7 @@ border-color: #191970;
 
 .staticBlock {
 	background-color: #000000;
-	margin-top:10px;
+	margin-top:15px;
 padding: 25px 5%;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -567,4 +567,106 @@ font-weight:bold;
 
 #follow:hover p{
 		color: #660099;
+}
+.resumeTitle{
+	background-image: url("Img/UI/resume_title_2.png");
+	background-repeat: no-repeat;
+	background-size: 300px auto;
+	background-position: 0px 28px;
+		color: #777777;
+		padding-left: 45px;
+		padding-top: 4px;
+	font-size: 22px;
+
+}
+
+.resumeTitle p {
+	font-size: 16px;
+	margin-bottom: -5px;
+	margin-right: 20px;
+	margin-left: 18px;
+}
+.resumeItem {
+	background-image: url("Img/UI/resume_bullet_1.png"), url("Img/UI/resume_head_1.png");
+	background-repeat: no-repeat, repeat-x;
+	background-size: 40px, 90% 25px;
+	background-position: 0% 0% , 0% 8px;
+
+
+	overflow: hidden;
+}
+.resStaticBlock {
+	background-color: #000000;
+	margin-top:15px;
+	padding: 25px 0px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.resumeItem h3 {
+
+
+	position: relative;
+	line-height: 15px;
+	top: 4px;
+	left: 45px;
+	color: #777777;
+	font-size: 10px;
+}
+	.resumeItem h3 b {
+		color: #b0b0b0;
+		font-size: 16px !important;
+		position: relative;
+		top: 2px;
+		line-height: 10px;
+	}
+
+.resumeItem ul {
+	padding-top: 10px;
+	margin-bottom: 0px;
+}
+
+.resumeItem li {
+	list-style: none;
+		background-image: url("Img/UI/resume_bullet_2.png");
+		background-repeat: no-repeat;
+		background-size: 15px;
+		background-position: left 4px;
+		padding-left: 25px;
+		margin-top: -10px;
+		margin-right: 20px;
+
+}
+#next a {
+	border-radius:5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	position: relative;
+	top: -20px;
+}
+
+#next p {
+		color: #111111;
+		position: relative;
+		top: -35px;
+		display: inline-block;
+			padding: 10px 25px;
+				height: 20px;
+}
+
+#next a:link, #next a:visited {
+		color: #666; /*colors accordian text*/
+		display: inline-block;
+		padding: 10px 25px;
+		height: 20px;
+}
+
+#next a:hover, #next a:active ,
+ #next .active a:link, #next .active a:visited {
+	background-color: #181818;
+	color: #660099; /*colors top nav links*/
+}
+footer {
+	position: relative;
+	top: 300
 }

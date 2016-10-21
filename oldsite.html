@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>IanCW: Homepage</title>
+		<meta charset="utf-8" />
+		<link  rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" href="colorbox.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript">
+	function layoutShift() {
+		var sideToggle = document.getElementById("sidebar");
+		var contentToggle = document.getElementById("content");
+		var bodyToggle = document.getElementById("body");
+		var centerToggle = document.getElementById('center');
+		console.log(bodyToggle[0] +"this is body toggle");
+		if((window.innerWidth < 1000)){
+			sideToggle.style.display = "none";
+			contentToggle.style.width = "100%";
+			bodyToggle.style.width = "90%";
+			centerToggle.style.width ="90%";
+		}
+		else{
+			sideToggle.style.display = "inline";
+			contentToggle.style.width = "70%";
+			bodyToggle.style.width = "70%";
+			centerToggle.style.width ="70%";
+		}
+	}
+	window.onresize = layoutShift;
+	window.onload = layoutShift;
+	layoutShift();
+	</script>
+
+	<script src="jquery.js"></script>
+	<script src="jquery.colorbox-min.js"></script>
+
+	</head>
+
+	<body id="body">
+
+		<header class="mainHeader">
+			<div id="center">
+				<div id="ledge">
+				</div>
+				<div id="redge">
+				</div>
+			</div>
+			<img src="Img/logo.jpg">
+
+			<nav><ul>
+				<li> <a  style="color: #660099;" href="#">Portfolio</a></li>
+				<li><a href="GolgothaBlog.html">Golgotha Project Blog</a></li>
+				<li><a href="Meat4every1.html">meat4every1.tv</a></li>
+
+			</ul></nav>
+
+		</header>
+
+		<div class="mainContent">
+			<div class="accordion">
+				<div id="content">
+
+					<!--SECTION_Barnes-->
+						<div id="BARNES" class="section">
+							<a href="#BARNES" title="Meat4every Twitch Channel (2015)"><img class="imgC" src="Img/Phead_BARNES.jpg"></a>
+							<article class="topContent">
+								<h3>
+									<a href="#BARNES" title="Keys To the Collection">Keys to the Collection Lighting (2016)</a>
+								</h3>
+								<div><!--Accordian Div-->
+									<p>Contract work I completed under Spech.Tech for the Barnes Foundation’s mobile app Keys to the Collection. My responsibilities included but were not limited to upgrading their broken Unity 4 lighting to the new Unity 5 system, improving lighting visual quality, and maintaining low memory use.</p>
+									<div>
+										<ul class="cbImgCol">
+											<li>	<a class="BARNES_Gallery" href="Img/Content Posts/BARNES_Gal_01.png"> <img title="P1" src="Img/Content Posts/BARNES_CBGal_01.jpg"> </a> </li>
+											<li>	<a class="BARNES_Gallery" href="Img/Content Posts/BARNES_Gal_02.png"> <img title="P1" src="Img/Content Posts/BARNES_CBGal_02.jpg"> </a> </li>
+											<li>	<a class="BARNES_Gallery" href="Img/Content Posts/BARNES_Gal_09.png"> <img title="P1" src="Img/Content Posts/BARNES_CBGal_09.jpg"> </a> </li>
+											<li>	<a class="BARNES_Gallery" href="Img/Content Posts/BARNES_Gal_14.png"> <img title="P1" src="Img/Content Posts/BARNES_CBGal_14.jpg"> </a> </li>
+											<li>	<a class="BARNES_Gallery" href="Img/Content Posts/BARNES_Gal_18.png"> <img title="P1" src="Img/Content Posts/BARNES_CBGal_18.jpg"> </a> </li>
+											<li>	<a class="BARNES_Gallery" href="Img/Content Posts/BARNES_Gal_19.png"> <img title="P1" src="Img/Content Posts/BARNES_CBGal_19.jpg"> </a> </li>
+										</ul>
+											<script>jQuery("a.BARNES_Gallery").colorbox({rel:'BARNES_Gallery', width:"70%", height:"70%"});</script>
+									</div>
+								</div><!--Accordian Div-->
+							</article>
+						</div>
+
+				<!--SECTION_Souls-->
+					<div id="SOULS" class="section">
+						<a href="#SOULS" title="Meat4every Twitch Channel (2015)"><img class="imgC" src="Img/Phead_Souls.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#SOULS" title="Sven">Chibi Souls Series :3 (2016)</a>
+							</h3>
+
+							<div><!--Accordian Div-->
+								<script type"text/javascript" src="/Text/Port_Gal_Souls.js"></script>
+								<div>
+									<p>I started designing Chibi Souls as a short diversion from working on my webcomic. I wanted to sidestep away from the visual style and process of the webcomic to take what I learned and apply it in less regimented styles. Chibi Souls was meant to help inform my decisions upon going back to the webcomic and reevaluating my pipeline for creating serialized art. The images produced for this side project allowed me to experiment with colors in ways I had not previously. Part of the inspiration for Chibi Souls was my exposure to the art of Miss-Octopie.  Besides the obvious stylistic influence, I was specifically intrigued by her use of color in line art. This spurred me to challenge myself to stop using pure black and grey in my art, and really push my experimentations with the interaction of light and color.  During this project I also developed some new custom brushes that have drastically sped up the process of blending colors in my work. Because of this I feel I can more quickly capture lighting, leaving me more time to creatively interpret light.<p>
+
+								</div>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+					<!--SECTION_COMIC-->
+						<div id="COMIC" class="section">
+							<a href="#COMIC" title="Meat4every Twitch Channel (2015)"><img class="imgC" src="Img/Phead_COMIC.jpg"></a>
+							<article class="topContent">
+								<h3>
+									<a href="#COMIC" title="Webcomic">Webcomic (working title)</a>
+								</h3>
+
+								<div><!--Accordian Div-->
+								<p>This webcomic is currently the main focus of the collected efforts of myself, my partnership with <a href="https://speck.tech/">Speck.Tech</a>, and our associates. The project is based around creating a recognizable Intellectual property that can be used to theme and promote serialized content across multiple mediums. This project is an exercise in world building, allowing our team to create a set of characters, events, and settings that free us to tell the kinds of personal and big picture stories that inspire us across multiple mediums.</p>
+								<p>We are currently in preproduction on two branded projects. The first is a webcomic meant to be a centerpiece for lore, story, character and world building for an expansive IP. The Second project is a simple game production primarily focused on implementing a model view controller and other improvements to our pipeline design. We are not building media, we are building a machine of talented individuals that creates quality media.</p>
+									<div>
+										<ul class="cbImgCol">
+											<li>	<a class="COMIC_Gallery" href="Img/Content Posts/comic_P1.png"> <img title="P1" src="Img/Content Posts/comic_CBP1.jpg"> </a> </li>
+											<li>	<a class="COMIC_Gallery" href="Img/Content Posts/comic_P2.png"> <img title="P2" src="Img/Content Posts/comic_CBP2.jpg"> </a> </li>
+										</ul>
+											<script>jQuery("a.COMIC_Gallery").colorbox({rel:'COMIC_Gallery', width:"140%"});</script>
+									</div>
+								</div><!--Accordian Div-->
+							</article>
+						</div>
+
+				<!--SECTION_Derp Wars-->
+					<div id="DWS" class="section">
+						<a href="#DWS" title="Derp Wars"><img class="imgC" src="Img/Phead_DerpWars.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#DWS" title="Sven">Derp Wars (2015)</a>
+							</h3>
+
+							<div><!--Accordian Div-->
+								<div class="vidScale">
+								<iframe  src="https://www.youtube.com/embed/a1814v8gHYc" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div>
+									<p>Derp Wars was an impromptu project born from my fascination with the Darth Jar Jar Theory (fact).  Started on December 9th and finished on December 24th, Derp Wars was an intense but short challenge of my ability to generate art quickly, write a cohesive argument, and bring these elements together with limited animations for a final video presentation.  This project was foundational in informing my way forward into various other projects.  It is a proof of concept that I can script and articulate a long form Youtube video about a complex topic.  This project allowed me to experiment with prototyping and incrementally improving on an art style prolifically in such a small period.  The increase in speed and quality I acheived by the end of the process was eye opening. From this experience I began to consider the merits of creating serialized art, which led to my webcomic.</p>
+								</div>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+				<!--SECTION_Rakashasa-->
+					<div id="ROR" class="section">
+						<a href="#ROR" title="Rise of Rakshaza (2015)"><img class="imgC" src="Img/Phead_ROR.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#ROR" title="Rise of Rakshaza">Rise of Rakshaza (2015)</a>
+							</h3>
+
+							<div><!--Accordian Div-->
+							<div>pand pooples</div>
+								<script type"text/javascript" src="/Text/Port_Gal_ROR.js"></script>
+								<div>
+									<p>A seed project for Meat4every1 on Twitch, Rise of Rakshaza is the name of a proposed Fallout 4 mod. I worked through a mock pre production phase in the early days of Meat4every1 on Twitch. The concept art seen above was meant to challenge myself to stick with one piece of artwork for a long time and was meticulously painted over the course of 2 months towards the end of 2015. The base character was used as a mannequin for the testing of various garments and equipment for look development.
+									</p>
+									<p>The concept art was crafted based on gameplay mechanics and lore surrounding the creature you see depicted.  In Fallout 4 ~200 years has passed since the great war. So much time has passed and the flora and fauna of the land has changed so drastically it is surprising to me that Bethesda has done very little to experiment with alternative cultural bases. Almost every culture we see in Fallout is directly linked to the pre war world. They live in pre war buildings, wear pre war clothes, use a pre war language etc. Everything is set in a Mad Max Aesthetic, all spikes, leather, and rusted technology. But I propose that with culture and society so thoroughly demolished, 200 years later we would begin to see cultures that had formed completely outside the direct influence of what had come before. With new species of sentient humanoids roaming the land in the form of sentient ghouls and super mutants, the shape of what a new society would look like begins to take form. Less Mad Max, more Apocalypto.
+									</p>
+									<p>The other side of the idea was the loose connection the Fallout lore has always had with the occult; Fortune tellers, Aliens, Ghosts, all make an appearance in fallout games from time to time. With the link Bethesda has recently suggested between The Elder Scrolls series and fallout, the idea for Rakshaza as the first truly magical installment in the Fallout universe began to take shape
+									</p>
+									<p>The concept that formed from these two ideas was a society of sentient ghouls called the Rakshaza. This new Fallout faction would be characterized by their ability to control radiation within their own body to cast spells, buffs, or use other abilities. What this would mean to the player was that they would have the ability to leverage that red radiation buildup on their health as a mana bar, Introducing what amounts to lore freindly blood and fire magic. The plan was to implement the core mechanic of leveraging radiation buildup as a resource in a small self contained mod with some basic abilities and spells. From there we would incrementally incorporate more mechanics, scenarios, equipment, spells, npcs, factions, etc. until we were satisfied with the project as whole.
+									</p>
+									</div>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+					<!--SECTION_Singularity-->
+						<div id="SING" class="section">
+							<a href="#SING" title="Singularity (2015)"><img class="imgC" src="Img/Phead_Singularity.jpg"></a>
+							<article class="topContent">
+								<h3>
+									<a href="#SING" title="Singularity">Singularity (2015)</a>
+								</h3>
+
+								<div><!--Accordian Div-->
+									<div>
+										<p> Singularity was the working title of an exploratory prototype project between myself and Bobby Speck. The project was focused on determining whether or not a conceptualize mobile game idea could be viable produced based on our time and resource limitations. The high concept was to create a puzzle game where players had little to no direct control of in game agents. Players would instead act through Ai built using a rudimentary block based coding system similar to educational languages like scratch. These Ai agents would interact with the world on your behalf and be built with increasingly complex code libraries to solve increasingly complex puzzles.  The purpose of this gameplay was to educate players on basic coding concepts, if statements, loops etc. in directed sandbox environments. The target audience was school age people with an interest in coding but no educational outlet to experiment with these interests. We wanted to give these young people a sense of ownership over coding concepts, by linking these concepts directly with their own interactive creations.
+										</p>
+											<p>During this exploratory prototyping phase we developed aspects of the UI and game world to functional completion, and created a robust plan for required development. Upon reaching this point we felt we had a full understanding of the project's complexity and requirements. Analyzing the needs of the project, the timeline of development to this point, and the expected timeline for prototype completion, we decided that our development goals would be better served by redirecting towards a smaller scale project.  We have high hopes for the future of Singularity, and fully intend to reexamine it if and when we have more resources we can leverage to address development concerns.  We have since redirected our efforts towards serialized storytelling in our new Webcomic, and plan to do another small scale game prototype focused on pipeline design.
+									</p>
+
+									<p>Concept art at early stage of development, showing the hub character that represents the player, the expected game world style, and plans for coding interface.</p>
+									<ul class="cbImgRow">
+										<a class="SING_Gallery" href="Img/Content Posts/SI1_UI.png"> <img title="SI1" src="Img/Content Posts/SI1_CBUI.jpg"> </a>
+									</ul>
+
+									<p>Concept art depicting the planned aesthetics for fog of war in Singularity.  Fog of war would allow us make sure every puzzle contained at least 2 phases, discovery and action.</p>
+									<ul class="cbImgRow">
+										<a class="SING_Gallery" href="Img/Content Posts/SI2_FW.png"> <img title="SI2" src="Img/Content Posts/SI2_CBFW.jpg"> </a>
+									</ul>
+										<script>jQuery("a.SING_Gallery").colorbox({rel:'SING_Gallery', width:"60%", height:"90%"});</script>
+								<p>This animation shows the interface at the end of prototyping. Players could Move code chunks to up to 5 scalable windows, edit that code, print the code into the console, and close coding windows to clear their contents.</p>
+									<img class="fullImage" src="Img/Content Posts/SI_Demo.gif">
+
+								<p>Images of in game sprites, and the subsequent assembly and animation.</p>
+
+
+
+								</div><!--Accordian Div-->
+							</article>
+						</div>
+
+				<!--SECTION_M4E1-->
+					<div id="M4E1" class="section">
+						<a href="#M4E1" title="Meat4every1 on Twitch (2015-Present)"><img class="imgC" src="Img/Phead_M4E1.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#M4E1" title="Sven">Meat4every Twitch Channel (2015)</a>
+							</h3>
+
+							<div><!--Accordian Div-->
+								<div>
+									<p><a href="Meat4every1.html">meat4every1.tv</a></p>
+									<p>The Meat4every1 Twitch channel was born from a need to combine the time I spend working on art or relaxing with a video game, with my desire to build a creative community of likeminded technophiles, gamers, artists, and everyone inbetween. The channel began in earnest October 2015. From that point until late April 2016 I maintained a schedule of at least three hours a day 5 days a week. During this period I developed a pipeline for maintaining a daily broadcast, incrementally improving the look and branding, while taking the personal steps necessary to improve as a performer.  Over the course of the seven months streaming five days a week I completed more digital illustrations than in the last seven years. It was enlightening and empowering to see my skills improve so drastically in such a short period. The explosion of quality and quantity in my 2016 portfolio is directly attributed to my Twitch Creative schedule.
+During My time on Twitch I have constructed a professional grade stream setup in my home studio. I have a two computer setup linked by a capture card allowing me to split tasks intuitively between the two rigs and maximize performance in games and art applications. I am confident that I could run the technical aspects and perform on a Twitch station to fulfill the professional broadcasting needs of others if called to do so. All in all as a project, from a personal improvement and production pipeline perspective, Meat4every1 on Twitch has been a huge success.
+									</p>
+									<p>After seven Months of streaming I have lost faith in Twitch Creative as a promotional platform. When I learned streamers like Ross from Game Grumps are only marginally successful (~200 viewers) my expectations of reaching or exceeding that kind of viewership were diminished  With that in mind I have since significantly cut back on my streaming schedule. Up to this point I have laid the groundwork for the creation of professional and entertaining serialized content on Twitch and other online streaming platforms. I am incredibly proud of the progress made and I will continue to develop and improve Meat4every1 as a Twitch brand and beyond.
+									</p>
+								</div>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+				<!--Art Commissions-->
+					<div id="ARTCOM2015" class="section">
+					<a href="#ARTCOM2015" title="Art Commissions"><img class="imgC" src="Img/Phead_ACOM.jpg"></a>
+					<article class="topContent">
+						<h3>
+							<a href="#ARTCOM2015" title="Art Commissions">2015 Art Commissions</a>
+						</h3>
+						<div><!--Accordian Div-->
+							<div>
+								<p>An art Commission undertaken in the early part of 2015, and finished over the course of 2 weeks.</p>
+							</div>
+							<a href="http://imgur.com/IbLYPNt" title="Portrait" target="_blank"><img class="fullImage" src="Img/Content Posts/ACOM_MH_Portrait.jpg"></a>
+							<a href="http://imgur.com/IG6M3tt" title="Logo" target="_blank"><img class="fullImage" src="Img/Content Posts/ACOM_MH_logo.jpg"></a>
+
+
+						</div><!--Accordian Div-->
+					</article>
+					</div>
+
+				<!--SECTION_UNSEELY_SECRETS-->
+					<div id="UNSEELY" class="section">
+					<a href="#UNSEELY" title="Unseely Secrets"><img class="imgC" src="Img/Phead_US_V01.jpg"></a>
+					<article class="topContent">
+						<h3>
+							<a href="#UNSEELY" title="Unseely Secrets">Pathfinder 3rd Party Expansion Illustrator (Ongoing)</a>
+						</h3>
+						<div><!--Accordian Div-->
+							<div>
+								<p>
+									A long term publication project. I provide concept art that drives the creative process, and print ready assets for use in publication.
+								</p>
+							</div>
+							<img class="fullImage" src="Img/Content Posts/US_Enspiriter_Work.jpg">
+							<img class="fullImage" src="Img/Content Posts/US_Goblin_2_Work.jpg">
+							<img class="fullImage" src="Img/Content Posts/US_Goblin_1_Work.jpg">
+
+						</div><!--Accordian Div-->
+
+					</article>
+					</div>
+				<!--SECTION_ForcefullFalcion-->
+					<div id="FORCEFULFALCON" class="section">
+					<a href="#FORCEFULFALCON" title="ForcefulFalcon"><img class="imgC" src="Img/Phead_FF_V01.jpg"></a>
+					<article class="topContent">
+						<h3>
+							<a href="#FORCEFULFALCON" title="ForcefulFalcon">Forceful Falcon Brand Design (Ongoing)</a>
+						</h3>
+						<div><!--Accordian Div-->
+							<div>
+								<p>Check out <a href="http://www.twitch.tv/forcefulfalcon/profile">The ForcefulFalcon Twitch page</a></p>
+								<p>ForcefulFalcon is the pseudonym of an up and coming Twitch streamer and game media personality, Katie. The Project consists of multiple
+								digital images I am painting in photoshop for branding use, ranging from t-shirt sales to a Youtube banner</p>
+							</div>
+							<img class="fullImage" src="Img/Content Posts/FF_WorkNProg.jpg">
+							<div>
+								<p>
+								This image was requested as the centerpeice for the ForcefulFalcon Youtube banner. A complex and detailed painting requiring the
+								designing of a version of Katie as a MOBA ranger type character.
+								</p>
+							</div>
+
+							<img class="fullImage" src="Img/Content Posts/FF_Work_Zombie.jpg">
+							<div>
+								<p>
+									This image is a creation of my own idea, a second painting for the youtube banner to fill out some of the remainign real estate.
+								</p>
+							</div>
+							<img class="fullImage" src="Img/Content Posts/FF_Work_Icon.jpg">
+							<div>
+								<p>
+									Another idea of my own devising to help further the ForcefulFalcon brand, quite literally a forceful, albeit cute, falcon. This design was received very
+									positively by the client and will go on to be a t-shirt design and likely an inclusion in the Youtube banner.
+								</p>
+							</div>
+						</div><!--Accordian Div-->
+
+					</article>
+					</div>
+
+					<!--SECTION_DOTA2CENTUAR-->
+					<div id="CENTAUR" class="section">
+					<a href="#CENTAUR" title="centaur"><img class="imgC" src="Img/Phead_CT_V01.jpg"></a>
+					<article class="topContent">
+						<h3>
+							<a href="#CENTAUR" title="Centaur">Dota 2 Set: Centaur Warrunner (Ongoing)</a>
+						</h3>
+						<div><!--Accordian Div-->
+							A Work In Progress put on hiatus recently because of an influx of commissions.
+							<img class="fullImage" src="Img/Content Posts/CT_Work_01.jpg">
+							<img class="fullImage" src="Img/Content Posts/CT_Work_02.jpg">
+							<img class="fullImage" src="Img/Content Posts/CT_Work_03.jpg">
+
+						</div><!--Accordian Div-->
+
+					</article>
+					</div>
+
+				<!--SECTION_Shadow_Demon-->
+					<div id="SHADOWDEMON" class="section">
+						<a href="#SHADOWDEMON" title="Shadow Demon"><img class="imgC" src="Img/Phead_SD_V01.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#SHADOWDEMON" title="Shadow Demon">Dota 2 Set: Shadow Demon (Ongoing)</a>
+							</h3>
+							<div><!--Accordian Div-->
+							<p>My Original Concept</p>
+							<img class="fullImage" src="Img/Content Posts/SD_Concept.jpg">
+							<p>The Rig Structure</p>
+							<img class="fullImage" src="Img/Content Posts/SD_Rig.jpg">
+							<p>Finished Modelling</p>
+							<img class="fullImage" src="Img/Content Posts/SD_Modeled.jpg">
+							<p>
+							My second venture into creating art assets for the Dota 2 workshop and store. Valve's Shadow Demon Character is rigged oddly. his shoulder joints are located near his neck, up behind the clavicle.  This placement allows for theunmoving platform around his shoulders, on wich spikes can sit and remain stable, while maintaining appropriate movement in the shoulders. creating shoulder pads for this character is made difficult by this.  They cannot be created as a single peice, like my concept, but must be separated into multiple independently moving pieces.
+							</p>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+				<!--SECTION_Sketchbook_Selections-->
+					<div id="SKETCHBOOK2014" class="section">
+						<a href="#SKETCHBOOK2014" title="Sketchbook 2011-2014"><img class="imgC" src="Img/Phead_Sketch_11_14.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#SKETCHBOOK2014" title="Sketchbook 2011-2014">Sketchbook Selections 2011-2014</a>
+							</h3>
+							<div><!--Accordian Div-->
+								<iframe class="imgur-album" width="100%" height="1100" frameborder="0" src="//imgur.com/a/BiLlf/embed"></iframe>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+				<!--SECTION_Sven-->
+					<div id="SVEN" class="section">
+						<a href="#SVEN" title="Sven"><img class="imgC" src="Img/SvenPostHead.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#SVEN" title="Sven">Dota 2 Set: Sven (2014)</a>
+							</h3>
+
+							<div><!--Accordian Div-->
+								<div class="vidScale">
+									<iframe src="https://www.youtube.com/embed/CUGw2p8s9zg" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div>
+									<p>Check out the <a href="http://steamcommunity.com/workshop/filedetails/?id=262518950" Title="Sven Set LINK">Steam Page</a><p>
+								</div>
+								<div>
+									<ul class="imgRow">
+										<li><img title="Sven Front" src="Img/Content Posts/Sven_Front.gif"></li>
+										<li><img title="Sven Back" src="Img/Content Posts/Sven_Back.gif"></li>
+									</ul>
+								</div>
+								<div>
+									<p>My First venture into creating art assets for the Dota 2 workshop and store. During the course of my time at Drexel university I encountered and mastered every aspect of creating characters for games and animation.  However the 5-10 week development schedules of projects at Drexel never left enough time to really dig into a single object or character and bring it to a professional level of detail. The goal of this personal project was to give myself a chance to create more meticulously crafted models. Every Texture for this armer set was meticulously hand painted in Photoshop using the same techniques employed in my digital art. Though an incredibly rewarding and fulfilling project, It illustrated for me the virtue of creating a pipeline that reaches similar quality goals but utilizes more than just my painting skills. In my following projects I have endeavoured to find a balance between this direct approache and more procedural approaches to asset generation.</p>
+								</div>
+								<div>
+									<img class="fullImage" src="Img/Content Posts/Sven_Head_NL.jpg">
+								</div>
+								<div>
+									<img class="fullImage" src="Img/Content Posts/SvenLoadScrn.jpg">
+								</div>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+				<!--SECTION_LoL_Art-->
+					<div id="LOLART" class="section">
+						<a href="#LOLART" title="lol art"><img class="imgC" src="Img/pHead_Aatrox.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#LOLART" title="lol art">Justin.Tv Art Contest (2014)</a>
+							</h3>
+							<div><!--Accordian Div-->
+								<div>
+									<p>Created over the course of a 14 consecutive hour illustration competition.</p>
+								</div>
+								<a href="http://imgur.com/D9Wi5rt"><img class="fullImage" src="http://i.imgur.com/D9Wi5rt.png" title="Hosted by imgur.com"/></a>
+
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+				<!--SECTION_Dead_End-->
+					<div id="DEADEND" class="section">
+						<a href="#DEADEND" title="Dead End"><img class="imgC" src="Img/Phead_DE.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#DEADEND" title="third post">Dead End (2012-2013)</a>
+							</h3>
+							<div><!--Accordian Div-->
+								<div class="vidScale">
+									<iframe src="//player.vimeo.com/video/79258779" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+								</div>
+								<div>
+								<p>
+									<a href="http://www.drexel.edu/westphal/news/archive/2013/2013-04-13-Dead-End/" title="Dead End Award Page" >Drexel University Research Day 2013: Dean’s Award</a>
+								</p>
+								<p>
+								The creation of this project was documented in this <a href="">developement blog</a>
+								</p>
+								<p>
+								The project portion of my Master's Thesis at Drexel University, Dead End was a ~15 minute survival horror game, developed over the course of 4 Months. All aspects of this game, code, art, etc. were created by myself during this period. The one exception to this was the in engine video recording plugin AVPRO Movie Capture generously donated by RenderHeads. </p>
+
+								<p>The Purpose of my thesis was to test two hypothesis. The first, that the externally displayed emotions of a Player Character (PC) in a third person perspective horror game would influence the emotional state of the player during the course of gameplay. The second, that this emotional shift would impact player performance. 40 students at Drexel University were tested. They were split into 2 groups. In one group the PC was animated to express fear. The other group used a PC animated to express confidence. The results were collected through metrics culled directly from gameplay, and post play session interviews. The metrics, compared between the two groups showed no statistically significant difference in performance between the two groups. The interviews however showed that players viewed the experience and their performance differently between the two groups, the fear group favoring negative accounts and the confident group favoring positive accounts.
+
+								</p>
+
+								</div>
+								<div class="vidScale">
+									<iframe src="//www.youtube.com/embed/5BeYkkgaeX4" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+				<!--SECTION_Bugs-->
+					<div id="BUGS" class="section">
+						<a href="#BUGS" title="Bugs"><img class="imgC" src="Img/Phead_Bugz.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#BUGS" title="Bugs">Unity 3D Swarm Simulation (2013)</a>
+							</h3>
+							<div><!--Accordian Div-->
+
+								<div class="vidScale">
+									<iframe src="//www.youtube.com/embed/pybu0QhtKU0" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div>
+									<p>
+										The creation of this project was documented in this <a href="http://black-incarnation.tumblr.com/" title="its pretty cool ;D">development blog</a>.
+									</p>
+									<p>
+										An exploration into using crowd ai in place of generic particle effect animations to create a bug swarm Conducted during a independendt study at Drexel University. Developed simultaneously with Dead End and leveraging some of the same back end elements for pathfinding. I created the effects for a theoretical 3rd person perspective game where the player could transform into a swarm of bugs. Bugs path to a point 10 units forward on the player character’s Z axis. Bugs are physics enabled allowing them to collide, climb over, and push other bugs.
+									</p>
+								</div>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+				<!--SECTION_Necromancer-->
+					<div id="NECRO" class="section">
+						<a href="#NECRO" title="four"><img class="imgC" src="Img/Phead_Necro.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#NECRO" title="four">Necromancer (2013)</a>
+							</h3>
+							<div><!--Accordian Div-->
+								<div class="vidScale">
+									<iframe  src="//www.youtube.com/embed/RiI3IrbyKaY" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div>
+								<p>
+								The creation of this project was documented in this <a href="http://matte-painting-dev.tumblr.com/" title="its pretty cool ;D">development blog</a>.
+								</p>
+								<p>
+								I developed this project simultaneously with my Master's Thesis, Dead End. It was created over the course of a ten week term as the final submission for my graduate compositing course at Drexel University. A layered fully realized Photoshop painting was split and projected onto relatively simple geometry to produce the scene and character. I modeled this geometry to match the images, then rigged and animated the character.  The animated scene in maya was imported and assembled in nuke for a final render. At some point I want to take another stab at this kind of composition in a game engine.
+								</p>
+
+								</div>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+				<!--SECTION_Operation_Dino-->
+					<div id="DINO" class="section">
+						<a href="#DINO" title="six"><img class="imgC" src="Img/Phead_Op_Dino.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#DINO" title="five">Operation Dino (2012)</a>
+							</h3>
+							<div><!--Accordian Div-->
+								<div class="vidScale">
+									<iframe src="//www.youtube.com/embed/rodIKVJNg0o" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div>
+									<p>
+										The creation of this project was documented in this <a href="http://glennwinters.com/gradgaming/" title="its pretty cool ;D">development blog</a>.
+									</p>
+									<p>
+										A two term Graduate project At Drexel University produced with the direction from The Academy of Natural Sciences, and tested on site. I worked on early art direction, and later on in development created every aspect of the main character "The Master Palaeontologist". I created the concept art to be approved by the 11 person team and overseeing professor, which was later used in the game logo. I then modelled, textured, rigged, and animated this character.
+									</p>
+								</div>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+					<!--DMM-->
+					<div id="DMM" class="section">
+						<a href="#DMM" title="six"><img class="imgC" src="Img/Phead_DMM.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#DMM" title="four">DMM Tutorials (2012)</a>
+							</h3>
+							<div><!--Accordian Div-->
+							<div class="vidScale">
+								<iframe src="//player.vimeo.com/video/40922676" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+							<div class="vidScale">
+								<iframe src="//player.vimeo.com/video/40929205" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+							<p> during the early exploratory stages of my Master's Thesis I considered doing research into destructible characters for real time renders.  the interests eventually shifted for my <a href="#three">Master's Thesis</a>, but during the process I learned a lot about the Digital Molecular Matter plugin for maya, and created some solid tutorials.</p>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+						<!--cassie-->
+					<div id="DP2012" class="section">
+						<a href="#DP2012" title="six"><img class="imgC" src="Img/Phead_cas.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#DP2012" title="eleven">Digital Painting (2011-2012)</a>
+							</h3>
+							<div><!--Accordian Div-->
+								<p>Portrait of a Friend</p>
+								<a href="http://imgur.com/mClL3"><img class="fullImage" src="http://i.imgur.com/mClL3.jpg" title="source: imgur.com" /></a>
+								<p>Concept Art Tutorial</p>
+								<div class="vidScale">
+									<iframe src="//player.vimeo.com/video/41776605" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
+								</div>
+								<p>The Dry Lich</p>
+								<div class="vidScale">
+									<iframe src="//player.vimeo.com/video/36682897" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+								</div>
+								<div class="vidScale">
+									<iframe src="//player.vimeo.com/video/36682086" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+								</div>
+								<div class="vidScale">
+									<iframe src="//player.vimeo.com/video/37581538" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+								</div>
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+				<!--SECTION_Epic_Defense-->
+					<div id="EPIC" class="section">
+						<a href="#EPIC" title="Epic"><img class="imgC" src="Img/Phead_ED.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#EPIC" title="Epic">Epic Defense (2011)</a>
+							</h3>
+							<div><!--Accordian Div-->
+								<p>Promo Video: 10 week prototype</p>
+								<div class="vidScale">
+									<iframe src="//www.youtube.com/embed/aPV5cgQcZIA" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<p>Promo Video: 20 week prototype</p>
+								<div class="vidScale">
+									<iframe src="//www.youtube.com/embed/7q_4vC_p0Bs" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<p>My first major game project. Developed over the course of my Gaming Workshop I and II course at Drexel University. The Class was split into two groups for the first 10 Week Semester.  Epic Defense was my proposal for the class, and I stepped up as project manager after it was chosen as one of two projects to go into production. The First 10 weeks i managed my team and created the dwarf character in his entirety as well as other assorted art assets. Epic Defense went on to be chosen for a second term of development, at which point I shared my duties as project manager.  During this time I created the new Goblin enemy and Bugbear enemy seen in the second video.
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+				<!--SECTION_College_Cg_Animations-->
+					<div id="BARGAIN" class="section">
+						<a href="#BARGAIN" title="six"><img class="imgC" src="Img/Phead_Old_Dude.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#BARGAIN" title="four">The Bargin(2011)</a>
+							</h3>
+							<div><!--Accordian Div-->
+								<div class="vidScale">
+									<iframe src="//www.youtube.com/embed/DxLzrJzuoaQ" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<p> The Rig</p>
+								<div>
+									<img class="fullImage" src="Img/Content Posts/OldManRig.jpg">
+								</div>
+								<p>My first facial rig, created over the course of 10 weeks for my Character Animation II course at Drexel University. The character was modeled in Zbrush, rigged and animated and rendered in Maya, then composited in nuke. </p>
+
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+					<!--first sight-->
+					<div id="FIRSTSIGHT" class="section">
+						<a href="#FIRSTSIGHT" title="six"><img class="imgC" src="Img/Phead_FirstSight.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#FIRSTSIGHT" title="four">First Sight(2011)</a>
+							</h3>
+							<div><!--Accordian Div-->
+								<div class="vidScale">
+									<iframe src="//player.vimeo.com/video/17614668" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+								</div>
+								<div>
+								<p>An animation created over the course of 5 weeks for my Character Animation I course at Drexel University.  The rigs for this animation were provided by our professor for this course.  Disappointed by missing out on a chance to create a new character, not satisfied with the provided rig, and being the only person i know who enjoys weight painting, i ripped the character off of the rig, fashioned the feminine curves, added and rigged her hair, and rebound her to the rig. Over the course of this project I was responsible for camera work, lighting, the females characters animations, and a portion of the background assets.
+								</p?
+								</div>
+
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+					<!--starflies-->
+					<div id="starFlies" class="section">
+						<a href="#starFlies" title="six"><img class="imgC" src="Img/Phead_StarFlies.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#starFlies" title="four">Star Flies (2011)</a>
+							</h3>
+							<div><!--Accordian Div-->
+								<div class="vidScale">
+									<iframe src="//player.vimeo.com/video/11911279" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+								</div>
+								<div>
+								<p>A three person project created over the course of the final 5 weeks of a VFX course at Drexel University. I was responsible for the modelling and texturing of the Tree and Character. I rigged the character which included 3 stretchy spline rigs. I also animated him for the short.</p>
+
+								</div>
+
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+
+					<!--Vody-->
+					<div id="Vody" class="section">
+						<a href="#Vody" title="six"><img class="imgC" src="Img/Phead_Vody.jpg"></a>
+						<article class="topContent">
+							<h3>
+								<a href="#Vody" title="four">Vody (2010)</a>
+							</h3>
+							<div><!--Accordian Div-->
+								<div class="vidScale">
+									<iframe src="//player.vimeo.com/video/12482990" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+								</div>
+								<div>
+									<p> my first complex character rig. This project was produced over the course of 5 weeks during my Animation II course at Drexel University. Considering the time restrictions, and my inexperience at the time, I am still very happy with the outcome, though it is not perfect. Having only only basic experience whith rigging, i created a spline rig for the characters spine and a complex multijointed, milti IK, leg, that sadly is barely seen in the video. I learned a lot about how to prioritize on an animation project.
+							</div><!--Accordian Div-->
+						</article>
+					</div>
+				<!--end final post--->
+						<footer>
+			<p>Copyright Ian Woskey 2016</p>
+		</footer>
+				</div>
+
+			</div>
+
+
+	<!--SIDEBAR-->
+	<aside id = "sidebar">
+
+				<article>
+					<div class="social">
+						<ul>
+							<li><a href="https://twitter.com/Meat4every1"><img src="Img/SMB_twitter.jpg"></a></li>
+							<li><a href="https://www.facebook.com/meat4every1/"><img src="Img/SMB_facebook.jpg"></a></li>
+							<li><a href="https://www.twitch.tv/meat4every1"><img src="Img/SMB_twitch.jpg"></a></li>
+							<li><a href="https://www.youtube.com/meat4every1"><img src="Img/SMB_youtube.jpg"></a></li>
+						</ul>
+				</div>
+				</article>
+		<article style="padding-bottom:1%;">
+<iframe id ="chunker" src="http://streambadge.com/twitch/dark/meat4every1/" style ="	height: 64px;"></iframe>
+	<a href="https://www.twitch.tv/meat4every1">
+		<div id="follow">
+		 	<p>Follow me on Twitch!</p>
+		</div>
+	</a>
+</article>
+			<article>
+				<div>
+				<h2>Ian C. Woskey</h2>
+				<p>iancwoskey@gmail.com</p>
+				<p>Digital Media Bs/Ms</p>
+				<p>Drexel University</p>
+				<a href="text/Resume.pdf">Resume<a>
+			</div>
+			</article>
+		</aside>
+
+
+		<!--
+		<aside class="sidebar">
+			<article>
+				<h2> Bottom SideBar Title</h2>
+				<p>sideBar Content</p>
+				<p>
+					 They have stealth abilities similar to a rogue, and bring versatility to the raid group.
+				</p>
+			</article>
+		</aside>
+		-->
+
+	</body>
+</html>
