@@ -86,7 +86,7 @@ height: 120%;
 }
 
 .mainHeader nav a:link, .mainHeader nav a:visited {
-	color: #666; /*colors accordian text*/
+	color: #888; /*colors accordian text*/
 	display: inline-block;
 	padding: 10px 25px;
 	height: 20px;
@@ -151,7 +151,7 @@ font-size: 20px;
 }
 
 #dropMenu li a:link, #dropMenu li a:visited {
- color: #666; /*colors accordian text*/
+ color: #888; /*colors accordian text*/
  display: inline-block;
  }
 #dropMenu li a:hover, #dropMenu li a:active ,
@@ -210,7 +210,7 @@ font-size: 20px;
 }
 /*accordion link header link styling*/
 .mainContent h3 a:link, .mainContent h3 a:visited {
-	color: #666;
+	color: #888;
 	display: inline-block;
 	padding: 10px 25px;
 	height: 20px;
@@ -233,11 +233,11 @@ background-color: #181818;
 	display: inline;
 }
 .mainContent p a:link{
-	color: #7c5bff;
+	color: #7c5bff !important; /*link styling??*/
 	font-weight:bold;
 }
 .mainContent p a:hover{
-	color: #777;
+	color: #888;
 	font-weight: bold;
 }
 
