@@ -1,7 +1,7 @@
 body {
 	background-image: url('Img/bg.png');
 	background-color: #404040;
-	color: #666666;
+	color: #888888;
 	font-size: 87.5%;
 	font-family: Ariel, 'Lucida Sans Unicode';
 	line-height: 1.5;
@@ -95,7 +95,7 @@ height: 120%;
 .mainHeader nav a:hover, .mainHeader nav a:active ,
 .mainHeader nav.active a:link, .mainHeader nav .active a:visited {
 	background-color: #181818;
-	color: #660099; /*colors top nav links*/
+	color: #7c5bff; /*colors top nav links*/
 }
 
 .mainHeader	nav ul li a {
@@ -107,6 +107,10 @@ height: 120%;
 	display: inline !important;
 	float : right;
 	margin: 4px;
+}
+
+.currentNav {
+	color: #7c5bff !important;
 }
 #mainNav ul li {
 	display: none;
@@ -153,7 +157,7 @@ font-size: 20px;
 #dropMenu li a:hover, #dropMenu li a:active ,
  #dropMenu li .active a:link, #dropMenu li .active a:visited {
  	background-color: #181818;
- 	color: #660099; /*colors top nav links*/
+ 	color: #7c5bff; /*colors top nav links*/
 }
 #dropMenuCover {
 	position: fixed;
@@ -215,7 +219,7 @@ font-size: 20px;
 .mainContent h3 a:hover, .mainContent h3 a:active,
 .mainContent h3 .active a:link, .mainContent h3 .active a:visited {
 background-color: #181818;
-	color: #660099 !important;
+	color: #7c5bff !important;
 }
 
 
@@ -229,7 +233,7 @@ background-color: #181818;
 	display: inline;
 }
 .mainContent p a:link{
-	color: #660099;
+	color: #7c5bff;
 	font-weight:bold;
 }
 .mainContent p a:hover{
@@ -485,7 +489,7 @@ padding: 25px 5%;
 	padding-bottom: 15px;
 }
 #sidebar a:link{
-color: #660099;
+color: #7c5bff;
 font-weight:bold;
 }
 
@@ -566,7 +570,7 @@ font-weight:bold;
 }
 
 #follow:hover p{
-		color: #660099;
+		color: #7c5bff;
 }
 .resumeTitle{
 	background-image: url("Img/UI/resume_title_2.png");
@@ -664,7 +668,7 @@ font-weight:bold;
 #next a:hover, #next a:active ,
  #next .active a:link, #next .active a:visited {
 	background-color: #181818;
-	color: #660099; /*colors top nav links*/
+	color: #7c5bff; /*colors top nav links*/
 }
 footer {
 	position: relative;
