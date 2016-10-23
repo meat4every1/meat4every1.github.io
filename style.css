@@ -636,7 +636,7 @@ font-weight:bold;
 
 }
 #resume a:link{
-	color: #7c5bff !important; /*link styling??*/
+	color: #7c5bff; /*link styling??*/
 	font-weight:bold;
 }
 .resStaticBlock a:hover{
