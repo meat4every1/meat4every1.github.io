@@ -416,6 +416,7 @@ width: 100%;
 }
 
 .imgRow li {
+	padding: 20px;
 display: table-cell;
 
 }
