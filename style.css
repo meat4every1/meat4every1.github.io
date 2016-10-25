@@ -382,12 +382,14 @@ z-index: 1;
 width: 100%;
 }
 .cbImgRow{
-display: inline;;
+position: relative;
+left: -40px;
 width: 100%;
 }
 
 .cbImgRow li {
 display: table-cell;
+
 }
 
 .cbImgRow img{
@@ -403,7 +405,7 @@ border-color: #191970;
 }
 
 .cbImgCol img{
-	margin-Bottom: 30px;
+	margin-bottom: 30px;
 	width: 100%;
 	position: inline;
 
@@ -715,4 +717,18 @@ font-weight:bold;
 footer {
 	position: relative;
 	top: 300
+}
+
+#about p{
+
+
+}
+
+#self {
+
+
+	width: 200px;
+	padding-left: 20px;
+
+
 }
