@@ -139,9 +139,10 @@
 		}
 	}
 	//window.onscroll = function() {layoutShift};
-	window.onload = layoutShift;
+
 	window.onresize = layoutShift;
 	window.onorientationchange = layoutShift;
+	document.onreadystatechange = layoutShift;
 	function DropMenuToggle() {
 
 		$("#dropMenuPos").toggleClass("dropMenuClosed");
