@@ -252,6 +252,7 @@ background-color: #181818;
 }
 .vidScale iframe,
 .vidScale object,
+.vidScale video,
 .vidScale embed {
  position: absolute;
     top: 0;
@@ -269,6 +270,7 @@ background-color: #181818;
     overflow: hidden;
 }
 .GBvidScale iframe,
+.GBvidScale video,
 .GBvidScale object,
 .GBvidScale embed {
  position: absolute;
