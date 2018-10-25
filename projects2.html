@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>IanCW: Homepage</title>
+		<meta charset="utf-8" />
+		<link  rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" href="colorbox.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="jquery.js"></script>
+		<script src="jquery.colorbox-min.js"></script>
+	<script type="text/javascript">
+	function layoutShift() {
+	//	$(".accordion").find(" h3 + div").css("height",'190px');
+			console.log(window.innerWidth);
+		var sideToggle = document.getElementById("sidebar");
+		var topToggle = document.getElementById("topToggle");
+		var socButtons = document.getElementById("topToggle").getElementsByTagName("img");
+		var socList = document.getElementById("topToggle").getElementsByTagName("li");
+
+
+		var pHeadText = document.getElementById("pHeadText");
+	//	var mainNavButtons =document.getElementById("mainNav").getElementsByTagName("a");
+		var mainNavButtons =document.getElementById("mainNav");
+
+		var contentToggle = document.getElementById("content");
+		var bodyToggle = document.getElementById("body");
+		var centerToggle = document.getElementById('center');
+
+
+		//mainNav.style.backgroundColor = "red";
+		console.log(window.innerWidth);
+
+		//LARGE________________________________________
+		if (window.innerWidth >=1000) {
+			$("#dropMenu ul li").css("marginTop","40px");
+			$("#dropMenuCloseButt").css("marginTop","40px");
+			sideToggle.style.display = "inline";
+			topToggle.style.display = "none";
+			contentToggle.style.width = "70%";
+			bodyToggle.style.width = "70%";
+			centerToggle.style.width ="70%";
+
+
+			$("#mainNav ul li:not(#dropMenButt)").show();
+			//$("#mainNav ul li").css("display","inline");
+				//COLOR DEBUG ___
+			//	mainNav.style.backgroundColor = "blue";
+
+		}
+
+		//MEDIUM______________________________________
+		else if((window.innerWidth < 1000)  && (window.innerWidth >=685)){
+
+				$("#dropMenu ul li").css("marginTop","40px");
+				$("#dropMenuCloseButt").css("marginTop","40px")
+			mainNav.style.display = "block";
+			sideToggle.style.display = "none";
+			topToggle.style.display = "inline";
+			contentToggle.style.width = "100%";
+			bodyToggle.style.width = "90%";
+			centerToggle.style.width ="90%";
+
+
+			for (i=0; i < socButtons.length; i++){
+				socButtons[i].style.width ="10%";
+				socList[i].style.padding ="0% .8%";
+		}
+		//Pheadtoggle
+
+
+		//	$("article.topContent").find("h3").find("a").toggleClass("pHeadText", false);
+		//	$(".accordion").find(" h3 + div").css("height",'0');
+
+			//~~~~~~Post Specific
+				//Rize of Rakshaza
+
+			//COLOR DEBUG ___
+		//	mainNav.style.backgroundColor = "green";
+			$("#mainNav ul li:not(#dropMenButt)").show();
+		}
+
+		//SMALL__________________________________________
+		else if (window.innerWidth <685){
+			sideToggle.style.display = "none";
+			topToggle.style.display = "inline";
+			contentToggle.style.width = "100%";
+			bodyToggle.style.width = "90%";
+			centerToggle.style.width ="90%";
+			$("#mainNav ul li:not(#dropMenButt)").hide();
+
+
+			if (Math.abs(window.orientation) === 90) {
+				//Landscape-----------------
+				$("#dropMenu ul li").css("marginTop","5px");
+				$("#dropMenuCloseButt").css("marginTop","5px")
+					for (i=0; i < socButtons.length; i++){
+						socButtons[i].style.width ="10%";
+						socList[i].style.padding ="0% 0.8%";
+						}
+					//PHEADTOGGLE
+
+
+						//	$("article.topContent").find("h3").find("a").toggleClass("pHeadText", false);
+						//	$(".accordion").find(" h3 + div").css("height",'0');
+
+							//~~~~~~Post Specific
+								//Rize of Rakshaza
+
+
+						//COLOR DEBUG ___
+						//mainNav.style.backgroundColor = "Aqua";
+			}
+			else {
+				//Portrait----------------
+				$("#dropMenuCloseButt").css("marginTop","40px")
+				$("#dropMenu ul li").css("marginTop","20px");
+				for (i=0; i < socButtons.length; i++){
+					socButtons[i].style.width ="23%";
+					socList[i].style.padding ="0.8% 0%";
+					}
+
+				//PHEADTOGGLE
+
+
+
+			//	$("article.topContent").find("h3").find("a").toggleClass("pHeadText", true);
+				//$(".accordion").find(" h3 + div").css("height",'190px');
+				//$("pHeadMobileWrapper").css(z-index)
+
+				//~~~~~~Post Specific
+					//Rize of Rakshaza
+
+
+					//COLOR DEBUG ___
+					//mainNav.style.backgroundColor = "purple";
+				}
+		}
+	}
+	//window.onscroll = function() {layoutShift};
+
+	window.onresize = layoutShift;
+	window.onorientationchange = layoutShift;
+		document.onreadystatechange = layoutShift;
+	function DropMenuToggle() {
+
+		$("#dropMenuPos").toggleClass("dropMenuClosed");
+
+	}
+	layoutShift();
+	</script>
+</script>
+
+
+	</head>
+
+	<body id="body">
+		<div id="dropMenuPos" class="dropMenuClosed">
+					<div id="dropMenu" >
+						<div id="dropMenuCloseButt"><a  onclick="DropMenuToggle()"><img src="Img/MobMenuButt.png"></a></div>
+						<ul>
+
+							<li><a href="index.html"  >Gallery</a></li>
+							<li><a href="projects.html" class="currentNav">Projects</a></li>
+							<li> <a href="resume.html" >Resume</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+					<div id="dropMenuCover" onclick="DropMenuToggle()"></div>
+				</div>
+
+		<header class="mainHeader">
+			<div id="center">
+				<div id="ledge">
+				</div>
+				<div id="redge">
+				</div>
+			</div>
+			<img src="Img/logo.jpg">
+
+			<nav id="mainNav"><ul>
+				<li><a href="index.html"  >Gallery</a></li>
+				<li><a href="projects.html" class="currentNav">Projects</a></li>
+				<li> <a href="resume.html" >Resume</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li id="dropMenButt" onclick="DropMenuToggle()"><a><img src="Img/MobMenuButt.png"></a></li>
+
+			</ul></nav>
+
+
+		</header>
+
+		<div class="mainContent">
+			<div class="accordion">
+				<div id="content">
+
+					<div id="topToggle";>
+						<div class="staticBlock">
+							<div class="social" style="padding-left: 3%;">
+								<ul>
+									<li><img src="Img/SMB_M.jpg"></li>
+									<li><img src="Img/SMB_4.jpg"></li>
+									<li><img src="Img/SMB_E.jpg"></li>
+									<li><img src="Img/SMB_1.jpg"></li>
+									<li><a href="https://twitter.com/Meat4every1"><img src="Img/SMB_twitter.jpg"></a></li>
+									<li><a href="https://www.linkedin.com/in/ian-woskey-059a997b"><img src="Img/SMB_linkedin.jpg"></a></li>
+									<li><a href="https://www.facebook.com/meat4every1/"><img src="Img/SMB_facebook.jpg"></a></li>
+									<li><a href="https://www.instagram.com/meat4every1/"><img src="Img/SMB_instagram.jpg"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!--SECTION_DINO-->
+						<div id="DINO" class="section">
+							<a href="#DINO" title="Operation Dino">
+
+								<div class = "pHeadMobileWrapper">
+								<div class="portHeadDiv">
+									<img class="pHeadMobile" src="Img/Phead_Dino.jpg">
+								</div>
+								</div>
+							</a>
+							<article class="topContent">
+								<h3 class="portHeadAccordDiv">
+									<a class="portHeadText" href="#DINO" title="Operation Dino">Operation Dino</a>
+								</h3>
+
+								<div><!--Accordian Div-->
+									<div class="vidScale">
+										<iframe src="//www.youtube.com/embed/rodIKVJNg0o" frameborder="0" allowfullscreen></iframe>
+									</div>
+									<div>
+											<p> 2012 </p>
+										<p>
+											The creation of this project was documented in this <a href="http://glennwinters.com/gradgaming/" title="its pretty cool ;D">development blog</a>.
+										</p>
+										<p>
+											A two term graduate project at Drexel University produced with the direction from The Academy of Natural Sciences, and tested on site. I worked on early art direction, and later on in the development process created every aspect of the main character "The Master Paleontologist".
+										</p>
+									</div>
+								</div><!--Accordian Div-->
+							</article>
+						</div>
+
+
+						<!--SECTION_DMM-->
+							<div id="DMM" class="section">
+								<a href="#DMM" title="DMM Tutorials">
+
+									<div class = "pHeadMobileWrapper">
+									<div class="portHeadDiv">
+										<img class="pHeadMobile" src="Img/Phead_DMM.jpg">
+									</div>
+									</div>
+								</a>
+								<article class="topContent">
+									<h3 class="portHeadAccordDiv">
+										<a class="portHeadText" href="#DMM" title="DMM Tutorials">DMM Tutorials</a>
+									</h3>
+
+									<div><!--Accordian Div-->
+									<div class="vidScale">
+										<iframe src="//player.vimeo.com/video/40922676" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+									</div>
+									<div class="vidScale">
+										<iframe src="//player.vimeo.com/video/40929205" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+									</div>
+										<p> 2012 </p>
+									<p>During the early exploratory stages of my Master's Thesis I considered doing research into destructible characters for real time engines. I eventually came to the conclusion that this was not possible with the confines of avaiable tech. During the process of coming to this conclusion I learned a lot about the Digital Molecular Matter plugin for Maya, and created these tutorials. </p>
+									</div><!--Accordian Div-->
+								</article>
+							</div>
+
+							<!--SECTION_EPIC-->
+								<div id="EPIC" class="section">
+									<a href="#EPIC" title="Epic Defense">
+
+										<div class = "pHeadMobileWrapper">
+										<div class="portHeadDiv">
+											<img class="pHeadMobile" src="Img/PortheadM_ED.jpg">
+										</div>
+										</div>
+									</a>
+									<article class="topContent">
+										<h3 class="portHeadAccordDiv">
+											<a class="portHeadText" href="#EPIC" title="Epic Defense">Epic Defense</a>
+										</h3>
+
+										<div><!--Accordian Div-->
+											<p>Promo Video: 10 week prototype</p>
+											<div class="vidScale">
+												<iframe src="//www.youtube.com/embed/aPV5cgQcZIA" frameborder="0" allowfullscreen></iframe>
+											</div>
+											<p>Promo Video: 20 week prototype</p>
+											<div class="vidScale">
+												<iframe src="//www.youtube.com/embed/7q_4vC_p0Bs" frameborder="0" allowfullscreen></iframe>
+											</div>
+												<p> 2011 </p>
+											<p>My first major game project at Drexel University, developed over the course of my Gaming Workshop I and II course at Drexel University. The class was split into two groups for the first 10 week semester.  Epic Defense was my proposal for the class, and I stepped up as project manager after it was chosen as one of two projects to go into production. The first 10 weeks I managed my team and created the dwarf character in his entirety as well as other assorted art assets. Epic Defense went on to be chosen for a second term of development, at which point I shared my duties as project manager.  During this time I created the new goblin enemy and bugbear enemy seen in the second video.
+											</p>
+										</div><!--Accordian Div-->
+									</article>
+								</div>
+
+								<!--SECTION_BARGAIN-->
+									<div id="BARG" class="section">
+										<a href="#BARG" title="The Bargain">
+
+											<div class = "pHeadMobileWrapper">
+											<div class="portHeadDiv">
+												<img class="pHeadMobile" src="img/Phead_Bargain.jpg">
+											</div>
+											</div>
+										</a>
+										<article class="topContent">
+											<h3 class="portHeadAccordDiv">
+												<a class="portHeadText" href="#BARG" title="The Bargain">The Bargain</a>
+											</h3>
+
+											<div><!--Accordian Div-->
+												<div class="vidScale">
+													<iframe src="//www.youtube.com/embed/DxLzrJzuoaQ" frameborder="0" allowfullscreen></iframe>
+												</div>
+												<p> The Rig</p>
+												<div>
+													<img class="fullImage" src="Img/Content Posts/OldManRig.jpg">
+												</div>
+													<p> 2011 </p>
+												<p>My first facial rig, this demonic old man was created over the course of 10 weeks for my Character Animation II course at Drexel University. The character was modeled in Zbrush, rigged, animated and rendered in Maya, then the video and 3D render were composited in Nuke.
+												</p>
+
+											</div><!--Accordian Div-->
+										</article>
+									</div>
+
+									<!--SECTION_First Sight-->
+										<div id="FIRST" class="section">
+											<a href="#FIRST" title="First Sight">
+
+												<div class = "pHeadMobileWrapper">
+												<div class="portHeadDiv">
+													<img class="pHeadMobile" src="Img/PortheadL_FS.jpg">
+												</div>
+												</div>
+											</a>
+											<article class="topContent">
+												<h3 class="portHeadAccordDiv">
+													<a class="portHeadText" href="#First" title="First Sight">First Sight </a>
+												</h3>
+
+												<div><!--Accordian Div-->
+													<div class="vidScale">
+														<iframe src="//player.vimeo.com/video/17614668" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+													</div>
+													<div>
+															<p> 2011 </p>
+													<p>An animation created over the course of 5 weeks for my Character Animation I course at Drexel University.  The rigs for this animation were provided by our professor.  I was disappointed that I could not create a new character for this project, and was not satisfied with the provided rig.  Being the only person I know who enjoys weight painting, I ripped the model off of the provided rig, fashioned the feminine curves, added and rigged her hair, and rebound her to the rig. Over the course of this project I was also responsible for camera work, lighting, the females characters animations, and a portion of the background assets.
+													</p?
+													</div>
+
+												</div><!--Accordian Div-->
+											</article>
+										</div>
+
+										<!--SECTION_Starflies-->
+											<div id="STAR" class="section">
+												<a href="#STAR" title="Starflies">
+
+													<div class = "pHeadMobileWrapper">
+													<div class="portHeadDiv">
+														<img class="pHeadMobile" src="Img/PortheadL_SF.jpg">
+													</div>
+													</div>
+												</a>
+												<article class="topContent">
+													<h3 class="portHeadAccordDiv">
+														<a class="portHeadText" href="#STAR" title="Starflies">Starflies</a>
+													</h3>
+
+													<div><!--Accordian Div-->
+														<div class="vidScale">
+															<iframe src="//player.vimeo.com/video/11911279" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+														</div>
+														<div>
+																<p> 2010 </p>
+														<p>A three person project created over the course of the final 5 weeks of a VFX course at Drexel University. I was responsible for the modelling and texturing of the tree and character. I rigged the character which included 3 stretchy spline rigs. I also animated him for the short.</p>
+
+														</div>
+
+													</div><!--Accordian Div-->
+												</article>
+											</div>
+
+											<!--SECTION_VODY-->
+												<div id="VODY" class="section">
+													<a href="#VODY" title="Vody">
+
+														<div class = "pHeadMobileWrapper">
+														<div class="portHeadDiv">
+															<img class="pHeadMobile" src="Img/Phead_Vody.jpg">
+														</div>
+														</div>
+													</a>
+													<article class="topContent">
+														<h3 class="portHeadAccordDiv">
+															<a class="portHeadText" href="#VODY" title="Vody">Vody</a>
+														</h3>
+
+														<div><!--Accordian Div-->
+															<div class="vidScale">
+																<iframe src="//player.vimeo.com/video/12482990" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+															</div>
+															<div>
+																	<p> 2010 </p>
+																<p>My first complex character rig. This project was produced over the course of 5 weeks during my Animation II course at Drexel University. Considering the time restrictions, and my inexperience at the time, I am still very happy with the outcome, though it is not perfect. Having only only basic experience with rigging, I created a spline rig for the characters spine and a complex multi jointed, multi-IK, leg, that sadly is barely seen in the video. I learned a lot about how to prioritize from this project. </p>
+														</div><!--Accordian Div-->
+													</article>
+												</div>
+
+												<div class="staticBlock" id="next">
+														<a style="float: left;" href="projects.html"> <- Previous</a>
+														<p style="float: right;" >Next -></p>
+													</div>
+
+
+
+						<footer>
+			<p>Copyright Ian Woskey 2018</p>
+		</footer>
+				</div>
+
+			</div>
+
+
+	<!--SIDEBAR-->
+	<aside id = "sidebar">
+
+				<article>
+					<div class="social"  style="display: inline;">
+						<ul>
+							<li><img src="Img/SMB_M.jpg"></li>
+							<li><img src="Img/SMB_4.jpg"></li>
+							<li><img src="Img/SMB_E.jpg"></li>
+							<li><img src="Img/SMB_1.jpg"></li>
+							<li><a href="https://twitter.com/Meat4every1"><img src="Img/SMB_twitter.jpg"></a></li>
+							<li><a href="https://www.linkedin.com/in/ian-woskey-059a997b"><img src="Img/SMB_linkedin.jpg"></a></li>
+							<li><a href="https://www.facebook.com/meat4every1/"><img src="Img/SMB_facebook.jpg"></a></li>
+							<li><a href="https://www.instagram.com/meat4every1/"><img src="Img/SMB_instagram.jpg"></a></li>
+
+
+						</ul>
+				</div>
+				</article>
+		<article style="padding-bottom:1%;">
+<iframe id ="chunker" src="http://streambadge.com/twitch/dark/meat4every1/" style ="	height: 64px;"></iframe>
+	<a href="https://www.twitch.tv/meat4every1">
+		<div id="follow">
+		 	<p>Follow me on Twitch!</p>
+		</div>
+	</a>
+</article>
+			<article>
+				<div>
+				<h2>Ian C. Woskey</h2>
+				<p>iancwoskey@gmail.com</p>
+				<p>Digital Media Bs/Ms</p>
+				<p>Drexel University</p>
+				<a href="text/Resume.pdf">Resume Pdf<a>
+			</div>
+			</article>
+		</aside>
+
+
+		<!--
+		<aside class="sidebar">
+			<article>
+				<h2> Bottom SideBar Title</h2>
+				<p>sideBar Content</p>
+				<p>
+					 They have stealth abilities similar to a rogue, and bring versatility to the raid group.
+				</p>
+			</article>
+		</aside>
+		-->
+
+	</body>
+</html>
