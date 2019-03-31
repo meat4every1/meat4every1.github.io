@@ -652,7 +652,7 @@ color: #7c5bff;
 
 
 }
-#resume a:link{
+#resume a:link, #resume a:visited{
 	color: #7c5bff; /*link styling??*/
 	font-weight:bold;
 }
