@@ -233,13 +233,49 @@
 								<div>
 								<!--Content-->
 								<p> Tech Artist - Bitloft</p>
-								<p> Jan 2019 - Present</p>
-								<p><a href="https://thecrystalcore.com/">The Crystal Core</a> is an educational game being developed by <a href="https://bitloft.com/mountains">Bitloft</a> game studio.  The purpose of this title is to create a gamified platform for students to undergo high school courses for credit. It is an ambitious project I am honored to be a part of.
+								<p> 2019</p>
+								<p><a href="https://thecrystalcore.com/">The Crystal Core</a> is an educational game being developed by <a href="https://bitloft.com/mountains">Bitloft</a> game studio.  The purpose of this title is to create a gamified platform for students to undergo high school courses for credit.
 								</p>
 								<p>
-									Since January I have been working as a Technical Artist at Bitloft studio.  I perform my duties remotely and maintain consistent and productive communication with the team.  A large portion of my work has been centered around the creation of shader effects for characters, and subsequently scripting tools and drafting clear documentation to streamline the installation of those effects. My responsibilities also include but are not limited to, training team members on the use of our version control tools, participating in interviews as the tech art department representative, and implementing character assets into unity and our existing systems. I always keep performance, visual quality, and the needs of other team members in mind.
+									From January Through July I worked as a Technical Artist at Bitloft studio.  I performed my duties remotely and maintained consistent and productive communication with the team.  A large portion of my work on The Crystal Core has been centered around the creation of shader effects for characters, and subsequently scripting tools and drafting clear documentation to streamline the installation of those effects. My responsibilities also include but are not limited to, training team members on the use of our version control tools, participating in interviews as the tech art department representative, and implementing character assets into unity and our existing systems. I always keep performance, visual quality, and the needs of other team members in mind.
 								</p>
-								<p> I look forward to showcasing my work on this project here when The Crystal Core goes live!</p>
+								<div class="vidScale">
+									<video controls src="Crystal-Core-Alpha-Video-Web-Version.mp4"></video>
+								</div>
+								<p>Fire Bird Effect</p>
+								<p>This fire effect was my first venture into using amplify shader editor for rapid shader creation. I consulted with the art director and lead character artist to dial this effect in just how they wanted it. The core of this shader is a simple performant effect using scrolling hand drawn noise. This effect went on to be the core of my latter sfx projects at Bitloft. </p>
+								<ul class="cbImgCol">
+									<li><a class="TCC_Gallery" href="Img/Content Posts/TCC_MercuryCutscene.gif"> <img title="Mercury Fire Effect" src="Img/Content Posts/TCC_MercuryCutscene.gif"> </a> </li>
+									<ul class="cbImgRow">
+										<li><a class="TCC_Gallery" href="Img/Content Posts/SR_21_Shader_02.gif"> <img title="Shader Graph Breakdown 1" src="Img/Content Posts/SR_21_Shader_02.gif"> </a> </li>
+										<li><a class="TCC_Gallery" href="Img/Content Posts/SR_21_Shader_01.gif"> <img title="Shader Graph Breakdown 2" src="Img/Content Posts/SR_21_Shader_01.gif"> </a> </li>
+										<li><a class="TCC_Gallery" href="Img/Content Posts/SR_21_Shader_03.gif"> <img title="Shader Graph Breakdown 3" src="Img/Content Posts/SR_21_Shader_03.gif"> </a> </li>
+										<li><a class="TCC_Gallery" href="Img/Content Posts/SR_21_Shader_04.gif"> <img title="Shader Graph Breakdown 4" src="Img/Content Posts/SR_21_Shader_04.gif"> </a> </li>
+									</ul>
+									<ul class="cbImgRow">
+										<li><a class="TCC_Gallery" href="Img/Content Posts/TCC_FireDemo.gif"> <img title="Fire Demo" src="Img/Content Posts/TCC_FireDemo.gif"> </a> </li>
+										<li><a class="TCC_Gallery" href="Img/Content Posts/TCC_Effect_Still.png"> <img title="Fire Demo" src="Img/Content Posts/TCC_Effect_Still.png"> </a> </li>
+									</ul>
+									<p>Trap Effect</p>
+									<p>This effect is virtually identical to the concept art I received at the start of the design process. I create and documented a streamlined pipeline for the design team to install and animate this effect in game.</p>
+									<li><a class="TCC_Gallery" href="Img/Content Posts/TCC_CorTrap.gif"> <img title="Trap Shader Effect" src="Img/Content Posts/TCC_CorTrap.gif"> </a> </li>
+									<p>Vanish Effect</p>
+									<p>This particle effect was largely self directed.  At first management wanted a quick fix for a small problem; an effect was needed to cover over enemy characters being removed after being defeated. As a member of the tech department I was privy to many interdepartmental concerns and tasks. I noticed that many departments needed various objects in game to disappear in a stylistically consistent way. I had just finished the trap effect and documentation and saw an opportunity to take what I had learned to the next level.  I proposed an all purpose vanish effect with a user friendly installation pipeline to management and got approval for the task. Over the next 3 weeks I conceptualized, designed, and implemented that system and effect.</p>
+									<li><a class="TCC_Gallery" href="Img/Content Posts/TCC_Vanish.gif"> <img title="Vanish Shader Effect" src="Img/Content Posts/TCC_Vanish.gif"> </a> </li>
+									<li><a class="TCC_Gallery" href="Img/Content Posts/TCC_Vanish_Concept.png"> <img title="Vanish Shader Concept" src="Img/Content Posts/TCC_Vanish_Concept.png"> </a> </li>
+									<p>Instalation: GUI Buton</p>
+									<p>To keep the effect performant I decided to go with a shader based effect similar to what I had created previously. This presented a serious difficulty, my custom shader needed to be swapped on and off the character at runtime. I created a script with a custom inspector GUI that allowed this effect to be applied to any object in the game; logging the current material configuration of the object with a single button press.</p>
+									<li><a class="TCC_Gallery" href="Img/Content Posts/TCC_Vanish_GUI.gif"> <img title="Vanish shader Instalation Documentation GUI Button" src="Img/Content Posts/TCC_Vanish_GUI.gif"> </a> </li>
+									<div>
+										<p>Instalation: Timeline</p>
+										<p>Once the object was set up, Designers could drag and drop predone animation clips into timeline to animate the effect.  These clips used animation events to swap my custom shader in and then revert the material to the original shader, while also animating visual parameters of the effect. All told setting up any object to use this effect takes 4 simple steps.  I produced documentation with clear demonstration gifs, some pictured here, as a resource to our design team.
+										</p>
+									</div>
+									<li><a class="TCC_Gallery" href="Img/Content Posts/TTCC_Vanish_Timeline.gif"> <img title="Vanish shader Instalation Documentation Timeline" src="Img/Content Posts/TCC_Vanish_Timeline.gif"> </a> </li>
+								</ul>
+									<script>jQuery("a.TCC_Gallery").colorbox({rel:'Octo_Gallery', width:"90%", height:"90%"});</script>
+
+
 
 
 								</div>
