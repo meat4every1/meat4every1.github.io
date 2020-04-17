@@ -462,6 +462,15 @@ padding: 25px 5%;
 	padding: 0px 25px 10px ;
 }
 
+.staticBlock a {
+color: #7c5bff;
+}
+
+.staticBlock a:hover{
+	color: #777;
+	font-weight: bold;
+}
+
 
 
 
