@@ -80,14 +80,6 @@ function loadSidebarContent() {
                             </ul>
                         </div>
                     </article>
-                    <article style="padding-bottom:1%;">
-                        <iframe id="chunker" src="http://streambadge.com/twitch/dark/meat4every1/" style="height: 64px;"></iframe>
-                        <a href="https://www.twitch.tv/meat4every1">
-                            <div id="follow">
-                                <p>Follow me on Twitch!</p>
-                            </div>
-                        </a>
-                    </article>
                     <article>
                         <div>
                             <h2>Ian C. Woskey</h2>
