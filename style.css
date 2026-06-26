@@ -370,8 +370,8 @@ z-index: 1;
 	color : #D3D3D3 !important;
 	position: absolute;
 	margin-top: 130px;
-
-
+	background-color: rgba(24, 24, 24, 0.8);
+	transition: background-color 0.2s ease;
 }
 
 .portHeadAccordDiv {
