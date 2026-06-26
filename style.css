@@ -190,14 +190,16 @@ font-size: 20px;
         transition: height 0.3s ease-in;
 }
 /*THIS IS WHERE YOU STYLE THE OPENED ACCORDIAN DIV!!!!!*/
-.accordion :target h3 + div {
+.accordion :target h3 + div,
+.accordion .section.section-open h3 + div {
     height: auto !important;
 		width: 100%;
 		text-align: justify;
 		text-justify: inter-word;
 }
 
-.accordion .section.large:target h3 + div {
+.accordion .section.large:target h3 + div,
+.accordion .section.large.section-open h3 + div {
         overflow: auto;
 }
 /*accordion window styling*/
