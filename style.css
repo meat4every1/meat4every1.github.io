@@ -372,6 +372,8 @@ z-index: 1;
 	margin-top: 130px;
 	background-color: rgba(24, 24, 24, 0.8);
 	transition: background-color 0.2s ease;
+	font-weight: 400;
+	letter-spacing: 0.03em;
 }
 
 .portHeadAccordDiv {
