@@ -385,14 +385,15 @@ z-index: 1;
 
 }
 
-/* Wide pheads: base styles; width/top/mask set by scaleWidePheads() from box aspect ratio */
+/* Wide pheads: center with translate so >100% width still crops evenly */
 #GENIES .pHeadMobile,
 #MAXMUSTARD .pHeadMobile {
 	width: 85%;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
+	left: 50%;
+	right: auto;
+	margin-left: 0;
+	margin-right: 0;
+	transform: translateX(-50%);
 	z-index: 0;
 }
 #GENIES .portHeadDiv{
