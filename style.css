@@ -367,6 +367,30 @@ z-index: 1;
 
 }
 
+/* Scale specific pheads; side gaps show background-color */
+#GENIES .pHeadMobile,
+#MAXMUSTARD .pHeadMobile {
+	width: 85%;
+	left: 0;
+	right: 0;
+	
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 0;
+	-webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+	mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+}
+#GENIES .pHeadMobile {
+	top: 30px;
+}
+#GENIES .portHeadDiv{
+	background: linear-gradient(to top, #993488, #f5daf8);
+}
+#MAXMUSTARD .portHeadDiv {
+	background-color: #4797ff;
+	background: linear-gradient(to top, #07b64a, #4797ff);	
+}
+
 .portHeadText {
 	z-index: 2;
 	color : #D3D3D3 !important;
