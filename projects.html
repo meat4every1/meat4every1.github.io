@@ -338,31 +338,34 @@
 							<div><!--Accordian Div-->
 								<div>
 								<!--Content-->
+									<h3>Overview</h3>
+									<p>A large portion of my work over the last three years emerged from a simple idea: can we take facial animation channels and retarget them as needed? Can a combination of brow and mouth animations drive standardized expression channels on animal ears, multiple eyes, or other non-human features?</p>
+									<p>This question launched my work at Genies in two directions: generative character rigging, and generative animation via LLM tagging. On the rigging side, I went from defining our face-rigging pipelines to building an AI-driven facial auto-rigger, and eventually owned synthetic character data generation, powering both the auto-rigger and generative character mesh creation. On the animation side, I went from evangelizing the utility of simple, category-based animation channels to building Unity animation systems designed to catch LLM tags and drive procedural animation.</p>
+
 									<div class="subSection">
-										<h3><a class="subAccordText" href="#">Overview</a></h3>
+										<h3><a class="subAccordText" href="#">Generative Characters</a></h3>
 										<div>
-											<p>Overview copy and images for Genies go here.</p>
+											<h3>Face Rig Pipeline</h3>
+											<p>After building a system in Unity that let us parse out facial animation channels as described above, I launched a campaign to expand the team's capacity to rig non-standard faces for ARKit. I adopted Face-It, mastered it, then trained our artists to use it — greatly improving the pace of "Doll" character production (short, cartoony-themed characters).</p>
+
+											<h3>AI Facial Auto-Rigger</h3>
+											<p>In 2023, generative AI was becoming more than a buzzword. As our ML team expanded, I began building an AI-driven facial auto-rigger around a simple prompt: given OpenCV-style landmarks projected onto a 3D character face, could that face be procedurally rigged to 80–90% fidelity? Fidelity here didn't mean speeding up an artist's work — it meant production-ready blendshape rigs that performed perfectly with zero white-glove tweaks.</p>
+											<p>The theory was simple: wrap an existing ARKit face topology to the novel head using the landmark data, scale the deltas to fit the new proportions, transfer the blendshapes, done. In practice, that wrap-and-transfer approach only got us to about 60% fidelity — most facial features needed real development to get right, largely through masking systems that prevented feature bleed by correctly splitting and isolating the eyes, lids, lips, brows, teeth, tongue, eyelashes, and any other separate mesh on the face.</p>
+											<p>Splitting upper and lower lips made opening a mouth fairly easy. Closing an eye convincingly, with no visible seam, was a much harder problem. After several iterations, I landed on a process that averaged landmark positions into a center line, curved that line to match natural eye proportions, skinned joints along the lids using those landmarks, rotated the lids together at the seam, and used the eyeball mesh itself to gently repel the lids and prevent interpenetration.</p>
+
+											<h3>Landmark Dataset</h3>
+											<p>An OpenCV-style facial landmark model drove the auto-rigger, with its points serving as the foundation for all downstream rigging. I worked closely with the head of ML to identify where that model needed to improve, and with no staff devoted to synthetic data, I built a local image-generation pipeline myself — bulk re-imagining a pool of head renders and turning my own feature requests directly into training data.</p>
+											<p>The clearest example came as our target cohort expanded toward cartoony faces with larger eyes, which demanded new eye landmarks. I designed a solution that split the eye corner into two landmarks: for humanoid faces, the two points simply overlapped, preserving backward compatibility, while for cartoony eyes they separated to give better surface coverage and higher-fidelity blink shapes. As a key benefit, the gap between those two landmarks became a simple, AI-determined boolean the auto-rigger could use to detect whether a given eye was realistic or cartoony. I then built the datasets to train the model on this new feature.</p>
+
+											<h3>Synthetic Character Generation</h3>
+											<p>From here, I largely owned synthetic character asset generation and spearheaded the Tech Art department's ability to provide datasets for the ML team. I led the refactoring and expansion of our modular hair system. I built a system in Houdini that generated our first wave of face-generation and segmentation datasets. And I created a facial variation tool in Blender, generating a dataset of attractive heads that improved our auto-gen character pipeline.</p>
 										</div>
 									</div>
 
 									<div class="subSection">
-										<h3><a class="subAccordText" href="#">AI Driven Face Auto Rigger</a></h3>
+										<h3><a class="subAccordText" href="#">Generative Animations</a></h3>
 										<div>
-											<p>One-liner placeholder for the AI Driven Face Auto Rigger.</p>
-										</div>
-									</div>
-
-									<div class="subSection">
-										<h3><a class="subAccordText" href="#">Synthetic 2D Landmark Data Set</a></h3>
-										<div>
-											<p>One-liner placeholder for the Synthetic 2D Landmark Data Set.</p>
-										</div>
-									</div>
-
-									<div class="subSection">
-										<h3><a class="subAccordText" href="#">Synthetic Face Variation Data</a></h3>
-										<div>
-											<p>One-liner placeholder for the Synthetic Face Variation Data.</p>
+											<p>Coming Soon!</p>
 										</div>
 									</div>
 								</div>
