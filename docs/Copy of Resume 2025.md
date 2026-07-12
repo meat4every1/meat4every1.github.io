@@ -1,10 +1,10 @@
-  
+
 **I A N   W O S K E Y**  
           848 333 9393              iancw.com             iancwoskey@gmail.com
 
 EDUCATION **DREXEL UNIVERSITY/ DIGITAL MEDIA ACCELERATE BS/MS**  
 **MASTER OF SCIENCE** 2013   
-**BACHELOR OF SCIENCE** 2012 
+**BACHELOR OF SCIENCE** 2012
 
   PROFICIENCIES         ╱▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔  
 
@@ -14,7 +14,7 @@ Maya, Blender, Houdini, ComfyUI, Synthetic Data, Python, C\#,
 
  **SENIOR TECHNICAL ANIMATOR** AVATAR R\&D, GENIES  2021 \- PRESENT     ▍
 
-* Lead team spearheading synthetic avatar data generation.  
+* Spearheaded synthetic avatar data generation.
   * Developed novel pose to pose AI animation solution.   
   * Built the ML guided facial auto rigger at the heart of Genies UGC ingestion.    
   * Developed a modular facial animation ingestion framework in Unity, and a pipeline for authoring those faces.
@@ -26,7 +26,7 @@ Maya, Blender, Houdini, ComfyUI, Synthetic Data, Python, C\#,
   * Designed and scripted animation process enabling deformer animation and smear frames.   
   * Worked with CEO/Director and Art Director to guide artistic/technical direction of characters.   
   * Worked with contracted artists and animators, through crits, draw overs, and concept art, to define artistic and technical expectations for characters and animations.   
-    
+
 
  **TECHNICAL ANIMATOR**  MARKETING, OCTOPIE  2019 \- 2021    ▍
 
@@ -34,7 +34,7 @@ Maya, Blender, Houdini, ComfyUI, Synthetic Data, Python, C\#,
   * Established pipeline for building and testing character assets using OBI physics plugin.  
   * Built adorable characters using a combination of active ragdolls and softbody simulations.  
   * Worked with the brand owner to ensure her artistic vision.  
-    
+
 
  **TECHNICAL ARTIST**  MOBILE GAME, BITLOFT 2019 ▍      ▍
 
@@ -44,7 +44,7 @@ Maya, Blender, Houdini, ComfyUI, Synthetic Data, Python, C\#,
   * Worked remotely, communicating daily with my team utilizing Slack, Jira, and Plastic SCM.  
   * Assisted management with all planning meetings; coordinated collaboration between teams.  
   * Created weekly review builds; responsible for performance testing and optimization on target mobile device.  
-    
+
 
  **TECHNICAL ARTIST** THE CRYSTAL CORE, BITLOFT  2019     ▍       ▍
 
@@ -53,7 +53,7 @@ Maya, Blender, Houdini, ComfyUI, Synthetic Data, Python, C\#,
   * Participated in interviews as the Tech Art department representative.  
   * Wrangled and implemented character assets; ensuring rig consistency, functionality, and optimization.  
   * Trained team members to use Plastic SCM and Plastic Gluon version control.  
-    
+
 
  **ADJUNCT PROFESSOR** GAME DESIGN AND PRODUCTION, DREXEL UNIVERSITY  2017-2018   ▍  ▍
 
