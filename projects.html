@@ -138,6 +138,52 @@
 				}
 		}
 	}
+
+	function scaleWidePheads() {
+		// Wide pheads: lerp image width by box aspect ratio (1:1 → narrowWidth, 6:1+ → wideWidth).
+		var configs = {
+			GENIES: { wideWidth: 0.85, narrowWidth: 1, wideTop: 30, wideFade: 20 },
+			MAXMUSTARD: { wideWidth: 0.85, narrowWidth: 1.4, wideTop: 0, wideFade: 20 }
+		};
+		var minRatio = 2;
+		var maxRatio = 4;
+
+		Object.keys(configs).forEach(function(id) {
+			var cfg = configs[id];
+			var section = document.getElementById(id);
+			if (!section) return;
+			var div = section.querySelector('.portHeadDiv');
+			var img = section.querySelector('.pHeadMobile');
+			if (!div || !img) return;
+
+			var w = div.clientWidth;
+			var h = div.clientHeight || 200;
+			if (!w) return;
+
+			var ratio = w / h;
+			var t = Math.max(0, Math.min(1, (ratio - minRatio) / (maxRatio - minRatio)));
+			var widthPct = (cfg.narrowWidth + (cfg.wideWidth - cfg.narrowWidth) * t) * 100;
+			img.style.width = widthPct + '%';
+			img.style.top = (cfg.wideTop * t) + 'px';
+
+			var fade = Math.round(cfg.wideFade * t);
+			if (fade < 1) {
+				img.style.webkitMaskImage = 'none';
+				img.style.maskImage = 'none';
+			} else {
+				var mask = 'linear-gradient(to right, transparent, black ' + fade + 'px, black calc(100% - ' + fade + 'px), transparent)';
+				img.style.webkitMaskImage = mask;
+				img.style.maskImage = mask;
+			}
+		});
+	}
+
+	var _layoutShift = layoutShift;
+	layoutShift = function() {
+		_layoutShift();
+		scaleWidePheads();
+	};
+
 	//window.onscroll = function() {layoutShift};
 
 	window.onresize = layoutShift;
