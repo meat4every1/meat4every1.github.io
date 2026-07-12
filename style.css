@@ -190,17 +190,35 @@ font-size: 20px;
         transition: height 0.3s ease-in;
 }
 /*THIS IS WHERE YOU STYLE THE OPENED ACCORDIAN DIV!!!!!*/
-.accordion :target h3 + div,
-.accordion .section.section-open h3 + div {
+.accordion :target > article > h3 + div,
+.accordion .section.section-open > article > h3 + div {
     height: auto !important;
 		width: 100%;
 		text-align: justify;
 		text-justify: inter-word;
 }
 
-.accordion .section.large:target h3 + div,
-.accordion .section.large.section-open h3 + div {
+/* projects.html: JS owns open state — don't let leftover :target block closing */
+.accordion.js-accordion .section:target:not(.section-open) > article > h3 + div {
+    height: 0 !important;
+    overflow: hidden;
+}
+
+.accordion .section.large:target > article > h3 + div,
+.accordion .section.large.section-open > article > h3 + div {
         overflow: auto;
+}
+
+/* Nested sub-accordions inside a project section */
+.accordion .subSection.sub-open > h3 + div {
+	height: auto !important;
+	width: 100%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+.accordion .subSection > h3 a.subAccordText {
+	padding-left: 40px;
+	font-size: 0.95em;
 }
 /*accordion window styling*/
 .mainContent{
