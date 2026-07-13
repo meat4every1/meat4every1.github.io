@@ -461,11 +461,14 @@ z-index: 1;
 	display: flow-root;
 	margin: 0.35em 0 1.1em;
 }
+#GENIES .geniesTextImg > p:first-of-type {
+	margin-top: 0;
+}
 #GENIES .geniesPull {
 	float: right;
 	width: 44%;
 	max-width: 325px;
-	margin: 0.1em 0 0.9em 1.35em;
+	margin: 0 0 0.9em 1.35em;
 	padding: 0;
 }
 #GENIES .geniesPull a {
