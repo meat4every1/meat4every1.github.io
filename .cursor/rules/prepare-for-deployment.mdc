@@ -1,0 +1,41 @@
+---
+description: When the user says "prepare for deployment", run the site deploy-prep checklist (asset hash bump, verify live pages, optional Cloudflare notes).
+alwaysApply: false
+---
+
+# Prepare for Deployment
+
+Trigger phrases: **prepare for deployment**, **prep for deploy**, **deploy prep**.
+
+When the user says any of these, run this checklist. Do not skip steps. Do not commit or push unless they explicitly ask.
+
+## 1. Bump cache-bust hashes
+
+From repo root (prefer Python; Node copy is optional):
+
+```bash
+python _tools/bump-asset-hashes.py
+```
+
+Fallback if Node is available: `node _tools/bump-asset-hashes.js`
+
+- Updates root live HTML only (`index.html`, `gallery.html`, `about.html`, `contact.html`, `resume.html`, `projects2.html`, etc.).
+- Sets `?v=<8-char-sha>` on `style.css`, `colorbox.css`, and `sidebar-loader.js` from file contents.
+- Use `python _tools/bump-asset-hashes.py --all` only if they ask to include `Archive/`.
+
+## 2. Spot-check
+
+- Confirm live pages reference `style.css?v=...` (not bare `style.css`).
+- Confirm `_tools/` was not added under a public path that Pages would serve (keep tooling in `_tools/`).
+- Summarize which HTML files changed and the new hashes.
+
+## 3. Remind (do not run unless asked)
+
+- Commit when they ask (include HTML + any CSS/JS + `_tools` if new).
+- After push to GitHub Pages: Fastly may still HIT old objects for a few minutes; the new `?v=` URLs bypass that for CSS/JS.
+- Cloudflare Dev Mode does not bypass GitHub Fastly; purge CF only if needed for HTML.
+
+## 4. Out of scope for this phrase
+
+- Do not redesign pages or refactor CSS.
+- Do not amend git history or force-push.
