@@ -210,15 +210,66 @@ font-size: 20px;
 }
 
 /* Nested sub-accordions inside a project section */
+.accordion .subSection {
+	text-align: left;
+}
 .accordion .subSection.sub-open > h3 + div {
 	height: auto !important;
 	width: 100%;
-	text-align: justify;
-	text-justify: inter-word;
+	text-align: left;
 }
-.accordion .subSection > h3 a.subAccordText {
-	padding-left: 40px;
-	font-size: 0.95em;
+.accordion .subSection > h3 {
+	text-align: left;
+	margin: 0.55em 0;
+}
+.accordion .subSection > h3 a.subAccordText,
+.accordion .subSection > h3 a.subAccordText:link,
+.accordion .subSection > h3 a.subAccordText:visited {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	padding: 6px 0;
+	height: auto;
+	font-size: 1em;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	color: #9a92b8 !important;
+	background: none;
+	border-bottom: 1px solid rgba(124, 91, 255, 0.28);
+	border-radius: 0;
+	cursor: pointer;
+	transition: color 0.15s ease, border-color 0.15s ease;
+}
+.accordion .subSection > h3 a.subAccordText::before {
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 7px solid #7c5bff;
+	opacity: 0.75;
+	transform: translateY(1px);
+	transition: transform 0.2s ease, opacity 0.15s ease;
+}
+.accordion .subSection.sub-open > h3 a.subAccordText::before {
+	transform: translateY(1px) rotate(90deg);
+	opacity: 1;
+}
+.accordion .subSection.sub-open > h3 a.subAccordText,
+.accordion .subSection.sub-open > h3 a.subAccordText:link,
+.accordion .subSection.sub-open > h3 a.subAccordText:visited {
+	color: #bdb4e0 !important;
+	border-bottom-color: rgba(124, 91, 255, 0.45);
+}
+.accordion .subSection > h3 a.subAccordText:hover,
+.accordion .subSection > h3 a.subAccordText:active {
+	color: #7c5bff !important;
+	background: none !important;
+	border-bottom-color: #7c5bff;
+}
+.accordion .subSection > h3 a.subAccordText:hover::before {
+	opacity: 1;
 }
 /*accordion window styling*/
 .mainContent{
