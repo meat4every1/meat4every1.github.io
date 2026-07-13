@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /Archive/
+
+Sitemap: https://www.iancw.com/sitemap.xml
