@@ -416,7 +416,7 @@ z-index: 1;
 }
 .portHeadDiv{
 	float: right;
-	overflow: Hidden;
+	overflow: hidden;
 	position: relative;
   display: inline-block;
 	height: 200px;
@@ -433,36 +433,47 @@ z-index: 1;
 	  background: -o-linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
 	  background: -ms-linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.65) 100%); /* IE10+ */
 	  background: linear-gradient(to bottom, rgba(0,0,0,0)60%,rgba(0,0,0,0.65) 100%); /* W3C */
-	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	  /* removed IE-only filter — it breaks background painting in Chrome */
 
 }
 
-/* Wide pheads: center with translate so >100% width still crops evenly */
-#GENIES .pHeadMobile,
-#MAXMUSTARD .pHeadMobile {
-	width: 85%;
-	left: 50%;
-	right: auto;
-	margin-left: 0;
-	margin-right: 0;
-	transform: translateX(-50%);
-	z-index: 0;
-}
+/* Wide pheads: real fill layer (Chrome ignores/overpaints .portHeadDiv backgrounds) */
 #GENIES .portHeadDiv,
 #MAXMUSTARD .portHeadDiv {
-	/* kill IE gradient filter inherited from .portHeadDiv — it blocks modern backgrounds */
+	isolation: isolate;
+	background: none !important;
 	filter: none !important;
 	-webkit-filter: none !important;
 }
-#GENIES .portHeadDiv{
-	background-color: #993488 !important;
-	background-image: linear-gradient(to top, #993488, #f5daf8) !important;
-	background-repeat: no-repeat !important;
+#GENIES .portHeadFill,
+#MAXMUSTARD .portHeadFill {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
 }
-#MAXMUSTARD .portHeadDiv {
-	background-color: #07b64a !important;
-	background-image: linear-gradient(to top, #07b64a, #4797ff) !important;
-	background-repeat: no-repeat !important;
+#GENIES .portHeadFill {
+	background: #993488;
+	background: linear-gradient(to top, #993488, #f5daf8);
+}
+#MAXMUSTARD .portHeadFill {
+	background: #07b64a;
+	background: linear-gradient(to top, #07b64a, #4797ff);
+}
+#GENIES .pHeadMobile,
+#MAXMUSTARD .pHeadMobile {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 50%;
+	right: auto;
+	bottom: auto;
+	width: 85%;
+	height: 100%;
+	margin: 0;
+	transform: translateX(-50%);
+	object-fit: contain;
+	object-position: center center;
 }
 
 /* Genies: editorial pull-figure (text wraps; stacks on narrow) */

@@ -164,7 +164,9 @@
 			var t = Math.max(0, Math.min(1, (ratio - minRatio) / (maxRatio - minRatio)));
 			var widthPct = (cfg.narrowWidth + (cfg.wideWidth - cfg.narrowWidth) * t) * 100;
 			img.style.width = widthPct + '%';
+			img.style.height = '100%';
 			img.style.top = (cfg.wideTop * t) + 'px';
+			img.style.objectPosition = cfg.wideTop ? 'center top' : 'center center';
 
 			var fade = Math.round(cfg.wideFade * t);
 			if (fade < 1) {
@@ -326,7 +328,8 @@
 
 							<div class = "pHeadMobileWrapper">
 							<div class="portHeadDiv">
-								<img class="pHeadMobile" src="Img/Phead_Genies.png">
+								<span class="portHeadFill" aria-hidden="true"></span>
+								<img class="pHeadMobile" src="Img/Phead_Genies.png" alt="">
 							</div>
 							</div>
 						</a>
@@ -407,7 +410,8 @@
 
 							<div class = "pHeadMobileWrapper">
 							<div class="portHeadDiv">
-								<img class="pHeadMobile" src="Img/Phead_MaxMustard.png">
+								<span class="portHeadFill" aria-hidden="true"></span>
+								<img class="pHeadMobile" src="Img/PHead_MaxMustard.jpg" alt="">
 							</div>
 							</div>
 						</a>
