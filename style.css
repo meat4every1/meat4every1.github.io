@@ -448,12 +448,21 @@ z-index: 1;
 	transform: translateX(-50%);
 	z-index: 0;
 }
+#GENIES .portHeadDiv,
+#MAXMUSTARD .portHeadDiv {
+	/* kill IE gradient filter inherited from .portHeadDiv — it blocks modern backgrounds */
+	filter: none !important;
+	-webkit-filter: none !important;
+}
 #GENIES .portHeadDiv{
-	background: linear-gradient(to top, #993488, #f5daf8);
+	background-color: #993488 !important;
+	background-image: linear-gradient(to top, #993488, #f5daf8) !important;
+	background-repeat: no-repeat !important;
 }
 #MAXMUSTARD .portHeadDiv {
-	background-color: #4797ff;
-	background: linear-gradient(to top, #07b64a, #4797ff);	
+	background-color: #07b64a !important;
+	background-image: linear-gradient(to top, #07b64a, #4797ff) !important;
+	background-repeat: no-repeat !important;
 }
 
 /* Genies: editorial pull-figure (text wraps; stacks on narrow) */
