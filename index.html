@@ -165,8 +165,12 @@
 			var widthPct = (cfg.narrowWidth + (cfg.wideWidth - cfg.narrowWidth) * t) * 100;
 			img.style.width = widthPct + '%';
 			img.style.height = '100%';
-			img.style.top = (cfg.wideTop * t) + 'px';
-			img.style.objectPosition = cfg.wideTop ? 'center top' : 'center center';
+			img.style.top = '0';
+			img.style.objectFit = 'cover';
+			// Genies: nudge framing up when wide (same idea as old top offset)
+			img.style.objectPosition = cfg.wideTop
+				? ('center ' + Math.round(20 + 15 * t) + '%')
+				: 'center center';
 
 			var fade = Math.round(cfg.wideFade * t);
 			if (fade < 1) {
@@ -183,7 +187,8 @@
 	var _layoutShift = layoutShift;
 	layoutShift = function() {
 		_layoutShift();
-		scaleWidePheads();
+		// measure after body width reflow from layoutShift
+		requestAnimationFrame(scaleWidePheads);
 	};
 
 	//window.onscroll = function() {layoutShift};
@@ -411,7 +416,7 @@
 							<div class = "pHeadMobileWrapper">
 							<div class="portHeadDiv">
 								<span class="portHeadFill" aria-hidden="true"></span>
-								<img class="pHeadMobile" src="Img/PHead_MaxMustard.jpg" alt="">
+								<img class="pHeadMobile" src="Img/Phead_MaxMustard.jpg" alt="">
 							</div>
 							</div>
 						</a>

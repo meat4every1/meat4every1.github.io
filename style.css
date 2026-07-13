@@ -470,9 +470,10 @@ z-index: 1;
 	bottom: auto;
 	width: 85%;
 	height: 100%;
+	max-width: none;
 	margin: 0;
 	transform: translateX(-50%);
-	object-fit: contain;
+	object-fit: cover; /* fill height; crop sides — not contain (that shrinks wide art) */
 	object-position: center center;
 }
 
