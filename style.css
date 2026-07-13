@@ -180,7 +180,8 @@ font-size: 20px;
 
 
 
-.accordion h3 + div {
+.accordion .section > article > h3 + div,
+.accordion .subSection > h3 + div {
         height: 0;
         overflow: hidden;
         -webkit-transition: height 0.3s ease-in;
@@ -453,6 +454,37 @@ z-index: 1;
 #MAXMUSTARD .portHeadDiv {
 	background-color: #4797ff;
 	background: linear-gradient(to top, #07b64a, #4797ff);	
+}
+
+/* Genies: editorial pull-figure (text wraps; stacks on narrow) */
+#GENIES .geniesTextImg {
+	display: flow-root;
+	margin: 0.35em 0 1.1em;
+}
+#GENIES .geniesPull {
+	float: right;
+	width: 44%;
+	max-width: 325px;
+	margin: 0.1em 0 0.9em 1.35em;
+	padding: 0;
+}
+#GENIES .geniesPull a {
+	display: block;
+}
+#GENIES .geniesPull img {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+	border-radius: 3px;
+}
+@media (max-width: 684px) {
+	#GENIES .geniesPull {
+		float: none;
+		width: min(260px, 65%);
+		max-width: none;
+		margin: 0.85em auto 1.1em;
+	}
 }
 
 .portHeadText {

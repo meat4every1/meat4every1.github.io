@@ -350,18 +350,43 @@
 											<p>After building a system in Unity that let us parse out facial animation channels as described above, I launched a campaign to expand the team's capacity to rig non-standard faces for ARKit. I adopted Face-It, mastered it, then trained our artists to use it — greatly improving the pace of "Doll" character production (short, cartoony-themed characters).</p>
 
 											<h3>AI Facial Auto-Rigger</h3>
-											<p>In 2023, generative AI was becoming more than a buzzword. As our ML team expanded, I began building an AI-driven facial auto-rigger around a simple prompt: given OpenCV-style landmarks projected onto a 3D character face, could that face be procedurally rigged to 80–90% fidelity? Fidelity here didn't mean speeding up an artist's work — it meant production-ready blendshape rigs that performed perfectly with zero white-glove tweaks.</p>
-											<p>The theory was simple: wrap an existing ARKit face topology to the novel head using the landmark data, scale the deltas to fit the new proportions, transfer the blendshapes, done. In practice, that wrap-and-transfer approach only got us to about 60% fidelity — most facial features needed real development to get right, largely through masking systems that prevented feature bleed by correctly splitting and isolating the eyes, lids, lips, brows, teeth, tongue, eyelashes, and any other separate mesh on the face.</p>
+											<div class="geniesTextImg">
+												<figure class="geniesPull">
+													<a class="GENIES_Gallery" href="Img/Content Posts/Genies/FaceRigFinalResult_NOBLINK.gif" title="AI facial auto-rigger result">
+														<img title="AI facial auto-rigger result" src="Img/Content Posts/Genies/FaceRigFinalResult_NOBLINK_CB.gif" alt="AI facial auto-rigger result">
+													</a>
+												</figure>
+												<p>In 2023, generative AI was becoming more than a buzzword. As our ML team expanded, I began building an AI-driven facial auto-rigger around a simple prompt: given OpenCV-style landmarks projected onto a 3D character face, could that face be procedurally rigged to 80–90% fidelity? Fidelity here didn't mean speeding up an artist's work — it meant production-ready blendshape rigs that performed perfectly with zero white-glove tweaks.</p>
+												<p>The theory was simple: wrap an existing ARKit face topology to the novel head using the landmark data, scale the deltas to fit the new proportions, transfer the blendshapes, done. In practice, that wrap-and-transfer approach only got us to about 60% fidelity — most facial features needed real development to get right, largely through masking systems that prevented feature bleed by correctly splitting and isolating the eyes, lids, lips, brows, teeth, tongue, eyelashes, and any other separate mesh on the face.</p>
+											</div>
+											<ul class="cbImgRow">
+												<li><a class="GENIES_Gallery" href="Img/Content Posts/Genies/collect Face mask data.gif"> <img title="Collecting face mask data" src="Img/Content Posts/Genies/collect Face mask data_CB.gif"> </a></li>
+												<li><a class="GENIES_Gallery" href="Img/Content Posts/Genies/EyeblinkMaskimprovement.png"> <img title="Eyeblink mask improvement" src="Img/Content Posts/Genies/EyeblinkMaskimprovement_CB.jpg"> </a></li>
+											</ul>
 											<p>Splitting upper and lower lips made opening a mouth fairly easy. Closing an eye convincingly, with no visible seam, was a much harder problem. After several iterations, I landed on a process that averaged landmark positions into a center line, curved that line to match natural eye proportions, skinned joints along the lids using those landmarks, rotated the lids together at the seam, and used the eyeball mesh itself to gently repel the lids and prevent interpenetration.</p>
+											<ul class="cbImgRow">
+												<li><a class="GENIES_Gallery" href="Img/Content Posts/Genies/joint blink v2 Final.gif"> <img title="Joint-based blink development" src="Img/Content Posts/Genies/joint blink v2 Final_CB.gif"> </a></li>
+												<li><a class="GENIES_Gallery" href="Img/Content Posts/Genies/FinalBlinkResult.png"> <img title="Final blink result" src="Img/Content Posts/Genies/FinalBlinkResult_CB.jpg"> </a></li>
+											</ul>
 
 											<h3>Landmark Dataset</h3>
 											<p>An OpenCV-style facial landmark model drove the auto-rigger, with its points serving as the foundation for all downstream rigging. I worked closely with the head of ML to identify where that model needed to improve, and with no staff devoted to synthetic data, I built a local image-generation pipeline myself — bulk re-imagining a pool of head renders and turning my own feature requests directly into training data.</p>
+											<ul class="cbImgRow">
+												<li><a class="GENIES_Gallery" href="Img/Content Posts/Genies/OpenCVLikePointDetection_01.png"> <img title="OpenCV-style landmark detection" src="Img/Content Posts/Genies/OpenCVLikePointDetection_01_CB.jpg"> </a></li>
+												<li><a class="GENIES_Gallery" href="Img/Content Posts/Genies/OpenCVLikePointDetection_02.png"> <img title="OpenCV-style landmark detection" src="Img/Content Posts/Genies/OpenCVLikePointDetection_02_CB.jpg"> </a></li>
+											</ul>
 											<p>The clearest example came as our target cohort expanded toward cartoony faces with larger eyes, which demanded new eye landmarks. I designed a solution that split the eye corner into two landmarks: for humanoid faces, the two points simply overlapped, preserving backward compatibility, while for cartoony eyes they separated to give better surface coverage and higher-fidelity blink shapes. As a key benefit, the gap between those two landmarks became a simple, AI-determined boolean the auto-rigger could use to detect whether a given eye was realistic or cartoony. I then built the datasets to train the model on this new feature.</p>
+											<ul class="cbImgRow">
+												<li><a class="GENIES_Gallery" href="Img/Content Posts/Genies/Landmark_Update_01.png"> <img title="Cartoony eye landmark update" src="Img/Content Posts/Genies/Landmark_Update_01_CB.jpg"> </a></li>
+												<li><a class="GENIES_Gallery" href="Img/Content Posts/Genies/Landmark_Update_02.png"> <img title="Cartoony eye landmark update" src="Img/Content Posts/Genies/Landmark_Update_02_CB.jpg"> </a></li>
+											</ul>
 
 											<h3>Synthetic Character Generation</h3>
 											<p>From here, I owned synthetic character asset generation and led the Tech Art department's efforts to supply datasets for the ML team. I refactored and expanded our modular hair system, built a Houdini pipeline for our first wave of face-generation and segmentation datasets, and created a Blender facial variation tool that generated attractive head variants to improve our auto-gen character pipeline.</p>
 											<p>The variation tool was the standout piece. It took our base Genie head and, through a mix of blendshapes and facial deformation joints, generated variations directly on the timeline, with real-time texture projection and mesh updates so I could scrub and QC each result instantly.</p>
 											<p>A web GUI drove the system, letting me define variation points, generation targets, and procedural constraints, then save them as reusable profiles to sculpt output toward specific facial cohorts. A snapshot system let me export or load heads as JSON metadata, which served two purposes: bulk-exporting good and bad examples for an LLM to find correlations and recommend guardrails, and feeding standout heads into an "attraction system" that averaged nearby high-performing heads into a weighted delta, nudging new variations toward attractiveness automatically.</p>
+
+											<script>jQuery("a.GENIES_Gallery").colorbox({rel:'GENIES_Gallery', width:"90%", height:"90%"});</script>
 										</div>
 									</div>
 
