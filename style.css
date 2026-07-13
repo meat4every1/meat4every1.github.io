@@ -834,16 +834,41 @@ footer {
 	top: 300
 }
 
-#about p{
+#about {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.35em;
+}
 
+#about .aboutCopy {
+	flex: 1 1 auto;
+	min-width: 0;
+}
 
+#about .aboutCopy p:first-child {
+	margin-top: 0;
 }
 
 #self {
+	flex: 0 0 240px;
+	width: 240px;
+	max-width: 38%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border-radius: 3px;
+}
 
-
-	width: 200px;
-	padding-left: 20px;
-
-
+@media (max-width: 684px) {
+	#about {
+		flex-direction: column;
+		align-items: center;
+	}
+	#self {
+		flex: 0 0 auto;
+		order: -1;
+		width: min(220px, 55%);
+		max-width: none;
+		margin: 0 0 1.1em;
+	}
 }
