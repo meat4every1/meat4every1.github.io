@@ -28,7 +28,7 @@ Personal site SEO for **www.iancw.com** (Ian C. Woskey — Senior / Lead Technic
 | [robots.txt](robots.txt) | Allow site; `Disallow: /Archive/`; Sitemap URL |
 | [sitemap.xml](sitemap.xml) | index, about, resume, gallery, contact only |
 | [sidebar-content.html](sidebar-content.html) | Social `alt` text + LinkedIn for sameAs identity |
-| OG image | `Img/Content Posts/About-Self.png` |
+| OG image | `Img/logo.jpg` (site header) |
 
 **Canonical base:** `https://www.iancw.com/`
 
