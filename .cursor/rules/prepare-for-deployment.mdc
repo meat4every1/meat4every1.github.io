@@ -21,6 +21,7 @@ Fallback if Node is available: `node _tools/bump-asset-hashes.js`
 
 - Updates root live HTML only (`index.html`, `gallery.html`, `about.html`, `contact.html`, `resume.html`, `projects2.html`, etc.).
 - Sets `?v=<8-char-sha>` on `style.css`, `colorbox.css`, and `sidebar-loader.js` from file contents.
+- Bumps site build id (`YYYY.MM.DD.N` in `_tools/site-version.txt`) into each HTML page: `<!-- iancw-build: … -->`, `<meta name="site-version">`, and `<body data-build="…">`.
 - Use `python _tools/bump-asset-hashes.py --all` only if they ask to include `Archive/`.
 
 ## 2. Spot-check

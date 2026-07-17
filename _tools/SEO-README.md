@@ -51,7 +51,21 @@ Personal site SEO for **www.iancw.com** (Ian C. Woskey — Senior / Lead Technic
 3. **H1** — Keep one `<h1 class="visually-hidden">…</h1>` after `<body>`; do **not** retag visible `<h3>` section headers as H1.
 4. **Alts** — Logo and project headers: descriptive role/project text; no layout impact.
 5. **New live page** — Add head package + H1 + entry in `sitemap.xml`. After deploy, refresh GSC (Meat4every1) if needed.
-6. **Deploy** — Run `python _tools/bump-asset-hashes.py` (“prepare for deployment”) so CSS/JS `?v=` hashes refresh.
+6. **Deploy** — Run `python _tools/bump-asset-hashes.py` (“prepare for deployment”) so CSS/JS `?v=` hashes and site build id refresh.
+
+## Site build version (deploy check)
+
+Human-readable CalVer: `YYYY.MM.DD.N` (date + deploy count that day). Source: `_tools/site-version.txt`, auto-bumped by `bump-asset-hashes.py`.
+
+Stamped in every live HTML page (invisible on screen):
+
+| Where | How to check in Chrome DevTools |
+|-------|----------------------------------|
+| `<!-- iancw-build: … -->` | Elements → expand `<head>` |
+| `<meta name="site-version" content="…">` | Elements → Ctrl+F `site-version` |
+| `<body data-build="…">` | Elements → select `<body>` → Attributes |
+
+Compare live `data-build` to your repo after deploy to confirm GitHub Pages picked up the push.
 
 ## Rationale (short)
 
@@ -73,6 +87,7 @@ Personal site SEO for **www.iancw.com** (Ian C. Woskey — Senior / Lead Technic
 - [ ] JSON-LD still lists Lead Technical Artist + Technical Director
 - [ ] `sitemap.xml` / `robots.txt` still correct
 - [ ] Asset hashes bumped before deploy
+- [ ] Site build id bumped (`python _tools/bump-asset-hashes.py`); verify in Chrome DevTools: `<body data-build>` or search `site-version` in Elements
 - [ ] (Optional) Confirm indexing in GSC under Meat4every1
 
 ## Diary
