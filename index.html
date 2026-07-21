@@ -519,7 +519,40 @@
 									<div class="subSection">
 										<h3><a class="subAccordText" href="#">Squash and Stretch</a></h3>
 										<div>
-											<p>Coming Soon!</p>
+											<ul class="cbImgRow">
+												<li><a class="MAXMUSTARD_Gallery" href="Img/Content Posts/MaxMustard/squash_06_Beauty.gif" title="Max Mustard squash beauty"> <img title="Max Mustard squash beauty" src="Img/Content Posts/MaxMustard/squash_06_Beauty_CB.gif" alt="Max Mustard squash-and-stretch beauty"> </a></li>
+												<li><a class="MAXMUSTARD_Gallery" href="Img/Content Posts/MaxMustard/FaceRig_03_Squash&amp;Animate.gif" title="Squash and animate face rig"> <img title="Squash and animate face rig" src="Img/Content Posts/MaxMustard/FaceRig_03_SquashandAnimate_CB.gif" alt="Squash and animate face rig"> </a></li>
+												<li><a class="MAXMUSTARD_Gallery" href="Img/Content Posts/MaxMustard/squash_05_Beauty.gif" title="Max Mustard squash beauty"> <img title="Max Mustard squash beauty" src="Img/Content Posts/MaxMustard/squash_05_Beauty_CB.gif" alt="Max Mustard squash-and-stretch beauty"> </a></li>
+											</ul>
+
+											<p>Born from an obsession with the squash-and-stretch capabilities of the early <a href="https://www.gdcvault.com/play/1024267/The-Animation-Pipeline-of-Overwatch" target="_blank" rel="noopener">Overwatch rigs</a>, I asked the question: "If Pixar can use deformers in offline renders, why not games?" Instead of expensive vertex-based deformation solutions, I hypothesized that deformation results could be compressed and output through joints. Deformation resolution is in the hands of the setup artist; limit deformations to standard skeleton joints or add extra joints for more fidelity if needed. The animators on my team were given access to a whole new toolkit of deformers for their real-time animations.</p>
+
+											<ul class="cbImgRow">
+												<li><a class="MAXMUSTARD_Gallery" href="Img/Content Posts/MaxMustard/Squash_01_Prototype.gif" title="Squash auto-rig prototype"> <img title="Squash auto-rig prototype" src="Img/Content Posts/MaxMustard/Squash_01_Prototype_CB.gif" alt="Squash auto-rig prototype"> </a></li>
+											</ul>
+
+											<p>I created a tool that builds DK joints or deformation kinematic joints for target joints in a rig. For each joint, a mesh sensor is created, containing strategically placed locators that measure scale, transformation, and rotation (averaged in instances of shear). The sensor meshes for each joint are baked together into a single mesh, to which deformers can be added. These mesh sensors are skinned to the joint they are created from, so the mesh sensor maintains coherence with the joint's base vertex position. From each joint, a DK joint is created as a leaf joint. The output of the mesh sensor is piped into the DK joint as a relative delta.</p>
+
+											<p>In effect, sensors move with the base joint, then get modified by deformers, that deformation is piped into the DK joint. The character mesh is skinned to this DK joint.</p>
+
+											<ul class="cbImgRow">
+												<li><a class="MAXMUSTARD_Gallery" href="Img/Content Posts/MaxMustard/Squash_02_basic.gif" title="Basic squash setup"> <img title="Basic squash setup" src="Img/Content Posts/MaxMustard/Squash_02_basic_CB.gif" alt="Basic squash setup"> </a></li>
+												<li><a class="MAXMUSTARD_Gallery" href="Img/Content Posts/MaxMustard/Squash_04_InEngineCurve.gif" title="In-engine squash curve"> <img title="In-engine squash curve" src="Img/Content Posts/MaxMustard/Squash_04_InEngineCurve_CB.gif" alt="In-engine squash curve"> </a></li>
+											</ul>
+
+											<p>In practice, this system lets an animator complete the base rig animation first, then deform the results as an additive layer on top. The original animation and base joints remain untouched; the deformation layer, made up of leaf joints underneath the base, shifts each child's position individually based on incoming deformation deltas.</p>
+
+											<p>This tech enabled the adorable, squishy feel my team and I brought to every character in Max Mustard.</p>
+
+											<ul class="cbImgRow">
+												<li><a class="MAXMUSTARD_Gallery" href="Img/Content Posts/MaxMustard/squash_08_Beauty.gif" title="Max Mustard squash beauty"> <img title="Max Mustard squash beauty" src="Img/Content Posts/MaxMustard/squash_08_Beauty_CB.gif" alt="Max Mustard squash-and-stretch beauty"> </a></li>
+												<li><a class="MAXMUSTARD_Gallery" href="Img/Content Posts/MaxMustard/squash_07_Beauty.gif" title="Max Mustard squash beauty"> <img title="Max Mustard squash beauty" src="Img/Content Posts/MaxMustard/squash_07_Beauty_CB.gif" alt="Max Mustard squash-and-stretch beauty"> </a></li>
+												<li><a class="MAXMUSTARD_Gallery" href="Img/Content Posts/MaxMustard/squash_09_Beauty.gif" title="Max Mustard squash beauty"> <img title="Max Mustard squash beauty" src="Img/Content Posts/MaxMustard/squash_09_Beauty_CB.gif" alt="Max Mustard squash-and-stretch beauty"> </a></li>
+												<li><a class="MAXMUSTARD_Gallery" href="Img/Content Posts/MaxMustard/squash_10_Beauty.gif" title="Max Mustard squash beauty"> <img title="Max Mustard squash beauty" src="Img/Content Posts/MaxMustard/squash_10_Beauty_CB.gif" alt="Max Mustard squash-and-stretch beauty"> </a></li>
+											</ul>
+											
+
+											<script>jQuery("a.MAXMUSTARD_Gallery").colorbox({rel:'MAXMUSTARD_Gallery', width:"90%", height:"90%"});</script>
 										</div>
 									</div>
 
