@@ -1,0 +1,57 @@
+---
+description: How to create Colorbox (CB) gallery thumbnails — especially animated GIF CBs. Use when making *_CB.gif / *_CB.jpg, adding colorbox rows, or processing portfolio gallery thumbs.
+alwaysApply: false
+---
+
+# Colorbox (CB) Thumbnail Procedure
+
+When adding images to a `cbImgRow` / colorbox gallery, create matching `*_CB` thumbs. Full assets stay for lightbox `href`; thumbs go in `img src`.
+
+## Animated GIF CBs (required method)
+
+**Do not** resize/re-encode animated GIFs with Pillow/`ImageSequence`. Per-frame palettes cause weird colors, flashing, and bad performance.
+
+**Do** use ffmpeg’s **two-pass shared palette** via the already-installed `imageio_ffmpeg` binary (no system ffmpeg install, no winget/choco).
+
+Recipe (locked):
+
+- Height capped at **400** (no upscaling): `scale=-2:'min(400,ih)':flags=lanczos`
+- **10 fps** for gallery thumbs
+- **128 colors** + **Bayer dither**: `palettegen` → `paletteuse`
+- Output next to source as `Name_CB.gif`
+
+Filter string:
+
+```text
+fps=10,scale=-2:'min(400,ih)':flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3
+```
+
+Prefer updating/running [`_tools/make-gif-cb.py`](_tools/make-gif-cb.py): put `(src, dst)` pairs in `JOBS`, then:
+
+```bash
+python _tools/make-gif-cb.py
+```
+
+Get ffmpeg with:
+
+```python
+import imageio_ffmpeg
+ff = imageio_ffmpeg.get_ffmpeg_exe()
+```
+
+## Still-image CBs (PNG/JPG sources)
+
+Pillow is fine for stills: center-crop/fit as needed, height ~400, save as `*_CB.jpg` (JPEG quality ~85–90). Match existing Genies/Barnes still CB patterns.
+
+## HTML wiring
+
+```html
+<ul class="cbImgRow">
+  <li><a class="SECTION_Gallery" href="path/to/full.gif" title="…">
+    <img title="…" src="path/to/full_CB.gif" alt="…">
+  </a></li>
+</ul>
+<script>jQuery("a.SECTION_Gallery").colorbox({rel:'SECTION_Gallery', width:"90%", height:"90%"});</script>
+```
+
+Click opens the **full** asset; the page only loads the CB thumb.
