@@ -467,8 +467,29 @@
 
 											<h3>Synthetic Character Generation</h3>
 											<p>From here, I owned synthetic character asset generation and led the Tech Art department's efforts to supply datasets for the ML team. I refactored and expanded our modular hair system, built a Houdini pipeline for our first wave of face-generation and segmentation datasets, and created a Blender facial variation tool that generated attractive head variants to improve our auto-gen character pipeline.</p>
+											<div class="vidScale">
+												<video controls src="Img/Content Posts/Genies/Synthetic Data/Take3_01_Generation.mp4"></video>
+											</div>
 											<p>The variation tool was the standout piece. It took our base Genie head and, through a mix of blendshapes and facial deformation joints, generated variations directly on the timeline, with real-time texture projection and mesh updates so I could scrub and QC each result instantly.</p>
-											<p>A web GUI drove the system, letting me define variation points, generation targets, and procedural constraints, then save them as reusable profiles to sculpt output toward specific facial cohorts. A snapshot system let me export or load heads as JSON metadata, which served two purposes: bulk-exporting good and bad examples for an LLM to find correlations and recommend guardrails, and feeding standout heads into an "attraction system" that averaged nearby high-performing heads into a weighted delta, nudging new variations toward attractiveness automatically.</p>
+											<div class="vidScale">
+												<video controls src="Img/Content Posts/Genies/Synthetic Data/Take3_02_QC.mp4"></video>
+											</div>
+											<p>A web GUI drove the system, letting me define variation points, generation targets, and procedural constraints, then save them as reusable profiles to sculpt output toward specific facial cohorts.</p>
+											<div class="vidScale">
+												<video controls src="Img/Content Posts/Genies/Synthetic Data/Demo Video 03 take 3.mp4"></video>
+											</div>
+											<p>Inside the web GUI I added a Value Trace menu that allowed each value to be simulated, with stepwise value readouts. With so many value tweaks happening under the hood, this clear debug menu was essential to tracking down the cause of unexpected results.</p>
+											<div class="vidScale">
+												<video controls src="Img/Content Posts/Genies/Synthetic Data/Value Generation Trace.mp4"></video>
+											</div>
+											<p>A snapshot system let me export or load heads as JSON metadata, which served two purposes: bulk-exporting good and bad examples for an LLM to find correlations and recommend generation guardrails, and exporting standout heads into an "attraction system" that averaged nearby high-performing heads into a weighted delta, nudging new variations toward attractiveness automatically.</p>
+											<div class="vidScale">
+												<video controls src="Img/Content Posts/Genies/Synthetic Data/Take3_03_HeadMetaData.mp4"></video>
+											</div>
+
+											<h3>Tagging and Buckets</h3>
+											<p>As the project expanded, we began ingesting a large pool of authored head variations. I designed and implemented a batch LLM API prompt to evaluate and tag each face blendshape based on its features. After building a tag framework and running my first tests, the key difficulty I faced was style adherence. The LLM would consistently describe the Genies art style rather than the individual features of the target head. I was able to build a secondary prompt that leveraged face atlas images to anchor the LLM to the Genies art style. This improved tagging greatly.</p>
+											<p>The purpose of this tagging system was to further improve our ability to bucket facial features within a pool of 600+ heads. The ML team was going feature by feature, expanding capacity and refining quality. For example, the model had difficulty producing thinner heads, and more data fitting that cohort was required. The tagging system allowed us to agentically build buckets of correct facial features with simple written requests. These facial features were then further varied using the synthetic head variation tool.</p>
 
 											<script>jQuery("a.GENIES_Gallery").colorbox({rel:'GENIES_Gallery', width:"90%", height:"90%"});</script>
 										</div>
