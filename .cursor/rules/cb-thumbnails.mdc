@@ -15,7 +15,9 @@ When adding images to a `cbImgRow` / colorbox gallery, create matching `*_CB` th
 
 Recipe (locked):
 
-- Height capped at **400** (no upscaling): `scale=-2:'min(400,ih)':flags=lanczos`
+- Thumbnail **height = 400px** — `scale=-2:400:flags=lanczos`
+- **Preserve native aspect ratio** — width follows from height
+- **Never** force a canvas aspect ratio (no `pad`, no letterboxing, no center-crop-to-ratio, no fixed WxH frame)
 - **10 fps** for gallery thumbs
 - **128 colors** + **Bayer dither**: `palettegen` → `paletteuse`
 - Output next to source as `Name_CB.gif`
@@ -23,7 +25,7 @@ Recipe (locked):
 Filter string:
 
 ```text
-fps=10,scale=-2:'min(400,ih)':flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3
+fps=10,scale=-2:400:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3
 ```
 
 Prefer updating/running [`_tools/make-gif-cb.py`](_tools/make-gif-cb.py): put `(src, dst)` pairs in `JOBS`, then:
@@ -41,7 +43,7 @@ ff = imageio_ffmpeg.get_ffmpeg_exe()
 
 ## Still-image CBs (PNG/JPG sources)
 
-Pillow is fine for stills: center-crop/fit as needed, height ~400, save as `*_CB.jpg` (JPEG quality ~85–90). Match existing Genies/Barnes still CB patterns.
+Pillow is fine for stills: scale to **height 400**, keep native aspect (no forced crop/pad to a ratio), save as `*_CB.jpg` (JPEG quality ~85–90).
 
 ## HTML wiring
 

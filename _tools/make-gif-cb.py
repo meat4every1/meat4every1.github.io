@@ -1,6 +1,6 @@
 """Regenerate animated GIF CB thumbs with ffmpeg two-pass shared palette.
 Uses imageio_ffmpeg's bundled binary (no system install).
-Recipe from prior Max Mustard CB fix: height<=400, 10fps, 128 colors, Bayer dither.
+Recipe from prior Max Mustard CB fix: height 400 (native aspect), 10fps, 128 colors, Bayer dither.
 """
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ JOBS = [
 
 VF = (
     "fps=10,"
-    "scale=-2:'min(400,ih)':flags=lanczos,"
+    "scale=-2:400:flags=lanczos,"
     "split[s0][s1];"
     "[s0]palettegen=max_colors=128:stats_mode=diff[p];"
     "[s1][p]paletteuse=dither=bayer:bayer_scale=3"
